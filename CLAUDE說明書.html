@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 學習中心 — 專案說明書</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --text:#1f2937; --muted:#6b7280;
+    --accent:#4f46e5; --accent2:#7c3aed; --accent-light:#eef2ff; --border:#e5e7eb;
+    --warn-bg:#fffbeb; --warn-border:#f59e0b; --ok-bg:#ecfdf5; --ok-border:#10b981;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:16px;}
+  .container{max-width:900px;margin:0 auto;padding:24px 20px 80px;}
+  header.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:16px;padding:36px 32px;margin-bottom:24px;}
+  header.hero h1{font-size:1.7em;margin-bottom:8px;}
+  header.hero p{opacity:.92;font-size:.95em;}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;font-size:.85em;}
+  .meta span{background:rgba(255,255,255,.18);padding:4px 12px;border-radius:20px;}
+  .meta a{color:#fff;}
+  nav.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin-bottom:22px;}
+  nav.toc strong{display:block;margin-bottom:8px;color:var(--accent);}
+  nav.toc a{display:inline-block;margin:4px 8px 4px 0;padding:5px 14px;background:var(--accent-light);color:var(--accent);text-decoration:none;border-radius:20px;font-size:.88em;}
+  nav.toc a:hover{background:var(--accent);color:#fff;}
+  section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:26px 30px;margin-bottom:18px;scroll-margin-top:16px;}
+  h2{font-size:1.3em;color:var(--accent);margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--accent-light);}
+  h3{font-size:1.05em;margin:18px 0 8px;color:#374151;}
+  p{margin-bottom:10px;}
+  ul,ol{margin:8px 0 14px 1.4em;}
+  li{margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:.92em;}
+  th{background:var(--accent-light);color:var(--accent);text-align:left;padding:8px 12px;}
+  td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  code{background:var(--accent-light);color:var(--accent);border-radius:5px;padding:1px 7px;font-size:.88em;font-family:Consolas,monospace;}
+  .tree{background:#1e293b;color:#e2e8f0;border-radius:10px;padding:16px 20px;font-family:Consolas,monospace;font-size:.86em;line-height:1.9;overflow-x:auto;white-space:pre;margin:10px 0 16px;}
+  .callout{border-left:4px solid var(--warn-border);background:var(--warn-bg);padding:11px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.93em;}
+  .callout.ok{border-left-color:var(--ok-border);background:var(--ok-bg);}
+  .biglink{display:block;text-align:center;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;border-radius:12px;padding:14px;font-size:1.05em;font-weight:bold;margin:6px 0 2px;}
+  footer{text-align:center;color:var(--muted);font-size:.85em;margin-top:26px;}
+  .top-link{position:fixed;right:20px;bottom:20px;background:var(--accent);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.2em;box-shadow:0 4px 12px rgba(0,0,0,.2);}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="hero" id="top">
+  <h1>📖 AI 學習中心 — 專案說明書</h1>
+  <p>記錄本網站的完整設計、建置經過、使用方式與維護方法。與 CLAUDE.md 內容一致，未來任何 Claude 工作階段讀到即可接手維護。</p>
+  <div class="meta">
+    <span>建置：2026-07-05 ~ 07-06</span>
+    <span>擁有者：Justin</span>
+    <span>成本：$0</span>
+  </div>
+</header>
+
+<a class="biglink" href="https://justin-n8n.github.io/ai-learning-hub/" target="_blank">🌐 前往網站：justin-n8n.github.io/ai-learning-hub</a>
+<p style="text-align:center;font-size:.85em;color:var(--muted);margin-bottom:20px;">GitHub Repo：<a href="https://github.com/justin-n8n/ai-learning-hub" target="_blank">github.com/justin-n8n/ai-learning-hub</a>　｜　本機：<code>Desktop\AI工具\ai-learning-hub\</code></p>
+
+<nav class="toc">
+  <strong>📑 目錄</strong>
+  <a href="#s1">一、專案是什麼</a>
+  <a href="#s2">二、建置經過</a>
+  <a href="#s3">三、技術架構</a>
+  <a href="#s4">四、自動更新排程</a>
+  <a href="#s5">五、日常使用</a>
+  <a href="#s6">六、維護方法</a>
+  <a href="#s7">七、已知限制</a>
+  <a href="#s8">八、未來規劃</a>
+  <a href="#s9">九、版本紀錄</a>
+</nav>
+
+<section id="s1">
+  <h2>一、專案是什麼</h2>
+  <p>一個<strong>個人 AI 學習入口網站</strong>：由 Cowork 排程自動收集 AI 資訊，AI 預先篩選、評分、產出繁中摘要，你只需閱讀「值得看」的精華，解決 AI 資訊爆炸與學習焦慮。</p>
+  <h3>核心原則</h3>
+  <ol>
+    <li><strong>AI 先篩選，人再閱讀</strong>——每日精選限量 5 則，不做資訊瀑布</li>
+    <li><strong>繁體中文為主</strong>——英文內容附中文摘要，專有名詞保留英文</li>
+    <li><strong>持續自動更新</strong>——每日新聞、每週工具/文章/知識庫</li>
+    <li><strong>從學習出發</strong>——收藏/已讀/筆記推著你學，不只是看</li>
+  </ol>
+  <p style="font-size:.9em;color:var(--muted)">完整規劃見《AI學習網站建置規劃書》（v1.1 定稿，在 AI工具 資料夾）。</p>
+</section>
+
+<section id="s2">
+  <h2>二、建置經過（決策紀錄）</h2>
+  <ol>
+    <li><strong>需求訪談</strong>：提出 5 大需求——每日 AI 新聞、AI 工具庫（依應用分類+開源精選）、AI 知識庫（自動更新）、生產力工具區、大神文章區。</li>
+    <li><strong>規劃書</strong>：Claude 撰寫建置規劃書，補充第 6 模組「我的學習」，提醒 FB 無法自動抓取、資訊過載風險、版權界線等。</li>
+    <li><strong>方案選擇</strong>：比較 4 個部署方案後，選定<strong>方案 D：Cowork 排程 + GitHub Pages</strong>——參考你已成功運作的 iPAS 備考網站模式。$0 成本、AI 處理由 Cowork 完成、手機可看。</li>
+    <li><strong>定案決策</strong>：遊戲化不採用；每日精選 5 則；Phase 3 做 Email/LINE 推播；興趣領域＝生產力工具最高權重。</li>
+    <li><strong>建置</strong>：Claude 寫出網站（純 HTML/JS/CSS 無框架）、初始內容、真實新聞首批 5 則，設定 2 個排程任務。</li>
+    <li><strong>部署</strong>：Claude 用 Chrome 自動化：建 GitHub repo → 上傳檔案 → 開啟 GitHub Pages → 驗證上線成功。</li>
+  </ol>
+</section>
+
+<section id="s3">
+  <h2>三、技術架構</h2>
+  <div class="tree">使用者瀏覽 ──→ GitHub Pages（靜態網站，手機可看）
+                    ↑ 資料檔上傳（自動覆蓋同名檔）
+Cowork 排程任務 ──→ WebSearch 抓資訊 → AI 篩選/摘要 → 更新本機 data/*.js
+                                        → Chrome 自動上傳 GitHub → 網站更新</div>
+  <ul>
+    <li><strong>無後端、無資料庫、無 API 費用</strong>——網站是純靜態檔案，資料存在 data/*.js</li>
+    <li>個人紀錄（收藏/已讀/筆記）存在瀏覽器 localStorage，不上傳雲端</li>
+    <li>成本 $0（含在 Claude 訂閱內）</li>
+  </ul>
+  <h3>檔案結構</h3>
+  <div class="tree">ai-learning-hub/
+├── CLAUDE.md           # 專案說明書（本文件的 md 版）
+├── README.md           # 部署與更新簡要說明
+├── index.html          # 網站主頁（六大模組 + UI 樣式）
+├── app.js              # 前端邏輯（分頁、收藏/已讀、深淺色、AI導師）
+└── data/               # 資料檔（排程更新的對象）
+    ├── news.js         # 每日新聞    window.SITE_NEWS
+    ├── tools.js        # 工具庫      window.SITE_TOOLS
+    ├── knowledge.js    # 知識庫      window.SITE_KNOWLEDGE
+    ├── productivity.js # 生產力工具  window.SITE_PRODUCTIVITY
+    └── articles.js     # 大神文章    window.SITE_ARTICLES</div>
+  <h3>資料格式重點</h3>
+  <ul>
+    <li>每個 data 檔都是 <code>window.SITE_XXX = {...}</code> 的 JS 檔（不用 JSON 是為了本機開啟不受 CORS 限制）</li>
+    <li><code>news.js</code>：lastUpdated + picks（5 則精選）+ archive（歷史最多 60 則）；每則含 date / stars / category / title / summary / why / source / url</li>
+    <li><code>tools.js</code>：categories（9 大分類）+ weekly（每週精選）+ <strong>toolVideos</strong>（本週新增 YouTube 教學影片，每工具上限 5 支）+ <strong>toolVideosHistory</strong>（歷史累積，每工具上限 30 支）——兩個 key 都涵蓋全部工具名稱，做法比照 iPAS 網站</li>
+    <li><code>articles.js</code>：leaders（追蹤名單：國際/中文/YouTube）+ articles（文章摘要）</li>
+    <li>修改後務必 <code>node --check</code> 驗證語法</li>
+  </ul>
+</section>
+
+<section id="s4">
+  <h2>四、自動更新排程（Cowork Scheduled Tasks）</h2>
+  <table>
+    <tr><th>任務 ID</th><th>排程</th><th>工作內容</th></tr>
+    <tr><td><code>ai-hub-daily-news</code></td><td>每天 08:00</td><td>搜尋 24-48hr AI 新聞 → 評分篩 5 則精選（繁中摘要+為什麼值得看）→ 更新 news.js（舊聞入 archive）→ Chrome 上傳 GitHub</td></tr>
+    <tr><td><code>ai-hub-weekly-update</code></td><td>每週一 09:00</td><td>① GitHub Trending / Hugging Face / Product Hunt 精選工具 → tools.js<br>② 追蹤名單新文章 AI 摘要 → articles.js<br>③ 檢查三大平台重大更新 → knowledge.js<br>④ 每個工具搜尋 YouTube 教學影片，合併進 tools.js 的 toolVideos/toolVideosHistory<br>→ Chrome 上傳 GitHub</td></tr>
+  </table>
+  <p><strong>AI 篩選評分維度</strong>：重要度、實用性、相關性（生產力工具最高權重）、學習價值。</p>
+  <div class="callout">⚠️ <strong>注意</strong>：排程執行時電腦需開機並登入 Claude（沒開機下次啟動補跑）；Chrome 需保持登入 github.com（帳號 justin-n8n）；首次執行建議在側邊欄 Scheduled 按「Run now」預先核准權限。排程任務檔在 <code>C:\Users\justi\Claude\Scheduled\</code>。</div>
+</section>
+
+<section id="s5">
+  <h2>五、日常使用方式</h2>
+  <ol>
+    <li><strong>看網站</strong>：開線上版（手機也行）或本機直接開 index.html（本機資料可能比線上新，因為排程先更新本機再上傳）</li>
+    <li><strong>每天</strong>：看首頁「今日精選」5 則，有興趣按「☆ 收藏」，看完按「標記已讀」</li>
+    <li><strong>每週</strong>：看工具庫「本週精選」與大神文章新摘要，挑 1-2 個實際動手玩</li>
+    <li><strong>AI 導師</strong>：知識庫/生產力頁每個條目都有「🤖 呼叫 AI 導師」按鈕，點了自動複製提問 Prompt，貼到 Claude 深入學＋拿 10 分鐘小練習</li>
+    <li><strong>我的學習</strong>：收藏待學清單＋已讀紀錄＋學習筆記（存瀏覽器本機，勿用無痕模式，換裝置不同步）</li>
+  </ol>
+</section>
+
+<section id="s6">
+  <h2>六、維護方法（對 Claude 說就好）</h2>
+  <p>你是非工程師，所有維護都透過 Cowork 對 Claude 下指令完成：</p>
+  <table>
+    <tr><th>想做什麼</th><th>怎麼說</th></tr>
+    <tr><td>加追蹤的大神/頻道</td><td>「幫我在 AI 學習網站加追蹤 XXX（附連結）」→ Claude 改 articles.js 並上傳</td></tr>
+    <tr><td>加/改工具</td><td>「幫我在工具庫加 XXX」→ Claude 改 tools.js 並上傳</td></tr>
+    <tr><td>補某工具的教學影片</td><td>「幫我幫 XXX 加教學影片」→ Claude 搜尋 YouTube 並更新 tools.js 的 toolVideos</td></tr>
+    <tr><td>調整興趣權重</td><td>「以後篩選新聞多注意 XXX 主題」→ Claude 改排程任務的 prompt</td></tr>
+    <tr><td>改精選數量/排程時間</td><td>「每日精選改 10 則」「新聞改晚上 8 點更新」→ Claude 更新排程任務</td></tr>
+    <tr><td>內容沒更新</td><td>檢查：①電腦當時是否開機 ②Scheduled 任務執行紀錄 ③Chrome 是否登入 GitHub</td></tr>
+    <tr><td>手動更新一次</td><td>到 Scheduled 按「Run now」，或直接叫 Claude 執行一次更新</td></tr>
+    <tr><td>網站改版/加功能</td><td>直接描述需求，Claude 改 index.html / app.js 後上傳</td></tr>
+  </table>
+  <h3>手動上傳 GitHub（備援）</h3>
+  <p style="font-size:.93em">自動上傳失敗時：到 <a href="https://github.com/justin-n8n/ai-learning-hub" target="_blank">repo</a> → 進 data 資料夾 → Add file → Upload files → 拖入更新後的檔案 → Commit changes（同名自動覆蓋），約 1 分鐘後網站生效。</p>
+  <h3>資料備份</h3>
+  <p style="font-size:.93em">所有內容都是純文字檔，GitHub repo 本身就是雲端備份；本機資料夾是第二份。建議偶爾整個資料夾複製備份。</p>
+</section>
+
+<section id="s7">
+  <h2>七、已知限制與風險</h2>
+  <ol>
+    <li><strong>Facebook 無法自動抓取</strong>（平台限制）——改追蹤創作者的部落格/Substack/YouTube；FB 好文可手動貼給 Claude 摘要後加入</li>
+    <li><strong>電腦沒開機當天不更新</strong>——隔次開機補跑；要完全雲端化可升級 GitHub Actions（規劃書方案 B）</li>
+    <li><strong>AI 摘要可能有誤</strong>——重要內容以原文連結為準</li>
+    <li><strong>localStorage 限制</strong>——收藏/筆記在單一瀏覽器本機；清除瀏覽器資料會消失；線上版和本機版的紀錄是分開的</li>
+    <li><strong>來源可能失效</strong>——排程總結會註明抓取失敗的來源，累積失效請叫 Claude 更換</li>
+  </ol>
+</section>
+
+<section id="s8">
+  <h2>八、未來規劃（Phase 3 待辦）</h2>
+  <ul>
+    <li>☐ Email / LINE 每日精選推播（已確認要做；可用 n8n 實作）</li>
+    <li>☐ 全站搜尋</li>
+    <li>☐ 學習路徑（入門→進階課程地圖）</li>
+    <li>☐ 提示詞（Prompt）收藏庫</li>
+    <li>☐ 每週學習回顧週報</li>
+    <li>☐ 實作挑戰（每週 30 分鐘小任務）</li>
+  </ul>
+</section>
+
+<section id="s9">
+  <h2>九、版本紀錄</h2>
+  <table>
+    <tr><th>日期</th><th>版本</th><th>內容</th></tr>
+    <tr><td>2026-07-05</td><td>規劃 v1.0</td><td>建置規劃書討論稿</td></tr>
+    <tr><td>2026-07-06</td><td>規劃 v1.1</td><td>全部決策定案（方案D、5則、要推播、不遊戲化）</td></tr>
+    <tr><td>2026-07-06</td><td>網站 v1.0</td><td>Phase 1 MVP 上線：六大模組、真實新聞首批、2 個排程任務、GitHub Pages 部署完成</td></tr>
+    <tr><td>2026-07-06</td><td>網站 v1.1</td><td>工具庫新增「教學影片」功能：每個工具附 YouTube 教學影片（比照 iPAS 網站），排程新增每週自動搜尋與合併步驟</td></tr>
+  </table>
+</section>
+
+<footer>AI 學習中心 專案說明書 ｜ 2026-07-06 ｜ 與 CLAUDE.md 內容一致</footer>
+</div>
+<a class="top-link" href="#top" title="回到頂部">↑</a>
+</body>
+</html>
