@@ -4,6 +4,58 @@ window.SITE_NEWS = {
   lastUpdated: "2026-07-06",
   picks: [
     {
+      date: "2026-07-01",
+      stars: 5,
+      category: "工具",
+      title: "Notion 大改版：多代理協作工作流，Claude 成首批「外部代理」",
+      summary: "Notion 於 7 月 1 日推出多項 AI Agent 更新：team 可共用的多代理工作流、支援外部代理接入、會議記錄自動標註講者、更完整的 Microsoft 檔案處理、互動式 HTML 區塊、Outlook 自動化，以及更多 MCP 連接。Claude 與 Cursor 是首批加入的「External Agent」，可直接在 Notion 工作區內接手端對端流程。",
+      why: "如果你已經在用 Notion 做知識管理，這代表 Claude 之後能直接在你的 Notion 頁面裡自動整理、寫作、串接任務，是生產力工具與 AI 代理結合的重要指標。",
+      source: "n8n / Notion 官方更新",
+      url: "https://n8n.io/integrations/notion/and/openai/"
+    },
+    {
+      date: "2026-07-03",
+      stars: 4,
+      category: "Anthropic",
+      title: "Claude Sonnet 5 成為 Claude Code 預設模型，原生 100 萬 token 上下文",
+      summary: "Anthropic 宣布 Claude Sonnet 5 現為 Claude Code 的預設模型，具備原生 100 萬 token 上下文視窗，優惠價格為每百萬 token 輸入 $2、輸出 $10，優惠期至 8 月 31 日。同時 Cowork 排程任務、企業級 MCP 連接器管理與花費門檻提醒等功能也一併更新。",
+      why: "你正在用的 Cowork 與 Claude Code 背後模型升級了，超大上下文代表能一次處理更多檔案與長對話，值得留意定價優惠視窗。",
+      source: "Anthropic Newsroom",
+      url: "https://www.anthropic.com/news"
+    },
+    {
+      date: "2026-07-05",
+      stars: 4,
+      category: "Google",
+      title: "Google 擴大開放 Gemini 個人化 AI 圖像生成功能",
+      summary: "Google 向更多美國用戶免費開放 Gemini 的個人化圖像生成功能，會擷取使用者已連結的 Gmail、Google Photos、YouTube 與搜尋紀錄，在不需詳細下指令的情況下產出貼合個人興趣的圖片。",
+      why: "展示了「連結個人資料 + AI 生成」的新工具方向，如果你有 Google 帳號生態，可以直接體驗這種免詳細 prompt 的圖像生成方式。",
+      source: "AI Weekly",
+      url: "https://aiweekly.co/ai-news-today/google-ai-news"
+    },
+    {
+      date: "2026-07-04",
+      stars: 3,
+      category: "政策",
+      title: "Anthropic 堵住中國企業經由代理服務存取 Claude 的漏洞",
+      summary: "報導指出 Anthropic 正在關閉讓 Ant Group 等中國企業透過中繼服務與雲端供應商間接存取 Claude 的漏洞管道，強化模型使用的合規與地緣政治風險控管。",
+      why: "反映 AI 大廠在地緣政治壓力下，正加強模型存取的合規審查，這類治理趨勢會逐漸影響一般企業用戶的使用條款。",
+      source: "AIToolsRecap",
+      url: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx"
+    },
+    {
+      date: "2026-07-02",
+      stars: 3,
+      category: "職涯",
+      title: "Meta 內部坦承 AI 代理專案停滯 4 個月，Zuckerberg 公開承認落後",
+      summary: "在 7 月 2 日的 Meta 全員大會上，Zuckerberg 坦承公司 AI 代理專案已停滯四個月，幾分鐘後其 AI 主管卻宣稱未發布的 Watermelon 模型已追上 GPT-5.5，說法前後矛盾，引發內部與外界質疑。",
+      why: "即使是 Meta 這樣的巨頭，AI 代理落地也充滿波折——提醒我們評估任何 AI 工具承諾時，都該保持務實與查證的態度。",
+      source: "BuildFastWithAI",
+      url: "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
+    }
+  ],
+  archive: [
+    {
       date: "2026-06-26",
       stars: 5,
       category: "OpenAI",
@@ -53,6 +105,5 @@ window.SITE_NEWS = {
       source: "BuildFastWithAI",
       url: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026"
     }
-  ],
-  archive: []
+  ]
 };
