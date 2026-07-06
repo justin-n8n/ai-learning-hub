@@ -16,7 +16,7 @@ window.SITE_KNOWLEDGE = {
     {
       name: "Claude（Anthropic）",
       updated: "2026-07-06",
-      body: "模型系列：Fable/Opus（最強）、Sonnet（平衡主力）、Haiku（快速平價）。特色功能：Projects（個人知識庫）、Artifacts（即時生成互動內容）、Claude Code（終端機編程代理）、Cowork（桌面自動化代理）。強項：長文處理、繁中品質、程式開發、代理任務。",
+      body: "模型系列：Fable/Opus（最強）、Sonnet（平衡主力）、Haiku（快速平價）。7 月初更新：美國政府解除出口管制後 Fable 5 重新開放使用；Sonnet 5 已成為新的預設模型，寫作能力大幅拉近與 Opus 4.8 的差距。特色功能：Projects（個人知識庫）、Artifacts（即時生成互動內容）、Claude Code（終端機編程代理）、Cowork（桌面自動化代理）、Claude Science（AI 科研工作台）。強項：長文處理、繁中品質、程式開發、代理任務。",
       learn: "入門：直接用 claude.ai 對話 → 進階：建立 Project 放入自己的資料 → 高階：Cowork 排程自動化"
     },
     {
@@ -28,7 +28,7 @@ window.SITE_KNOWLEDGE = {
     {
       name: "Gemini（Google）",
       updated: "2026-07-06",
-      body: "與 Google 全家桶深度整合（Gmail、Docs、試算表）。特色：NotebookLM（研究神器，免費）、AI Studio（開發者平台）、超長上下文。強項：多模態、Google 服務整合、免費額度大方。",
+      body: "與 Google 全家桶深度整合（Gmail、Docs、試算表）。7 月更新：Gemini 3.5 Pro 正式開放使用（原訂 6 月延後至本月）；圖像/影片生成新增 Nano Banana 2 Lite（快速低成本生圖）與 Gemini Omni Flash（對話式影片生成與編輯）。特色：NotebookLM（研究神器，免費）、AI Studio（開發者平台）、超長上下文。強項：多模態、Google 服務整合、免費額度大方。",
       learn: "入門：NotebookLM 上傳文件做摘要 → 進階：Gemini in Workspace 處理郵件文件"
     },
     {

@@ -51,7 +51,13 @@ window.SITE_TOOLS = {
   // 每週精選開源/新工具 —— 排程自動更新
   weekly: {
     week: "2026-07-06",
-    note: "首批精選將於每週排程啟用後自動更新（GitHub Trending / Hugging Face / Product Hunt）",
-    items: []
+    note: "本週精選來自 GitHub Trending 與 Product Hunt",
+    items: [
+      { name: "Wispr Flow", price: "免費試用/付費約 $15/月", desc: "跨 App 語音輸入工具，口述後 AI 自動整理成通順文字，可直接餵給 Claude、ChatGPT 或任何輸入框", fit: "⭐ 打字慢、常需要邊想邊講的人，上手門檻最低，最適合非工程師", link: "https://wisprflow.ai" },
+      { name: "Dify", price: "免費(自架)/付費(雲端)", desc: "視覺化拖拉建立 AI 應用與 Agent 工作流，內建 RAG 知識庫管理與 MCP 整合", fit: "想做客製 AI 應用但不想寫程式的人；比 n8n 更聚焦在對話型/知識庫場景", link: "https://dify.ai" },
+      { name: "Open WebUI", price: "免費（開源）", desc: "自架的 ChatGPT 風格網頁介面，可串接 Ollama 等本機或線上模型", fit: "重視資料隱私、想用本機模型但要好操作介面的人；需要一點自架基礎", link: "https://github.com/open-webui/open-webui" },
+      { name: "OpenClaw", price: "免費（開源）", desc: "可在 WhatsApp、Telegram、Slack、iMessage 等你已在用的通訊軟體裡直接對話的個人 AI 助理", fit: "想在熟悉的聊天工具裡用 AI 而非再開一個新 App 者；需要一定技術背景自行架設，非工程師較吃力", link: "https://github.com/openclaw/openclaw" },
+      { name: "Ollama Cloud", price: "免費(本機)/付費 Pro $20、Max $100 每月", desc: "本機 LLM 生態龍頭 Ollama 新增雲端運算方案，可混合本機與雲端彈性切換", fit: "已在用 Ollama 跑本機模型、想要更強算力時的自然升級路徑", link: "https://ollama.com" }
+    ]
   }
 };
