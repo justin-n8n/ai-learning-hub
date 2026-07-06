@@ -59,5 +59,111 @@ window.SITE_TOOLS = {
       { name: "folk", price: "未公開詳細定價", desc: "把零散的簡訊、聊天訊息自動整理成可追蹤的任務或客戶關係紀錄", fit: "用簡訊/文字溝通管理客戶或人脈的小型工作者適合，屬輕量低學習成本工具", link: "https://www.producthunt.com" },
       { name: "Typeahead", price: "新上架，個人版免費/小額訂閱", desc: "Mac 上的智慧自動完成工具，在任何 App 裡預測並補完你正在打的文字", fit: "⭐ 大量打字工作者（寫作者、客服）想省時間，即裝即用零學習曲線", link: "https://www.producthunt.com" }
     ]
+  },
+  // 教學影片（本週新增）—— 每週排程搜尋 YouTube 更新；key 需與 categories 內工具 name 完全一致
+  toolVideos: {
+    "Claude": [
+      { t: "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院", u: "https://www.youtube.com/watch?v=5Aha8QOVke4" }
+    ],
+    "ChatGPT": [
+      { t: "【2026最新】你不知道的20種使用ChatGPT的方法！隱藏功能和技巧完整教學", u: "https://www.youtube.com/watch?v=04cz8zNr33Y" },
+      { t: "ChatGPT Skills 教學：一鍵標準化輸出內容，告別每次重寫 Prompt", u: "https://www.youtube.com/watch?v=vB9n85aeufA" }
+    ],
+    "Notion AI": [
+      { t: "最新 Notion AI 自動化應用教學｜完整比較 ChatGPT 更好上手的 AI 工具", u: "https://www.youtube.com/watch?v=Hq56E4fmP6o" },
+      { t: "線上課程買了看不完？教你用 Notion AI「會議功能」無腦學習", u: "https://www.youtube.com/watch?v=elK4w0B5-T8" }
+    ],
+    "沉浸式翻譯": [
+      { t: "超強AI翻譯插件，全新6大使用方法｜沉浸式翻译", u: "https://www.youtube.com/watch?v=amru_En_z74" },
+      { t: "教你快速上手網頁翻譯神器【沉浸式翻譯】", u: "https://www.youtube.com/watch?v=L6tCcDqbA_0" }
+    ],
+    "DeepL": [
+      { t: "How To Use DeepL Translator For Beginners (Step-By-Step) | DeepL Tutorial 2025", u: "https://www.youtube.com/watch?v=N5lY9bPU_iA" }
+    ],
+    "Sora": [
+      { t: "OpenAI 全球熱爆 Sora2 教學｜AI 一鍵複製人樣同聲線？！用文字生成 20 秒短片", u: "https://www.youtube.com/watch?v=jZ1_YRRSicg" },
+      { t: "必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN）", u: "https://www.youtube.com/watch?v=5XgvjKV1iEw" }
+    ],
+    "Runway": [
+      { t: "Runway Gen 4.5 教學：5分鐘學會使用方法", u: "https://www.youtube.com/watch?v=w_kKWDyPZnI" }
+    ],
+    "HeyGen": [
+      { t: "HeyGen AI - Full Tutorial 2026: BEST AI Avatar Video Generator", u: "https://www.youtube.com/watch?v=eFwx6fyDOmU" }
+    ],
+    "CapCut": [
+      { t: "【CapCut 教學 2026】新手完整入門指南：從0開始學會影片剪輯", u: "https://www.youtube.com/watch?v=o2Z2yTrgayk" },
+      { t: "【免費剪輯神器】CapCut 手機剪輯教學：15分鐘做出高質感影片", u: "https://www.youtube.com/watch?v=K3cax7G8cjM" }
+    ],
+    "Midjourney": [
+      { t: "Midjourney 保姆級完整教學01：10分鐘學會Midjourney，如何註冊、使用", u: "https://www.youtube.com/watch?v=VSzIn_kkwiQ" }
+    ],
+    "DALL·E（ChatGPT 內建）": [
+      { t: "DALL·E 3快速上手教學：比Midjourney更好用的免費AI繪圖工具，支持中文提示詞，如何在ChatGPT開啟DALL·E 3", u: "https://www.youtube.com/watch?v=Wav60DMzP74" }
+    ],
+    "Stable Diffusion": [
+      { t: "Stable Diffusion 最新版安裝：基本操作教學：繁體中文介面設定教學", u: "https://www.youtube.com/watch?v=urF_6GSALWo" }
+    ],
+    "Claude Code": [
+      { t: "還在羨慕別人用 AI 開發酷產品？Claude Code 保姆級教學讓你輕鬆體驗 Vibe Coding，動動嘴就能做出Anything！", u: "https://www.youtube.com/watch?v=2pM-7fBXc_M" },
+      { t: "FULL Claude Code Tutorial For Beginners in 2026! (Become a PRO)", u: "https://www.youtube.com/watch?v=X_zVY3-mbM8" }
+    ],
+    "Cursor": [
+      { t: "【Cursor 教學】入門到實戰，用AI Agent自動化你的工作流！", u: "https://www.youtube.com/watch?v=kVniOF36GEk" }
+    ],
+    "GitHub Copilot": [
+      { t: "GitHub Copilot CLI 實戰教學：從修 Bug 到自動建立 Pull Request（含 MCP 設定與切換 Model 示範）", u: "https://www.youtube.com/watch?v=KVht2h5fb9E" }
+    ],
+    "ElevenLabs": [
+      { t: "ElevenLabs 超擬真語音教學：結合 n8n 自動生成 AI 旁白！", u: "https://www.youtube.com/watch?v=T-oQOu_ZltM" }
+    ],
+    "Suno": [
+      { t: "Suno AI Advanced Tutorial 2026 (In-Depth Tutorial)", u: "https://www.youtube.com/watch?v=sWg3ehNd29Y" }
+    ],
+    "Whisper": [
+      { t: "How To Install Whisper Ai Step-By-Step (Beginner Setup Guide) 2026 (Free Version)", u: "https://www.youtube.com/watch?v=mJPtmzcyoyk" }
+    ],
+    "Gamma": [
+      { t: "製作 PPT 太麻煩？Gamma AI，幾分鐘搞定高質感簡報，從排版到內容生成一站式解決", u: "https://www.youtube.com/watch?v=9PgHe_ThV4U" },
+      { t: "它竟把6千字長文快速轉成簡報？內容處理量更大贏 ChatGPT？還能用 AI 提示語生成最精準 PPT 需求！｜Gamma｜泛科學院", u: "https://www.youtube.com/watch?v=f0Tw2w-WxRs" }
+    ],
+    "Napkin": [
+      { t: "Napkin AI Complete Tutorial 2026 | Turn Your Text Into Stunning Visuals in Seconds with Napkin AI", u: "https://www.youtube.com/watch?v=ozHDhKGhdEE" }
+    ],
+    "Claude（檔案分析）": [
+      { t: "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院", u: "https://www.youtube.com/watch?v=5Aha8QOVke4" }
+    ],
+    "Perplexity": [
+      { t: "【最完整教學】Perplexity Comet AI 瀏覽器 10 大神級用法：工作效率、研究搜尋、生活資訊一次搞定！", u: "https://www.youtube.com/watch?v=oLn8dbfXH-0" },
+      { t: "10分鐘學會用 Perplexity，AI 教父都愛用！｜張邁可", u: "https://www.youtube.com/watch?v=SiCoXrlobec" }
+    ],
+    "NotebookLM": [
+      { t: "NotebookLM 完整教學！93%的人還不知道的8個隱藏用法，完勝ChatGPT", u: "https://www.youtube.com/watch?v=zgWerTIynVA" },
+      { t: "別再忙著手抄筆記！NotebookLM教學｜YT影片、音檔秒變逐字稿與重點摘要", u: "https://www.youtube.com/watch?v=-BhyDONU8q8" }
+    ],
+    "n8n": [
+      { t: "超詳細教學：n8n AI 實作0基礎入門到進階（AI Agent／LLM／RAG／Webhook）", u: "https://www.youtube.com/watch?v=vvqhzbp4J5A" },
+      { t: "n8n 手把手完整教學：從基礎到進階，學習簡單強大的流程自動化工作流", u: "https://www.youtube.com/watch?v=sYWCxgEF_yY" }
+    ],
+    "Cowork": [
+      { t: "FULL Claude Cowork Tutorial For Beginners in 2026! (Zero to PRO)", u: "https://www.youtube.com/watch?v=JdQ_FHgP5ms" },
+      { t: "The ONLY Claude Cowork Tutorial You'll Ever Need in 2026", u: "https://www.youtube.com/watch?v=PnPsf-hwGtI" }
+    ],
+    "Make": [
+      { t: "告別重複作業地獄！Make.com 零基礎上手～不懂程式碼照樣也能搞定辦公室流程自動化", u: "https://www.youtube.com/watch?v=_Fz-Gmrr5B4" }
+    ],
+    "Zapier": [
+      { t: "Zapier MCP 教學，如何連結到 Manus 等 AI Agent｜CLI 取代不了 MCP 的原因", u: "https://www.youtube.com/watch?v=uZ4i3g_WoLw" }
+    ]
+  },
+  // 教學影片歷史累積（每工具上限 30 支，超過砍最舊）—— 排程自動維護
+  toolVideosHistory: {
+    "Claude": [], "ChatGPT": [], "Notion AI": [], "沉浸式翻譯": [], "DeepL": [],
+    "Sora": [], "Runway": [], "HeyGen": [], "CapCut": [],
+    "Midjourney": [], "DALL·E（ChatGPT 內建）": [], "Stable Diffusion": [],
+    "Claude Code": [], "Cursor": [], "GitHub Copilot": [],
+    "ElevenLabs": [], "Suno": [], "Whisper": [],
+    "Gamma": [], "Napkin": [], "Claude（檔案分析）": [],
+    "Perplexity": [], "NotebookLM": [],
+    "n8n": [], "Cowork": [], "Make": [], "Zapier": []
   }
 };
