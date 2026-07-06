@@ -29,6 +29,45 @@ window.SITE_ARTICLES = {
   // 自動抓取的文章 —— {date, author, title, points:[], verdict, url}
   articles: [
     {
+      date: "2026-07-06",
+      author: "Simon Willison",
+      title: "sqlite-utils 4.0rc2/rc3 更新：複合外鍵支援與大小寫不敏感欄位",
+      points: [
+        "作者持續用 Claude Fable 5 與 GPT-5.5 協作，把累積已久的 issue/PR 一次清空，changelog 因此越滾越大",
+        "rc3 新增「複合外鍵（compound foreign keys）」的內省與建立支援，屬於不相容的重大變更",
+        "新版遵循 SQLite 慣例，將欄位名稱比對改為大小寫不敏感",
+        "延續前一天 $149 讓 AI 衝刺大改版的做法，展示 AI coding agent 在真實開源專案中的具體產出"
+      ],
+      verdict: "偏技術向，適合有在維護開源套件、或想了解 AI 協作實際產出品質的人參考",
+      url: "https://simonwillison.net/2026/Jul/6/sqlite-utils/"
+    },
+    {
+      date: "2026-07-02",
+      author: "Simon Willison（引述 Geoffrey Litt）",
+      title: "「先理解才能參與」：AI 寫的程式碼越滾越大，人跟得上嗎？",
+      points: [
+        "引用 Geoffrey Litt 在 AI Engineer 大會的核心觀點：Understand to participate（要理解才能參與）",
+        "隨著 coding agent 一次能生成的變更越來越大、越複雜，人類理解若跟不上，會累積「認知債務」",
+        "唯有對程式碼／內容有足夠深入的理解，才能在與 AI 協作過程中持續發揮創意判斷",
+        "提醒即使工具再強，使用者仍需要投入心力「消化」AI 產出，而不是照單全收"
+      ],
+      verdict: "簡短但點出 AI 協作時代最容易被忽略的風險，不論工程師或一般使用者都值得一讀",
+      url: "https://simonwillison.net/2026/Jul/2/understand-to-participate/"
+    },
+    {
+      date: "2026-06-29",
+      author: "雷蒙三十（侯智薰）",
+      title: "31 歲上半年總結：AI 時代給我的 19 句生活體悟",
+      points: [
+        "以 19 句短語取代長篇復盤，涵蓋選擇、意義與工作哲學",
+        "談 AI 時代的判斷與責任：「AI 可以給你一百個方案，但只有你的判斷能決定要哪個」",
+        "分享「輸出即學習」「用日記記錄小念頭」等個人習慣，反映他如何把 AI 融入日常創作流程",
+        "文中連結多篇他過去半年的週報，可作為觀察他個人工作法演變的索引"
+      ],
+      verdict: "偏個人反思而非工具教學，想找生產力乾貨可略過，但作為華文圈少見的「AI 時代生活哲學」文章值得一讀",
+      url: "https://raymondhouch.com/yuiraymond/2026-midyear-life-reflections/"
+    },
+    {
       date: "2026-07-05",
       author: "Simon Willison",
       title: "花 $149 讓 Claude Fable 幫忙把 sqlite-utils 改到 4.0 正式版",

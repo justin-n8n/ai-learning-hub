@@ -28,7 +28,7 @@ window.SITE_KNOWLEDGE = {
     {
       name: "Gemini（Google）",
       updated: "2026-07-06",
-      body: "與 Google 全家桶深度整合（Gmail、Docs、試算表）。7 月更新：Gemini 3.5 Pro 正式開放使用（原訂 6 月延後至本月）；圖像/影片生成新增 Nano Banana 2 Lite（快速低成本生圖）與 Gemini Omni Flash（對話式影片生成與編輯）。特色：NotebookLM（研究神器，免費）、AI Studio（開發者平台）、超長上下文。強項：多模態、Google 服務整合、免費額度大方。",
+      body: "與 Google 全家桶深度整合（Gmail、Docs、試算表）。7 月更新：Gemini 3.5 Pro 正式開放使用（原訂 6 月延後至本月）；圖像/影片生成新增 Nano Banana 2 Lite（快速低成本生圖）與 Gemini Omni Flash（對話式影片生成與編輯）。本週新增：Gemini Spark（macOS 版個人 AI 代理，可自主執行桌面任務）開始上線；Gemini Omni 影片功能擴大支援自訂 AI 分身頭像，向 18 歲以上訂閱用戶全球開放。特色：NotebookLM（研究神器，免費）、AI Studio（開發者平台）、超長上下文。強項：多模態、Google 服務整合、免費額度大方。",
       learn: "入門：NotebookLM 上傳文件做摘要 → 進階：Gemini in Workspace 處理郵件文件"
     },
     {

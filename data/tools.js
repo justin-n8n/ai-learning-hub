@@ -51,13 +51,13 @@ window.SITE_TOOLS = {
   // 每週精選開源/新工具 —— 排程自動更新
   weekly: {
     week: "2026-07-06",
-    note: "本週精選來自 GitHub Trending 與 Product Hunt",
+    note: "本週精選來自 GitHub Trending、Hugging Face 與 Product Hunt",
     items: [
-      { name: "Wispr Flow", price: "免費試用/付費約 $15/月", desc: "跨 App 語音輸入工具，口述後 AI 自動整理成通順文字，可直接餵給 Claude、ChatGPT 或任何輸入框", fit: "⭐ 打字慢、常需要邊想邊講的人，上手門檻最低，最適合非工程師", link: "https://wisprflow.ai" },
-      { name: "Dify", price: "免費(自架)/付費(雲端)", desc: "視覺化拖拉建立 AI 應用與 Agent 工作流，內建 RAG 知識庫管理與 MCP 整合", fit: "想做客製 AI 應用但不想寫程式的人；比 n8n 更聚焦在對話型/知識庫場景", link: "https://dify.ai" },
-      { name: "Open WebUI", price: "免費（開源）", desc: "自架的 ChatGPT 風格網頁介面，可串接 Ollama 等本機或線上模型", fit: "重視資料隱私、想用本機模型但要好操作介面的人；需要一點自架基礎", link: "https://github.com/open-webui/open-webui" },
-      { name: "OpenClaw", price: "免費（開源）", desc: "可在 WhatsApp、Telegram、Slack、iMessage 等你已在用的通訊軟體裡直接對話的個人 AI 助理", fit: "想在熟悉的聊天工具裡用 AI 而非再開一個新 App 者；需要一定技術背景自行架設，非工程師較吃力", link: "https://github.com/openclaw/openclaw" },
-      { name: "Ollama Cloud", price: "免費(本機)/付費 Pro $20、Max $100 每月", desc: "本機 LLM 生態龍頭 Ollama 新增雲端運算方案，可混合本機與雲端彈性切換", fit: "已在用 Ollama 跑本機模型、想要更強算力時的自然升級路徑", link: "https://ollama.com" }
+      { name: "Mem0", price: "免費版(1萬筆記憶)/Starter $19/月/Pro $249/月", desc: "讓 AI 助理「記得住」你過去對話與偏好的記憶層工具，串進 AI 代理後就不用每次重講背景", fit: "偏自動化玩家（如串 n8n 流程）值得投資；一般用戶等 ChatGPT/Claude 內建記憶更成熟即可，非必裝", link: "https://github.com/mem0ai/mem0" },
+      { name: "Databox MCP", price: "14天免費試用，需 Databox 付費帳號(Analyst $64/月起)", desc: "直接在 Claude、n8n 裡用自然語言問公司業績數據，自動生成圖表分析", fit: "已在用 Claude/n8n 且需要盯業績報表的小團隊主管值得一試；純個人用戶可跳過", link: "https://databox.com/mcp" },
+      { name: "Mina Meeting Assistant", price: "新上架，多為免費試用", desc: "自動加入視訊會議、做摘要與待辦事項整理的 AI 會議助手", fit: "⭐ 每週開很多會、需要快速回顧重點的上班族很划算，幾乎零設定即可上手", link: "https://www.producthunt.com" },
+      { name: "folk", price: "未公開詳細定價", desc: "把零散的簡訊、聊天訊息自動整理成可追蹤的任務或客戶關係紀錄", fit: "用簡訊/文字溝通管理客戶或人脈的小型工作者適合，屬輕量低學習成本工具", link: "https://www.producthunt.com" },
+      { name: "Typeahead", price: "新上架，個人版免費/小額訂閱", desc: "Mac 上的智慧自動完成工具，在任何 App 裡預測並補完你正在打的文字", fit: "⭐ 大量打字工作者（寫作者、客服）想省時間，即裝即用零學習曲線", link: "https://www.producthunt.com" }
     ]
   }
 };
