@@ -105,11 +105,29 @@ function renderNews(cat){
 })();
 
 /* ---------- 工具庫 ---------- */
-var T = window.SITE_TOOLS || {categories:[],weekly:{items:[]}};
+var T = window.SITE_TOOLS || {categories:[],weekly:{items:[]},toolVideos:{},toolVideosHistory:{}};
+function videoLinks(list){
+  return (list||[]).map(function(v){
+    return '<a href="'+esc(v.u)+'" target="_blank" rel="noopener">▶️ '+esc(v.t)+'</a>';
+  }).join("");
+}
+function toolVideosHtml(name){
+  var fresh = (T.toolVideos||{})[name] || [];
+  var hist = (T.toolVideosHistory||{})[name] || [];
+  if(!fresh.length && !hist.length) return "";
+  var html = '<details class="tool-videos"><summary>🎬 教學影片'+(fresh.length?' ('+fresh.length+' 新)':'')+'</summary>';
+  html += videoLinks(fresh);
+  if(hist.length){
+    html += '<div class="yt-history"><div class="yt-history-label">📼 過往教學影片</div>'+videoLinks(hist)+'</div>';
+  }
+  html += '</details>';
+  return html;
+}
 function toolHtml(t, catName){
   var id = "t_" + t.name.replace(/[^a-z0-9一-鿿]/gi,"");
   return '<div class="tool-card"><h4><a href="'+esc(t.link)+'" target="_blank" rel="noopener">'+esc(t.name)+'</a><span class="price">'+esc(t.price)+'</span></h4>' +
     '<p>'+esc(t.desc)+'</p><div class="tool-fit">👤 適合：'+esc(t.fit)+'</div>' +
+    toolVideosHtml(t.name) +
     '<div class="act-btns">'+favBtn(id,"工具",t.name,t.link)+'</div></div>';
 }
 function renderTools(catId){
