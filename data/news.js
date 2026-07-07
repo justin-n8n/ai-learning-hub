@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-06",
+  lastUpdated: "2026-07-08",
   picks: [
+    {
+      date: "2026-07-07",
+      stars: 4,
+      category: "Anthropic",
+      title: "Claude Fable 5 全球重新開放，Claude Mythos 5 開放部分美國企業試用",
+      summary: "隨著出口管制鬆綁，Anthropic 重新在全球開放 Claude Fable 5 的存取權限，同時將仍在測試中的 Claude Mythos 5 開放給部分美國企業組織試用，顯示 Anthropic 在地緣政治限制放鬆後加快旗艦模型的全球佈局。",
+      why: "日後在 Claude Platform 或各方案上若看到 Fable 5、Mythos 5 選項，代表能接觸到 Anthropic 目前最前沿的模型陣容，可以持續留意何時開放給一般帳號。",
+      source: "AI Weekly",
+      url: "https://aiweekly.co/ai-news-today/anthropic-news"
+    },
+    {
+      date: "2026-07-03",
+      stars: 4,
+      category: "開源",
+      title: "個人 AI 助理 OpenClaw 狂飆破 21 萬星，本地優先浪潮成形",
+      summary: "主打完全在自己裝置上執行的開源個人 AI 助理 OpenClaw，自年初爆紅以來持續狂飆，數天內從 9,000 星衝上 6 萬星，如今累計已突破 21 萬顆 GitHub star。它可作為本地閘道，串接 WhatsApp、Telegram、Slack、Discord、Signal、iMessage 等 50 多種服務，資料不需交給雲端。",
+      why: "想玩自動化、跨平台整合（類似 n8n 的串接思路）的人，可以觀察這種本地優先、隱私優先架構的設計取捨，說不定能搬進自己的工作流。",
+      source: "DEV Community",
+      url: "https://dev.to/sonotommy/10-best-open-source-ai-agents-for-2026-2l6p"
+    },
+    {
+      date: "2026-07-01",
+      stars: 4,
+      category: "Google",
+      title: "Gemini Spark 桌面版登陸 Mac，搶攻代理式助理戰場",
+      summary: "Google 將代理式助理 Gemini Spark 帶到 macOS 桌面版，新增即時主題追蹤、串接 Google Tasks 與 Google Keep 等功能，正面迎戰 Claude Desktop、Microsoft Copilot、OpenClaw 等桌面 AI 助理。",
+      why: "桌面型 AI 助理的競爭會直接牽動日常工具選擇，可以比較看看 Gemini Spark 跟慣用的 Claude、Cowork 工作流程差在哪裡。",
+      source: "TechCrunch",
+      url: "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
+    },
+    {
+      date: "2026-07-07",
+      stars: 3,
+      category: "產業",
+      title: "微軟悄悄用自研 MAI 模型取代 Excel、Outlook 裡的 OpenAI、Anthropic",
+      summary: "彭博社報導，微軟開始在 Excel、Outlook 等軟體中，把原本呼叫 OpenAI、Anthropic 的部分請求改由自研 MAI 模型處理，目前每週已有數萬次提示由 MAI 完成，顯示微軟正加速降低對外部 AI 供應商的依賴。",
+      why: "平常工作用的 Office 全家桶背後模型正在悄悄換血，了解這類供應鏈調整，有助於判斷未來工具選擇與體驗落差。",
+      source: "Bloomberg",
+      url: "https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps"
+    },
+    {
+      date: "2026-07-07",
+      stars: 3,
+      category: "政策",
+      title: "伊利諾州跟進紐約、加州，要求主要 AI 模型接受第三方安全稽核",
+      summary: "伊利諾州於 7 月 7 日跟進紐約、加州腳步，要求主要 AI 模型開發商揭露安全措施並通報重大安全事件，並自 2027 年起須接受獨立第三方安全稽核。",
+      why: "各州陸續立法規範 AI 安全揭露，代表 AI 治理正從自願性準則走向強制稽核，是觀察 AI 產業合規走向的重要指標。",
+      source: "iThome",
+      url: "https://www.ithome.com.tw/news"
+    }
+  ],
+  archive: [
     {
       date: "2026-07-01",
       stars: 5,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       why: "即使是 Meta 這樣的巨頭，AI 代理落地也充滿波折——提醒我們評估任何 AI 工具承諾時，都該保持務實與查證的態度。",
       source: "BuildFastWithAI",
       url: "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-06-26",
       stars: 5,
