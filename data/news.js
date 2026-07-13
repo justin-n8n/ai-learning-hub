@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-08",
+  lastUpdated: "2026-07-13",
   picks: [
+    {
+      date: "2026-07-13",
+      stars: 5,
+      category: "工具",
+      title: "Notion Custom Agents 大擴充，Claude、Cursor 成首批「外部代理」正式上線",
+      summary: "Notion 為 Custom Agents 新增 Mercury、Mixpanel、Miro、Box、ClickHouse 五個連接器，並開放 Worker 跨團隊共用；Claude 與 Cursor 成為首批可端對端接手工作流程的 External Agent，AI 會議記錄也升級為依麥克風判斷發言人。Notion MCP 使用量近一個月成長 10 倍。",
+      why: "如果你在 Notion 做知識管理，這代表 Claude 之後能更深入地接手你的頁面整理、任務串接與流程自動化，是生產力工具與 AI 代理結合的重要進展。",
+      source: "TechCrunch",
+      url: "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/"
+    },
+    {
+      date: "2026-07-10",
+      stars: 5,
+      category: "OpenAI",
+      title: "OpenAI 發布 ChatGPT Work 與 GPT-5.6，正式進軍企業「超級助理」市場",
+      summary: "OpenAI 於 7 月 9 日推出 GPT-5.6（分三種尺寸）及 ChatGPT Work，將 Codex 整合進 ChatGPT 桌面版，並提供 15 項整合的外掛目錄與網站建置功能。ChatGPT Work 先開放 Pro、Enterprise、Edu 用戶，之後擴及 Plus、Business。",
+      why: "ChatGPT Work 主打「一站式代理型生產力」，跟 Cowork、Claude Code 的定位相近，值得比較功能差異，評估是否值得納入日常工作流。",
+      source: "CGTN",
+      url: "https://news.cgtn.com/news/2026-07-10/OpenAI-unveils-super-app-as-rivalry-with-Anthropic-intensifies-1OF7nrvaglG/p.html"
+    },
+    {
+      date: "2026-07-12",
+      stars: 4,
+      category: "Google",
+      title: "Gemini 3.5 Pro 將於 7/17 全面上市，200 萬 token 上下文創新高",
+      summary: "Google DeepMind 的 Gemini 3.5 Pro 預計 7 月 17 日正式開放，具備 200 萬 token 上下文視窗（現有前沿模型的兩倍），並提供需訂閱每月 250 美元 Ultra 方案才能使用的 Deep Think 深度推理模式。此次發布落在 GPT-5.6、Grok 4.5 之後，是 AI 界近期最密集的競爭週。",
+      why: "超大上下文代表能一次丟進更多文件、長對話或整個知識庫做分析，若你常需要處理大量資料，可留意 Gemini 3.5 Pro 上市後的實測評比。",
+      source: "buildfastwithai",
+      url: "https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026"
+    },
+    {
+      date: "2026-07-13",
+      stars: 4,
+      category: "開源",
+      title: "n8n 上半年新增逾 35 個節點，AI Agent 節點全面重構支援多模型",
+      summary: "n8n 在 2026 上半年新增超過 35 個節點，包括 Anthropic Claude、Google Gemini、Perplexity、ElevenLabs、Groq 專用節點；AI Agent 節點重構後可跨 Claude、GPT-4o、Gemini、Mistral 做工具呼叫，並推出支援分組節點群的空間化 Canvas 介面。",
+      why: "你在用 n8n 做自動化，這波更新代表串接更多 AI 模型與服務會更省事，值得找時間試試新的 AI Agent 節點跟 Canvas 介面。",
+      source: "Nodesify",
+      url: "https://nodesify.com/blog/n8n-workflow-automation-guide-2026"
+    },
+    {
+      date: "2026-07-13",
+      stars: 3,
+      category: "Anthropic",
+      title: "Anthropic 推出「反思儀表板」測試版，幫用戶檢視 AI 使用習慣",
+      summary: "Anthropic 為 Claude 推出 Beta 反思儀表板，協助用戶追蹤、視覺化並回顧自己的使用模式，可設定免打擾時段，並提供更有意圖地使用 AI 的洞察與提示。目前開放給有開啟 Memory 功能的 Free、Pro、Max 用戶，網頁版與桌面版皆可用。",
+      why: "與其埋頭一直用 AI，不如偶爾回顧自己是怎麼用的——這個功能很適合想建立健康 AI 使用習慣、避免過度依賴的人試試看。",
+      source: "Anthropic Newsroom",
+      url: "https://www.anthropic.com/news"
+    }
+  ],
+  archive: [
     {
       date: "2026-07-07",
       stars: 4,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       why: "各州陸續立法規範 AI 安全揭露，代表 AI 治理正從自願性準則走向強制稽核，是觀察 AI 產業合規走向的重要指標。",
       source: "iThome",
       url: "https://www.ithome.com.tw/news"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-07-01",
       stars: 5,
