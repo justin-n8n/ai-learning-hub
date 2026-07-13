@@ -1,7 +1,7 @@
 // 大神文章區資料檔 —— 每週排程自動抓取新文章 + AI 摘要
 // leaders: 追蹤名單（可自行增減）；articles: 自動抓取的文章摘要
 window.SITE_ARTICLES = {
-  lastUpdated: "2026-07-06",
+  lastUpdated: "2026-07-13",
   leaders: {
     intl: [
       { name: "Ethan Mollick", outlet: "One Useful Thing", focus: "AI 在工作與學習的實際應用，最適合非工程師", url: "https://www.oneusefulthing.org/" },
@@ -28,6 +28,46 @@ window.SITE_ARTICLES = {
   },
   // 自動抓取的文章 —— {date, author, title, points:[], verdict, url}
   articles: [
+    {
+      date: "2026-07-12",
+      author: "雷蒙三十（侯智薰）",
+      title: "雷蒙週報 #184：上半年總結、免費開源「說人話」去 AI 味寫作 SKILL、AI Agent 該不該換家",
+      points: [
+        "免費開源釋出「說人話」（speak-human-tw）SKILL，能抓出中文文章 35 種以上的「AI 寫作痕跡」並給改寫建議，可直接整合進個人內容工作流",
+        "分享與強模型協作心法：不要把「該怎麼做」寫死進提示詞，讓 AI 保留判斷空間，並把「產出計畫」與「大量執行」分工給不同工具",
+        "深入比較 Zeabur 漲價後與 Vercel、Supabase、Cloudflare、Netlify 的取捨，重點在養 Bot、n8n、資料庫等長期服務該怎麼選平台",
+        "附上與電腦玩物站長 Esor 直播對談重點整理，談 AI 時代如何用 Agent 接手第二大腦整理工作",
+        "記錄 Threads 帳號故障時直接用官方 API 自寫發文介面頂著用，示範工具失靈時如何用 AI 自救"
+      ],
+      verdict: "值得精讀——「說人話」SKILL 和平台部署比較，很適合正在摸索 AI 寫作與自動化的讀者",
+      url: "https://raymondhouch.com/newsletter/184/"
+    },
+    {
+      date: "2026-07-08",
+      author: "閱讀前哨站（瓦基）",
+      title: "〈AI 瓦基第二大腦〉對談吳淡如：AI 學不來的是你的個性",
+      points: [
+        "吳淡如是重度 AI 使用者（一天用 AI 8 小時、訂最高階方案），卻靠自己動筆的真實文章賺到創作者分潤，凸顯「AI 磨平一切後，帶稜角的真人反而稀有」",
+        "她把自己的畫作餵給 AI 模仿卻學不像，體悟「不完美是個人風格的資產」，作者補充：是磨過技藝後留下的不完美才珍貴",
+        "分享工作法：把耗時的 AI 推理過程（13-20 分鐘）拿去運動，把「慢思考」時間從腦袋轉移到身體",
+        "吳淡如建議課程命名要凸顯「目的性」而非只是聰明，點出行銷文案設計上的觀察"
+      ],
+      verdict: "非工具教學文，而是心法分享，適合已在用 AI 工作、想思考「AI 學不會什麼」的讀者",
+      url: "https://readingoutpost.com/ai-cannot-learn-your-personality/"
+    },
+    {
+      date: "2026-07-08",
+      author: "Simon Willison",
+      title: "GPT-Live 登場：ChatGPT 語音模式終於升級",
+      points: [
+        "OpenAI 換新 ChatGPT 語音模式背後的模型，作者搶先體驗數週後認為進步明顯",
+        "遇到需要網路搜尋或深度推理的難題時，會自動把任務轉交背景中的前沿模型處理，同時語音對話不中斷",
+        "舊版語音模式知識停留在 2024 年、能力偏弱，新模型讓語音助理重新變得實用",
+        "作者提到一個小 bug：模型一度會突然打斷使用者、對非玩笑的話發笑，回報後 OpenAI 已調整改善"
+      ],
+      verdict: "消費端更新而非深度教學，但點出「語音助理終於堪用」的轉折，適合想用語音跟 AI 討論規劃的人快速瀏覽",
+      url: "https://simonwillison.net/2026/Jul/8/introducing-gptlive/"
+    },
     {
       date: "2026-07-06",
       author: "Simon Willison",
