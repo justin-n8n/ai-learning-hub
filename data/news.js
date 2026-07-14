@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-13",
+  lastUpdated: "2026-07-14",
   picks: [
+    {
+      date: "2026-07-07",
+      stars: 5,
+      category: "Anthropic",
+      title: "Claude Cowork 正式擴展至 Web 與 Mobile，跨裝置接續工作",
+      summary: "Anthropic 宣布 Claude Cowork（原本僅限桌面版）開放 Max 方案用戶使用網頁版與行動版 Beta，並將陸續開放更多方案。Cowork session 改為預設在雲端執行，使用者可以在電腦上開始任務，用手機查看進度，即使筆電闔上也能接續完成；Chat 與 Cowork 介面也在網頁與桌面版整合為同一個工作空間。使用數據顯示，Cowork 最大宗用途（33.4%）是整理業務流程，例如彙整分散更新、建立入職清單、核對試算表，軟體開發僅佔 8.7%。",
+      why: "你正在用的 Cowork 現在能跨裝置接續任務，等於在手機上也能查看甚至延續今天交辦的工作，非常值得馬上體驗看看。",
+      source: "TechCrunch / VentureBeat",
+      url: "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
+    },
+    {
+      date: "2026-07-13",
+      stars: 4,
+      category: "OpenAI",
+      title: "OpenAI 推出全雙工語音 AI「GPT-Live」，邊聽邊想邊說",
+      summary: "OpenAI 發布新語音 AI 產品 GPT-Live，採用「全雙工（full-duplex）」設計，能同時聆聽、思考與說話，不需要等對方講完才回應；具備即時翻譯、對話中即時網路搜尋，以及把任務交接給其他 AI 代理人的能力。",
+      why: "如果你常需要跨語言溝通或想用語音快速下指令做事，GPT-Live 這種「邊聽邊想」的互動方式，可能比現有語音助理更貼近真人對話的節奏。",
+      source: "BuildFastWithAI",
+      url: "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
+    },
+    {
+      date: "2026-06-14",
+      stars: 4,
+      category: "工具",
+      title: "Heptabase 更新 Goal Discovery：AI 自動讀懂你白板上正在成形的學習方向",
+      summary: "Heptabase 公開路線圖與更新日誌顯示，「Goal Discovery」功能持續強化：AI 會讀取使用者近期的白板內容，主動歸納出正在成形的學習方向，並讓使用者選擇要納入分析的白板、隨時重新探索目標；同時 AI Agent 也新增 Goal Page 與 Skills 相關功能，可協助管理筆記、標籤、白板與課程進度。",
+      why: "如果你用 Heptabase 做視覺化筆記與學習規劃，Goal Discovery 能幫你從一堆卡片和白板中，自動看出自己實際在往哪個方向鑽研，省去手動整理的功夫。",
+      source: "Heptabase Public Wiki",
+      url: "https://wiki.heptabase.com/changelog"
+    },
+    {
+      date: "2026-07-11",
+      stars: 3,
+      category: "產業",
+      title: "蘋果控告 OpenAI 竊取商業機密，馬斯克與奧特曼隔空交火",
+      summary: "蘋果於 7 月 11 日對 OpenAI 提起訴訟，指控其竊取商業機密，訴訟焦點在於超過 400 名前蘋果員工（多來自晶片設計與裝置端 AI 團隊）跳槽至 OpenAI。消息傳出後，Elon Musk 在 X 上轉發並冷嘲 OpenAI 的挖角手法，Sam Altman 隨即反擊，兩人隔空交火延燒至隔日。",
+      why: "科技巨頭間的人才與專利爭奪戰，往往預示著下一波裝置端 AI（on-device AI）競賽的方向，值得留意後續蘋果自家 AI 策略會如何調整。",
+      source: "unrot.co",
+      url: "https://unrot.co/blogs/today-top-10-ai-news-july-13-2026"
+    },
+    {
+      date: "2026-06-29",
+      stars: 3,
+      category: "開源",
+      title: "美團開源 1.6 兆參數模型 LongCat-2.0，訓練全程未用美系晶片",
+      summary: "中國美團於 6 月 29 日以 MIT 授權開源 LongCat-2.0，這是一款 1.6 兆參數的混合專家（MoE）模型，平均每個 token 啟用 480 億參數，支援原生百萬 token 上下文，訓練完全使用中國自製 ASIC 晶片、未使用任何美系限制晶片；在 SWE-bench Pro 測試中以 59.5% 的成績略勝 GPT-5.5 的 58.6%。",
+      why: "這則新聞讓你了解開源模型與晶片自主化的最新進展，是掌握全球 AI 產業格局變化的重要拼圖。",
+      source: "綜合外媒報導",
+      url: "https://news.ycombinator.com/front"
+    }
+  ],
+  archive: [
     {
       date: "2026-07-13",
       stars: 5,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       why: "與其埋頭一直用 AI，不如偶爾回顧自己是怎麼用的——這個功能很適合想建立健康 AI 使用習慣、避免過度依賴的人試試看。",
       source: "Anthropic Newsroom",
       url: "https://www.anthropic.com/news"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-07-07",
       stars: 4,
