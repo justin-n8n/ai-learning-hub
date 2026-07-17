@@ -1,8 +1,110 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-14",
+  lastUpdated: "2026-07-17",
   picks: [
+    {
+      date: "2026-07-16",
+      stars: 4,
+      category: "Anthropic",
+      title: "資安業者 F5 評測：Claude Sonnet 5 奪下 AI 安全指數冠軍",
+      summary: "F5 Labs 公布 7 月 CASI（Comprehensive AI Security Index）排行榜，Claude Sonnet 5 以 93.08 分拿下第一，Claude Haiku 4.5、Claude Opus 4.8 分居二、三名，Anthropic 模型包辦前三；同份報告另以「賽博龐克故事」型越獄手法測試 26 款主流模型，平均攻擊成功率高達 71.3%，其中 Claude Haiku 4.5 抵抗力最強。",
+      why: "你平常用的正是 Claude Sonnet 5，這份第三方評測代表你手上的工具在安全性上是目前業界最紮實的選擇之一，是很實際的定心丸。",
+      source: "iThome",
+      url: "https://www.ithome.com.tw/news/177360"
+    },
+    {
+      date: "2026-07-16",
+      stars: 4,
+      category: "開源",
+      title: "中國 Moonshot AI 發布 Kimi K3，號稱全球最大開源模型（2.8 兆參數）",
+      summary: "Moonshot AI 於 7 月 16 日發表 Kimi K3，採 Mixture-of-Experts 架構、總參數達 2.8 兆，具備 100 萬 token 上下文與原生視覺理解，並採用自研的 Kimi Delta Attention 技術讓長文本解碼速度提升達 6.3 倍；在 GDPval-AA v2 職業任務基準測試中排名第三，僅次於 Claude Fable 5 Max 與 GPT-5.6 Sol Max。權重預計 7 月 27 日完整開源釋出。",
+      why: "開源模型持續逼近前沿商用模型水準，未來若想省成本自架 AI 服務，Kimi K3 會是值得留意的免費替代方案。",
+      source: "VentureBeat / MarkTechPost",
+      url: "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
+    },
+    {
+      date: "2026-07-16",
+      stars: 3,
+      category: "Google",
+      title: "Google 傳出捨棄舊版 Gemini 3.5 Pro，模型從零重新打造",
+      summary: "有消息指出，Google 原訂發布的 Gemini 3.5 Pro base model 已被整個放棄，團隊選擇從零重新訓練，導致原訂發布時程延後；此舉正值 Google 與 OpenAI、Anthropic 在旗艦模型發布上競爭白熱化之際。",
+      why: "旗艦模型延後上市代表這幾週的模型評比排名可能還會再洗牌一次，選工具前可以再觀望一下最新測試結果。",
+      source: "AIToolsRecap",
+      url: "https://aitoolsrecap.com/Blog/ai-news-july-16-2026"
+    },
+    {
+      date: "2026-07-15",
+      stars: 3,
+      category: "政策",
+      title: "FIDO 聯盟啟動 Agentic Commerce 標準，OpenAI 加入理事會",
+      summary: "國際身分驗證組織 FIDO 聯盟近期成立 Agentic Authentication 技術工作小組與 Agentic Payments 子工作組，正式啟動「AI 代理商務」（Agentic Commerce）的驗證與授權標準制定，OpenAI 也加入理事會共同推動 AI 代理的身分驗證機制。",
+      why: "未來 AI 代理若要幫你訂票、下單、付款，背後都需要這類身分驗證標準把關，及早了解有助於判斷哪些自動化工具值得信任。",
+      source: "iThome",
+      url: "https://www.ithome.com.tw/news/177321"
+    },
+    {
+      date: "2026-07-16",
+      stars: 3,
+      category: "Anthropic",
+      title: "Claude Code 釋出大型穩定性更新，子代理即時串流文字、背景任務回報更完整",
+      summary: "Anthropic 為 Claude Code 推出一波涵蓋範圍廣泛的穩定性與工作流程更新，新增子代理（subagent）文字即時串流、更完善的權限與上傳處理、背景代理任務回報改善、終端機渲染加速，並修復 Chrome、Windows、Bedrock、Vertex、hooks 與 session 復原等多項問題。",
+      why: "如果你有搭配 Claude Code 或 Cowork 背景任務使用，這批修復能讓長時間執行的任務回報更即時、操作更順手，值得更新後試用。",
+      source: "Releasebot",
+      url: "https://releasebot.io/updates/anthropic"
+    }
+  ],
+  archive: [
+    {
+      date: "2026-07-10",
+      stars: 4,
+      category: "工具",
+      title: "Heptabase 手機版更新至 v1.37.2，語音筆記可在背景錄音",
+      summary: "Heptabase 於 7 月 10 日釋出行動版 v1.37.2，並在 7/9 加入「App 縮到背景時仍可繼續錄製語音筆記」功能，讓使用者邊做其他事、邊口述想法也不會中斷收音；同期 v1.98.4 也優化 AI Tutor，新筆記與白板會自動開在編輯中卡片的對側窗格，並修正 Mermaid 圖表編輯時預覽消失的問題。",
+      why: "如果你習慣用 Heptabase 做視覺化學習與筆記，這次更新讓語音捕捉靈感更順手，AI Tutor 的排版優化也讓多工筆記的閱讀動線更直覺。",
+      source: "Heptabase Public Wiki",
+      url: "https://wiki.heptabase.com/changelog"
+    },
+    {
+      date: "2026-07-14",
+      stars: 4,
+      category: "OpenAI",
+      title: "GPT-5.6「Sol」成為 Microsoft 365 Copilot 預設模型",
+      summary: "微軟 7 月 14 日將 OpenAI 最新旗艦模型 GPT-5.6（代號 Sol）設為 Microsoft 365 Copilot 的預設模型，Sol 具備 Ultra 子代理模式與 Max 推理強度設定；此舉緊接在 GPT-5.6 通過美國商務部逐案審查、正式對外開放付費方案 24 小時內完成，顯示 OpenAI 與微軟加速把最新模型鋪進日常辦公軟體。",
+      why: "如果你平常用 Word、Excel、Outlook 裡的 Copilot，背後模型換成 Sol 後，回答品質與代理能力可能有感提升，值得實測比較差異。",
+      source: "ThursdAI",
+      url: "https://thursdai.news/releases/2026-07"
+    },
+    {
+      date: "2026-07-14",
+      stars: 3,
+      category: "Anthropic",
+      title: "Anthropic 傳與三星洽談客製 Claude 推理晶片",
+      summary: "據報導，Anthropic 目前已轉虧為盈、年化營收上看 470 億美元，並正與三星進行早期談判，開發專屬 Claude 推理用客製晶片，目標是直接壓低目前每月高達 12.5 億美元的運算成本。",
+      why: "這代表 Claude 未來的算力成本若能下降，長期而言有機會反映在訂閱定價或用量額度上，值得留意後續進展。",
+      source: "Tech Startups",
+      url: "https://techstartups.com/2026/07/14/top-tech-news-today-july-14-2026-amazon-cloudflare-google-ibm-nvidia-samsung-xai-more/"
+    },
+    {
+      date: "2026-07-14",
+      stars: 4,
+      category: "政策",
+      title: "OpenAI 提議讓美國政府持股 5%，比照阿拉斯加主權基金模式",
+      summary: "Sam Altman 向川普總統、商務部長 Lutnick 與財政部長 Bessent 提出構想，讓 OpenAI（估值約 8,520 億美元）撥出 5% 股份、約 426 億美元價值，交由仿效阿拉斯加永久基金的公共基金持有，並倡議讓美國各大 AI 公司都比照辦理，每年配發股利給民眾。",
+      why: "若這類「AI 主權基金」構想成真，將是政府與前沿 AI 公司關係的重大轉變，牽動未來 AI 治理與監管走向，值得持續關注後續協商結果。",
+      source: "unrot.co",
+      url: "https://unrot.co/blogs/today-top-10-ai-news-july-14-2026"
+    },
+    {
+      date: "2026-07-14",
+      stars: 3,
+      category: "產業",
+      title: "上海世界人工智慧大會 7/17 登場，習近平睽違 8 年首度親自出席",
+      summary: "2026 世界人工智慧大會（WAIC）將於 7 月 17 日在上海開幕，中國國家主席習近平自 2018 年首屆大會以來首次親自出席，恰與 Google Gemini 3.5 Pro 預計同日全面上市的時間點重疊，凸顯中美 AI 產業競爭進入新階段。",
+      why: "中國政府層級對 AI 大會的重視程度提升，加上與 Gemini 新模型發布撞期，是觀察全球 AI 地緣政治角力的重要時間點。",
+      source: "Tech Startups",
+      url: "https://techstartups.com/2026/07/14/top-tech-news-today-july-14-2026-amazon-cloudflare-google-ibm-nvidia-samsung-xai-more/"
+    },
     {
       date: "2026-07-07",
       stars: 5,
@@ -52,9 +154,7 @@ window.SITE_NEWS = {
       why: "這則新聞讓你了解開源模型與晶片自主化的最新進展，是掌握全球 AI 產業格局變化的重要拼圖。",
       source: "綜合外媒報導",
       url: "https://news.ycombinator.com/front"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-07-13",
       stars: 5,
