@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-17",
+  lastUpdated: "2026-07-20",
   picks: [
+    {
+      date: "2026-07-18",
+      stars: 5,
+      category: "開源",
+      title: "n8n 推出 AI Assistant：用自然語言直接生成、修改工作流程",
+      summary: "n8n 於近期發布內建的「AI Assistant」，是一個聊天式代理，可直接依照使用者的自然語言描述建立、編輯、測試與除錯工作流程；7 月中的穩定性更新也修復了大量編輯器、AI Assistant、核心與節點相關問題，讓 webhook 處理、憑證管理與聊天回應更穩定。",
+      why: "你平常就用 n8n 做自動化，這個內建代理等於多一個「用講的」就能搭工作流程的方式，值得直接在自己的 workflow 上試用看看能省多少手動拖節點的時間。",
+      source: "n8n Community / Releasebot",
+      url: "https://community.n8n.io/t/introducing-the-ai-assistant-the-workflow-building-agent-inside-n8n/302667"
+    },
+    {
+      date: "2026-07-17",
+      stars: 5,
+      category: "工具",
+      title: "Notion AI 2026 大更新：模型選擇器支援 Claude Opus 4.8，情境視窗擴大 2.5 倍",
+      summary: "Notion AI 新增可自由切換 Claude Opus 4.8、GPT-5.5、Gemini 3.1 Pro、Grok、Kimi、DeepSeek 的模型選擇器，並支援跨已連結 App 的搜尋與手機版 AI Notes；情境視窗從 20 頁擴大到 50 頁（2.5 倍），自動填寫速度也從 8-12 秒縮短到 3 秒以內，另加入 macOS／Windows 語音輸入。",
+      why: "如果你在 Notion 做知識整理，能直接選用 Claude Opus 4.8 處理長筆記、又能跨頁搜尋，會讓平常的資料彙整明顯省力，是值得馬上開來體驗的更新。",
+      source: "Ainotely / Fazm Blog",
+      url: "https://ainotely.com/blog/notion-ai-features-2026/"
+    },
+    {
+      date: "2026-07-14",
+      stars: 4,
+      category: "Anthropic",
+      title: "Anthropic 推出 Claude for Teachers，美國中小學教師可免費用滿一年",
+      summary: "Anthropic 於 7 月 14 日發布 Claude for Teachers，讓通過驗證的美國 K-12 教師免費使用至少一年，內含教學技能庫，並直接串接對應全美 50 州課綱標準的實證教學資源，同時提供教師 AI 素養培訓課程。",
+      why: "即使你不是教職，這也展現 Anthropic 把 Claude 深度客製到特定職業場景的思路，可以參考這種「技能庫 + 標準對接」的設計，思考怎麼把 Claude 客製到自己的工作領域。",
+      source: "Chalkbeat / Edweek",
+      url: "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+    },
+    {
+      date: "2026-07-17",
+      stars: 3,
+      category: "政策",
+      title: "歐盟下令 Google 開放 Android，讓競爭對手的 AI 代理能平等存取",
+      summary: "歐盟監管機構要求 Google 開放 Android 系統權限，讓其他公司的 AI 代理（agent）能以平等條件存取裝置功能，不得讓自家 Gemini 佔有系統層級優勢，這是歐盟 DMA 法規在 AI 代理時代的最新延伸執法。",
+      why: "手機作業系統層級的 AI 代理之爭正式進入監管視野，未來你手機上能裝哪些 AI 助理、它們能做到多深，很可能會因這類裁決而改變。",
+      source: "Computerworld",
+      url: "https://www.computerworld.com/article/4198420/google-must-open-android-to-rival-ai-agents-eu-orders.html"
+    },
+    {
+      date: "2026-07-18",
+      stars: 4,
+      category: "OpenAI",
+      title: "GPT-5.6 一個提示解開懸而未決 30 年的凸優化難題，登上 Hacker News 冠軍",
+      summary: "本週 Hacker News 討論度最高的 AI story 是 GPT-5.6 透過使用者下的提示，協助解決一個在凸優化（convex optimization）領域懸而未決近 30 年的數學問題，引發開發者社群熱烈討論 AI 在嚴謹數學研究上的實際貢獻。",
+      why: "這類案例是觀察「AI 到底能不能做真研究」的具體範例，比起廠商公關稿，社群工程師的第一手討論更能幫你判斷目前 AI 推理能力的真實水準。",
+      source: "Hacker News",
+      url: "https://news.ycombinator.com/best"
+    }
+  ],
+  archive: [
     {
       date: "2026-07-16",
       stars: 4,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       why: "如果你有搭配 Claude Code 或 Cowork 背景任務使用，這批修復能讓長時間執行的任務回報更即時、操作更順手，值得更新後試用。",
       source: "Releasebot",
       url: "https://releasebot.io/updates/anthropic"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-07-10",
       stars: 4,
