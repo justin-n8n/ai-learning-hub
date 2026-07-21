@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  lastUpdated: "2026-07-20",
+  lastUpdated: "2026-07-21",
   picks: [
+    {
+      date: "2026-07-19",
+      stars: 5,
+      category: "Anthropic",
+      title: "Claude Sonnet 5 正式登陸 Microsoft 365 Copilot 與 Copilot Cowork",
+      summary: "Anthropic 的 Claude Sonnet 5 現已整合進 Microsoft 365 Copilot，率先在 Copilot Cowork 與 PowerPoint 中推出，鎖定文件、試算表與簡報等日常辦公的多步驟代理任務（agentic multi-step work），效能已接近 Opus 4.8，但成本僅約四到六成。",
+      why: "你熟悉的 Office 生態系正式用上頂級 Claude 模型來自動化文件與簡報工作，很值得實際比較它在日常辦公流程裡跟你目前用的 Cowork 有什麼不同。",
+      source: "Microsoft Tech Community",
+      url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic%E2%80%99s-claude-sonnet-5-in-microsoft-365-copilot/4532188"
+    },
+    {
+      date: "2026-07-18",
+      stars: 5,
+      category: "工具",
+      title: "Notion AI 代理新增行事曆管理，可自動排程、加入會議與寄邀請",
+      summary: "Notion 為其 AI Agent 功能新增行事曆管理能力，使用者可直接在聊天視窗中請 agent 安排行程、加入會議、寄出邀請並尋找共同會議時間；同時安全稽核紀錄也擴大涵蓋 Custom Agent 的操作紀錄，方便掌握 AI 代理實際做了哪些變更。",
+      why: "如果你平常用 Notion 管理任務，這代表可以把「排會議、找時間」這類瑣事直接交給 AI 處理，是最貼近日常生產力工作流的更新。",
+      source: "Releasebot / Notion",
+      url: "https://releasebot.io/updates/notion"
+    },
+    {
+      date: "2026-07-17",
+      stars: 4,
+      category: "開源",
+      title: "n8n 強化 AI Agent 決策能力，深化企業級工作流整合",
+      summary: "workflow 自動化平台 n8n 近期更新聚焦於將 AI agent 更深入整合進工作流的決策節點、強化 HTTP／API 串接與企業級管理功能，延續其在完成 1.8 億美元 C 輪募資、估值達 25 億美元後的產品擴張腳步。",
+      why: "你正在學習用 n8n 做自動化，這些新功能代表設計 workflow 時能讓 AI agent 直接參與判斷與決策，而不只是單純串接資料，值得找時間實際試用。",
+      source: "n8n Blog",
+      url: "https://blog.n8n.io/"
+    },
+    {
+      date: "2026-07-16",
+      stars: 3,
+      category: "Google",
+      title: "Google Gemini 3.5 Pro 再度延後推出，程式碼撰寫能力未達內部目標",
+      summary: "原訂 6 月釋出的 Google 旗艦模型 Gemini 3.5 Pro，因程式碼撰寫與多步驟長鏈推理（multi-step accuracy）表現未達內部預期，Google 甚至重建部分模型並更新訓練資料，但測試結果仍不理想，導致上市時程無限期延後。",
+      why: "了解各家旗艦模型的實際進度，有助於判斷之後該選哪個 AI 工具；Google 的延後也反映目前競爭最激烈的仍是程式碼與複雜推理能力。",
+      source: "9to5Google",
+      url: "https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/"
+    },
+    {
+      date: "2026-07-20",
+      stars: 4,
+      category: "開源",
+      title: "Hugging Face 遭 AI 代理入侵，防守方的安全護欄反而擋住自己人",
+      summary: "Hugging Face 揭露上週遭一個自主 AI 代理入侵內部叢集，攻擊者透過惡意資料集的程式碼執行漏洞取得節點權限、竊取雲端憑證並橫向移動，單一週末內產生逾 1.7 萬筆操作紀錄；諷刺的是，藍隊在分析攻擊指令與惡意程式碼時，商用前沿模型的安全護欄反而擋下了自己人的鑑識請求，最終改用開源的 GLM 5.2 模型在自有機器上完成分析。",
+      why: "這是目前少見「AI 代理主動發動入侵」的真實案例，也凸顯安全護欄設計的兩難：對懂資安的人來說，這件事很值得當成資安意識的實際教材。",
+      source: "VentureBeat",
+      url: "https://venturebeat.com/security/safety-guardrails-blocked-hugging-faces-defenders-not-the-attacker-when-an-ai-agent-breached-its-systems"
+    }
+  ],
+  archive: [
     {
       date: "2026-07-18",
       stars: 5,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       why: "這類案例是觀察「AI 到底能不能做真研究」的具體範例，比起廠商公關稿，社群工程師的第一手討論更能幫你判斷目前 AI 推理能力的真實水準。",
       source: "Hacker News",
       url: "https://news.ycombinator.com/best"
-    }
-  ],
-  archive: [
+    },
     {
       date: "2026-07-16",
       stars: 4,
