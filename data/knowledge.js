@@ -1,6 +1,6 @@
 // AI 知識庫資料檔 —— 每週排程檢查官方更新日誌，有變動時自動改寫並標記更新日期
 window.SITE_KNOWLEDGE = {
-  lastUpdated: "2026-07-13",
+  lastUpdated: "2026-07-20",
   basics: [
     { term: "LLM（大型語言模型）", en: "Large Language Model", body: "以海量文字訓練出的 AI 模型，能理解與生成自然語言。ChatGPT、Claude、Gemini 背後都是 LLM。它的本質是「預測下一個字」，但規模夠大後湧現出推理、翻譯、寫程式等能力。" },
     { term: "Token（詞元）", en: "Token", body: "LLM 處理文字的最小單位。一個中文字約 1~2 個 token，英文單字約 1~1.3 個。API 計費、模型輸入長度限制都以 token 計算。" },
@@ -15,8 +15,8 @@ window.SITE_KNOWLEDGE = {
   platforms: [
     {
       name: "Claude（Anthropic）",
-      updated: "2026-07-13",
-      body: "模型系列：Fable/Opus（最強）、Sonnet（平衡主力）、Haiku（快速平價）。本週更新：Cowork 擴展至網頁與手機（先前僅限桌面），採雲端運算、跨裝置同步，即使裝置離線排程任務仍可執行（Beta，先開放 Max 方案）；新增「Reflect」使用分析儀表板，彙整個人 AI 使用習慣統計；Microsoft 365 連接器新增寫入能力（可寄信、管理行事曆、建立/更新 OneDrive/SharePoint 檔案，先前僅能讀取）。特色功能：Projects（個人知識庫）、Artifacts（即時生成互動內容）、Claude Code（終端機編程代理）、Cowork（桌面/雲端自動化代理）、Claude Science（AI 科研工作台）。強項：長文處理、繁中品質、程式開發、代理任務。",
+      updated: "2026-07-20",
+      body: "模型系列：Fable/Opus（最強）、Sonnet（平衡主力）、Haiku（快速平價）。上週更新：Cowork 擴展至網頁與手機（先前僅限桌面），採雲端運算、跨裝置同步，即使裝置離線排程任務仍可執行（Beta，先開放 Max 方案）；新增「Reflect」使用分析儀表板，彙整個人 AI 使用習慣統計；Microsoft 365 連接器新增寫入能力（可寄信、管理行事曆、建立/更新 OneDrive/SharePoint 檔案，先前僅能讀取）。本週新增：推出「Claude for Teachers」，提供美國 K-12 認證教師免費使用進階 Claude 工具、教學技能與符合各州課綱的課程整合功能，並含教育專用連接器與 AI 素養培訓，學生資料不用於模型訓練；Claude API／Bedrock／Google Cloud 新增「對話中系統訊息（mid-conversation system messages）」功能，支援 Fable 5、Mythos 5、Opus 4.8。特色功能：Projects（個人知識庫）、Artifacts（即時生成互動內容）、Claude Code（終端機編程代理）、Cowork（桌面/雲端自動化代理）、Claude Science（AI 科研工作台）、Claude for Teachers（教育版）。強項：長文處理、繁中品質、程式開發、代理任務。",
       learn: "入門：直接用 claude.ai 對話 → 進階：建立 Project 放入自己的資料 → 高階：Cowork 排程自動化（現可跨手機/網頁使用）"
     },
     {

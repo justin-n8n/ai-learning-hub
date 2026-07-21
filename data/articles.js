@@ -1,7 +1,7 @@
 // 大神文章區資料檔 —— 每週排程自動抓取新文章 + AI 摘要
 // leaders: 追蹤名單（可自行增減）；articles: 自動抓取的文章摘要
 window.SITE_ARTICLES = {
-  lastUpdated: "2026-07-13",
+  lastUpdated: "2026-07-20",
   leaders: {
     intl: [
       { name: "Ethan Mollick", outlet: "One Useful Thing", focus: "AI 在工作與學習的實際應用，最適合非工程師", url: "https://www.oneusefulthing.org/" },
@@ -28,6 +28,59 @@ window.SITE_ARTICLES = {
   },
   // 自動抓取的文章 —— {date, author, title, points:[], verdict, url}
   articles: [
+    {
+      date: "2026-07-20",
+      author: "Dan Shipper（Every／Chain of Thought）",
+      title: "GPT-5.6 如何改變知識工作：別再「做」工作，去「照料」你的迴圈",
+      points: [
+        "GPT-5.6 Sol（在 ChatGPT Work，前身 Codex）能可靠地跑完整套知識工作迴圈，而不只是逐項任務協助",
+        "作者提出「知識工作三步迴圈」：蒐集資訊、做決策採取行動、從結果中學習，AI 接手其中大部分執行工作，人只需守住判斷與批准的關卡",
+        "舉例包括用 AI 掃收件匣、招募篩選、公司會議與 Slack 摘要、找房家具比價等，每輪結束後 AI 會從你的修改中學習偏好",
+        "Every 團隊開源了一個叫 Tend 的 prompt／repo，讓讀者能自己動手把收件匣、招募流程或客服佇列改造成可「照料」的系統"
+      ],
+      verdict: "值得精讀——適合想把 AI 從單次問答工具升級成日常工作系統的管理者、內容團隊與個人工作者",
+      url: "https://every.to/chain-of-thought/how-gpt-5-6-changes-knowledge-work"
+    },
+    {
+      date: "2026-07-20",
+      author: "Simon Willison",
+      title: "誰在怕中國模型？從蒸餾之爭看美國開源 AI 的政策難題",
+      points: [
+        "Simon 轉引 Ben Thompson（Stratechery）觀點：美國各大模型廠一邊靠未授權資料訓練，一邊用條款禁止別人蒸餾自家模型，這種雙重標準值得檢討",
+        "Thompson 建議美國應立法明確「訓練資料屬合理使用」，並禁止禁止蒸餾的服務條款，讓開放創新能延續",
+        "文中提到阿里巴巴一改先前不開源 Qwen 3.7 Max 的決定，轉而開源 Qwen 3.8 Max，可能與近期鼓勵開源合作的談話有關",
+        "反映中美 AI 開源策略的角力正牽動整個產業的模型競爭格局"
+      ],
+      verdict: "適合想理解「開源 vs 閉源」政策辯論、以及中美 AI 模型競爭態勢的讀者，屬產業觀察短評，5 分鐘可讀完",
+      url: "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/"
+    },
+    {
+      date: "2026-07-19",
+      author: "Simon Willison（引述 Nik Suresh）",
+      title: "AI 狂熱正在摧毀企業的決策品質",
+      points: [
+        "Simon 轉引 Nik Suresh 的觀察，描述大型企業顧問案中瀰漫的「AI 狂熱」如何扭曲決策",
+        "匿名案例：某高管從未用過任何 AI 工具，卻主導了一份完全圍繞 AI 的、涉及 20 億美元營收的技術策略",
+        "另有工程師坦言為了保住飯碗，被迫把整個 Go 專案交給 AI 重寫成 Zig",
+        "文中揭露供應商高管明知客戶「100 倍生產力」的說法誇大，卻不敢反駁，因為反駁可能被視為攻擊客戶、導致合約取消"
+      ],
+      verdict: "值得一讀的警世短文，適合企業主管、顧問或任何想避免被 AI 炒作牽著走做決策的人",
+      url: "https://simonwillison.net/2026/Jul/19/ai-mania/"
+    },
+    {
+      date: "2026-07-16",
+      author: "閱讀前哨站（瓦基）",
+      title: "《工作流改造術》讀後心得：工作流順暢的關鍵，是先從「放大成果」開始",
+      points: [
+        "瓦基專訪《高效人生工作法圖解》作者、電腦玩物站長 Esor 與專案管理專家趙胤丞，談如何把上百本生產力經典濃縮成可執行的工作流程",
+        "Esor 強調生產力的本質是「產出」，趙胤丞則把成果拆成三層次：完成、帶來結果、能持續累積",
+        "分享「關鍵路徑法」搭配番茄鐘，幫助從救火式忙碌中找出每天最重要的一步",
+        "Esor 示範用 ChatGPT 每天早上自動整理收件匣、寫回信草稿，並用 Codex 打造專屬 AI 工作教練，越用越懂你的工作習慣",
+        "建議新手從「復盤」與「放大成果」切入，而不是急著學一整套方法論"
+      ],
+      verdict: "非常值得精讀，適合正在嘗試把 GTD、卡片盒筆記等方法論與 AI 助理結合、卻覺得工作依然凌亂的職場工作者",
+      url: "https://readingoutpost.com/productivity-methods-illustrated-guide/"
+    },
     {
       date: "2026-07-12",
       author: "雷蒙三十（侯智薰）",
