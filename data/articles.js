@@ -1,7 +1,7 @@
 // 大神文章區資料檔 —— 每週排程自動抓取新文章 + AI 摘要
 // leaders: 追蹤名單（可自行增減）；articles: 自動抓取的文章摘要
 window.SITE_ARTICLES = {
-  lastUpdated: "2026-07-27",
+  lastUpdated: "2026-08-04",
   leaders: {
     intl: [
       { name: "Ethan Mollick", outlet: "One Useful Thing", focus: "AI 在工作與學習的實際應用，最適合非工程師", url: "https://www.oneusefulthing.org/" },
@@ -28,6 +28,58 @@ window.SITE_ARTICLES = {
   },
   // 自動抓取的文章 —— {date, author, title, points:[], verdict, url}
   articles: [
+    {
+      date: "2026-08-03",
+      author: "Simon Willison（simonwillison.net）",
+      title: "別當「AI 傳聲筒」",
+      points: [
+        "引用 Niklas Gruhn 創造的新詞「meat proxy（肉身代理人）」，指那些把 AI 產出的內容原封不動轉貼給同事、卻沒有自己讀懂或驗證的人",
+        "核心建議：可以用 AI 起草，但不要只是「轉發」——先讀懂、驗證，再用自己的話重新表達，這個動作本身才是你創造的價值",
+        "點出團隊協作中一個正在擴散的隱憂：審核者預設對方已理解內容，實際上只是 AI 產出的未讀轉發，會侵蝕團隊間的信任"
+      ],
+      verdict: "篇幅短但切中要害，適合分享給任何在工作中大量使用 ChatGPT／Claude 產出文字的人自我提醒",
+      url: "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/"
+    },
+    {
+      date: "2026-08-02",
+      author: "Simon Willison（simonwillison.net）",
+      title: "AI 發展公開信大盤點：開放權重之爭與「放慢腳步」聯署",
+      points: [
+        "微軟牽頭、235 家公司（含 NVIDIA、Amazon、Y Combinator）聯署公開信，主張開放權重模型比封閉模型更安全、更利於發現漏洞，反對政府以「安全」為由限制開源模型",
+        "該信罕見地為「蒸餾」（distillation，用一個模型的輸出訓練另一個模型）技術背書，稱其為業界長期慣例",
+        "Anthropic 並未簽署，執行長 Dario Amodei 另發聲明強調威權國家可能用開放模型發展更強 AI、甚至用於網路攻擊或生物武器，呼籲打擊「工業規模的蒸餾行為」",
+        "7 月 28 日另有 1,324 名前沿 AI 公司員工（含 OpenAI、Anthropic 高層）聯署，要求美國政府支持國際合作、刻意放慢自動化 AI 研發速度",
+        "文中點出 Anthropic 已用 Claude Code 產出 80% 自家程式碼、OpenAI 用自家模型降低 20% 服務成本，顯示「AI 研發 AI」的加速正是這些聯署信背後的真正焦慮"
+      ],
+      verdict: "理解當前 AI 產業路線之爭（開放 vs. 管制）最濃縮的懶人包，適合想跟上政策動態的讀者",
+      url: "https://simonwillison.net/2026/Aug/2/open-letters/"
+    },
+    {
+      date: "2026-08-01",
+      author: "Simon Willison（simonwillison.net）",
+      title: "十個數學與理論電腦科學難題，AI 一次攻破",
+      points: [
+        "OpenAI 用內部版本的新模型「Astra」挑戰十個至少十年沒有進展的數學難題，每題花費不到 2,000 美元的 token 成本就得出解答",
+        "解答附上 Lean 4 形式化證明程式碼，並用 AI 生成一份「重建推理過程」的說明文件，讓外界檢視 AI 是怎麼想出來的",
+        "呼應了幾天前 Anthropic 用 Mythos Preview 模型花 10 萬美元 token 找出密碼學弱點的案例，顯示前沿 AI 正被用在真正困難的原創研究上",
+        "部分數學家因此陷入類似西洋棋「深藍時刻」的存在焦慮",
+        "Simon Willison 提出質疑：公司公布了解答和「重建的推理」，卻不願公開真正下的提示詞，透明度仍打折扣"
+      ],
+      verdict: "少數具體展示「AI 能做原創高階研究」而非泛泛而談的案例，能幫助非工程背景讀者理解 AI 能力邊界正在往哪裡推進",
+      url: "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/"
+    },
+    {
+      date: "2026-07-31",
+      author: "瓦基（閱讀前哨站）",
+      title: "AI 助教自動回覆功能上線幕後",
+      points: [
+        "新課程《AI 瓦基第二大腦》上線後，最受矚目的是課程練習區新增的「AI 助教自動回覆」功能，是知識衛星平台首次為單一課程開發的新功能",
+        "學員完成練習後，由瓦基親手設計批改標準的 AI 助教在數十秒內給予個人化回饋，上線短短幾天已有數十位學員留下作業並收到回覆",
+        "電子報同時附上另一篇文章，詳細說明「我幫每個單元都寫一套批改標準」的實作過程，適合想了解如何用 AI 打造教學/客服自動回覆流程的讀者參考"
+      ],
+      verdict: "對想學習「如何用 AI 打造自動化回饋系統」的非工程背景讀者有參考價值，但本期電子報主體仍偏讀書心得，AI 相關內容只占開頭一小段",
+      url: "https://readingoutpost.com/newsletter-2026-07-31/"
+    },
     {
       date: "2026-07-23",
       author: "Ethan Mollick（One Useful Thing）",
