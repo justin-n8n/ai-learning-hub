@@ -1,8 +1,60 @@
 // 每日 AI 新聞資料檔 —— 由 Cowork 排程自動更新
 // 格式：{date, stars(1-5), category, title, summary, why, source, url}
 window.SITE_NEWS = {
-  "lastUpdated": "2026-08-03",
+  "lastUpdated": "2026-08-04",
   "picks": [
+    {
+      "date": "2026-08-03",
+      "stars": 3,
+      "category": "政策",
+      "title": "白宮擬邀 OpenAI、Anthropic、Google 磋商 AI 模型安全測試新框架",
+      "summary": "彭博社於 8/3 報導，美國政府計畫邀請 OpenAI、Anthropic、Google 等主要 AI 廠商出席白宮會議，討論一套自願性的前沿模型安全測試框架，源自川普政府 6 月簽署的 AI 網路安全行政命令，採取廠商自願接受審查的 opt-in 方式。",
+      "why": "政策動向會直接影響未來新模型上市的節奏與可用性，持續留意能幫你判斷該不該等新版模型還是先用現有工具。",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-03/openai-anthropic-google-to-join-white-house-ai-safety-meeting"
+    },
+    {
+      "date": "2026-08-03",
+      "stars": 3,
+      "category": "職涯",
+      "title": "AI 人才大戰升溫：Google 研究員相繼跳槽 OpenAI、Anthropic",
+      "summary": "Axios 於 8/3 報導，Google 頂尖研究員 Noam Shazeer 轉往 OpenAI、諾貝爾化學獎得主 John Jumper 轉投 Anthropic，Meta 雖砸重金挖角卻頻頻留不住人才，反映各大 AI 公司間人才爭奪戰持續白熱化。",
+      "why": "觀察頂尖人才流向哪家公司，往往能提前嗅出誰的下一代模型會更強，也能幫你判斷該優先深耕哪個生態系的工具。",
+      "source": "Axios",
+      "url": "https://www.axios.com/2026/08/03/ai-talent-wars-openai-google-meta-anthropic"
+    },
+    {
+      "date": "2026-08-03",
+      "stars": 5,
+      "category": "工具",
+      "title": "Notion AI 新增用量儀表板，會議記錄完成後可自動觸發 Agent",
+      "summary": "Notion 自 8/3 起在設定頁新增「Notion AI 用量」檢視，讓使用者能追蹤六小時與月結兩種額度上限；同時新增 Custom Agent 觸發功能，可在 AI 會議記錄完成後自動更新追蹤表、發送摘要或把回饋轉成待辦事項。",
+      "why": "如果你用 Notion 整理筆記與任務，這代表開會後不用再手動彙整，AI 能自動把記錄轉成後續行動，直接省下一段整理時間。",
+      "source": "Releasebot / Notion",
+      "url": "https://releasebot.io/updates/notion"
+    },
+    {
+      "date": "2026-08-02",
+      "stars": 4,
+      "category": "工具",
+      "title": "「Vibe Coding」惹議：工程師社群激辯 AI 寫程式只做得出原型",
+      "summary": "開發者 Anuradha Weeraman 發表文章主張，AI coding agent 產出的程式碼多半只是「看起來能動」的原型，離真正上線的產品仍有落差，該觀點在 Hacker News 引發大量工程師留言反駁，討論熱烈。",
+      "why": "了解 AI 寫程式工具目前真實的能耐與侷限，能幫你判斷用 Claude、Cowork 這類工具做自動化時，哪些交給 AI 放心、哪些還是要自己再檢查一次。",
+      "source": "Hacker News / weeraman.com",
+      "url": "https://weeraman.com/the-prototype-isnt-the-product/"
+    },
+    {
+      "date": "2026-08-03",
+      "stars": 4,
+      "category": "資安",
+      "title": "微軟推出 Project Perception：紅藍綠三色 AI 代理協同防禦系統公開測試",
+      "summary": "微軟於 8/3 開放 Project Perception 公開測試，這是一套由紅隊（找漏洞）、藍隊（判斷風險）、綠隊（修補）三組 AI 代理協同運作的資安防禦平台，整合進 Microsoft Defender，並搭配自研資安模型 MAI-Cyber-1-Flash，採依用量計費方式收費。",
+      "why": "這示範了多個 AI 代理分工合作、互相檢核的實際架構，即使你不做資安，也能從中觀察怎麼設計「代理互相制衡」的自動化流程，對規劃自己的 n8n workflow 也有參考價值。",
+      "source": "Axios / Microsoft",
+      "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/"
+    }
+  ],
+  "archive": [
     {
       "date": "2026-07-30",
       "stars": 5,
@@ -52,9 +104,7 @@ window.SITE_NEWS = {
       "why": "如果你在台灣職場想靠 AI 工具建立個人優勢，這份數據代表現在多數同事、公司都還沒真正跨部門用起來，提早熟悉 Claude、n8n 這類工具，反而是拉開差距的好機會。",
       "source": "iThome",
       "url": "https://www.ithome.com.tw/tags/ai"
-    }
-  ],
-  "archive": [
+    },
     {
       "date": "2026-07-27",
       "stars": 5,
@@ -604,56 +654,6 @@ window.SITE_NEWS = {
       "why": "即使是 Meta 這樣的巨頭，AI 代理落地也充滿波折——提醒我們評估任何 AI 工具承諾時，都該保持務實與查證的態度。",
       "source": "BuildFastWithAI",
       "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
-    },
-    {
-      "date": "2026-06-26",
-      "stars": 5,
-      "category": "OpenAI",
-      "title": "OpenAI 發布 GPT-5.6：Sol / Terra / Luna 三模型分級",
-      "summary": "GPT-5.6 以三個模型推出：旗艦 Sol（$5/$30）、平衡型 Terra（$2.50/$15）、快速平價 Luna（$1/$6）。這是史上第一次在美國政府明確協調下進行的 AI 模型發布，API 全面開放預計 7 月中下旬。",
-      "why": "Terra 定價與 Claude Sonnet 4.6 持平、效能接近 GPT-5.5，可能成為最多人採用的主力模型。選 AI 工具時可先觀望 7 月中的實測評比。",
-      "source": "BuildFastWithAI",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026"
-    },
-    {
-      "date": "2026-07-03",
-      "stars": 4,
-      "category": "Anthropic",
-      "title": "Anthropic 營收超越 OpenAI，預計 2029 年獲利",
-      "summary": "報導指出 Anthropic 營收已超越 OpenAI，5 月時預估年營收將達 470 億美元，並預計 2029 年轉虧為盈（比 OpenAI 早一年）。同時諾貝爾化學獎得主 John Jumper（AlphaFold2 共同開發者）宣布離開 Google DeepMind 加入 Anthropic。",
-      "why": "AI 雙強格局成形，Claude 生態系（含 Claude Code、Cowork）持續壯大，值得持續投資學習。",
-      "source": "AIToolsRecap / Fortune",
-      "url": "https://aitoolsrecap.com/Blog/ai-news-july-3-2026"
-    },
-    {
-      "date": "2026-07-03",
-      "stars": 4,
-      "category": "政策",
-      "title": "白宮與三大 AI 廠商磋商「自願性 AI 發布標準」",
-      "summary": "白宮正與 OpenAI、Google、Anthropic 進行後期磋商，建立自願性 AI 模型發布標準，最快下週宣布。OpenAI 另提議讓美國政府取得 5% 股份（估值約 426 億美元）。",
-      "why": "政府介入 AI 發布流程將影響未來新模型的推出節奏與可用性，是 AI 產業的結構性轉變。",
-      "source": "AIToolsRecap",
-      "url": "https://aitoolsrecap.com/Blog/ai-news-july-3-2026"
-    },
-    {
-      "date": "2026-07-04",
-      "stars": 4,
-      "category": "職涯",
-      "title": "美國 6 月就業僅增 5.7 萬，AI 加速取代初階知識工作",
-      "summary": "美國勞工統計局 6 月報告顯示新增就業僅 57,000 人，分析指出 AI 工具正以加速度取代入門級知識型工作。",
-      "why": "這正是本站存在的理由——持續學習 AI 工具、把 AI 變成自己的槓桿，而不是被取代的對象。",
-      "source": "BuildFastWithAI",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
-    },
-    {
-      "date": "2026-07-01",
-      "stars": 3,
-      "category": "xAI",
-      "title": "Grok 4.5 於 SpaceX 與 Tesla 內部私測中",
-      "summary": "xAI 的 Grok 4.5 目前在 SpaceX 和 Tesla 進行私有測試，尚未公開發布時程。",
-      "why": "追蹤即可，暫不需行動。xAI 模型迭代速度快，但工作應用生態仍以 OpenAI / Anthropic / Google 為主。",
-      "source": "BuildFastWithAI",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026"
     }
   ]
 };
