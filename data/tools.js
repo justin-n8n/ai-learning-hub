@@ -1,6 +1,6 @@
 // AI 工具庫資料檔 —— 每週由 Cowork 排程自動更新（新工具加到對應分類，weekly 區塊放每週精選）
 window.SITE_TOOLS = {
-  "lastUpdated": "2026-08-04",
+  "lastUpdated": "2026-08-11",
   "categories": [
     {
       "id": "writing",
@@ -235,6 +235,13 @@ window.SITE_TOOLS = {
           "desc": "自動幫你把待辦任務、習慣排進行事曆空檔，取代手動喬時間",
           "fit": "⭐ 已用 Notion/Heptabase 管理任務、想進一步自動化時間規劃的人",
           "link": "https://reclaim.ai"
+        },
+        {
+          "name": "Glasp MCP Connector",
+          "price": "免費",
+          "desc": "把 Glasp 網頁畫線筆記變成 MCP 伺服器，直接在 Claude、ChatGPT 用自然語言搜尋收藏重點",
+          "fit": "⭐ 已用 Notion/Heptabase 做第二大腦的人，低學習曲線、即插即用",
+          "link": "https://glasp.co/mcp"
         }
       ]
     },
@@ -283,1017 +290,439 @@ window.SITE_TOOLS = {
           "desc": "低程式碼的 AI 工作流程與 Agent 建構平台，支援 RAG 知識庫、多模型與 MCP 整合",
           "fit": "已熟悉 n8n、想進階打造 AI 客服機器人或知識庫應用的人，學習曲線中等",
           "link": "https://dify.ai"
+        },
+        {
+          "name": "Firecrawl",
+          "price": "開源自架免費／雲端方案有免費額度＋按量付費",
+          "desc": "把整個網站轉成乾淨、適合餵給 LLM 的結構化資料的爬蟲/搜尋 API",
+          "fit": "適合已用 n8n 做自動化、想加上「自動蒐集網路資料」能力的人，需一定技術背景",
+          "link": "https://github.com/firecrawl/firecrawl"
         }
       ]
     }
   ],
   "weekly": {
-    "week": "2026-08-03",
-    "note": "本週精選來自 GitHub Trending 與 Product Hunt；Hugging Face 熱門榜多為學術論文與底層模型，僅 Qwen Image Edit LoRAs 屬適合一般使用者體驗的項目",
+    "week": "2026-08-11",
+    "note": "本週精選來自 Product Hunt 每日榜單、GitHub Trending 與 Hugging Face 熱門 Spaces；Glasp MCP Connector、Firecrawl 因成熟度高，本週同步加入固定分類",
     "items": [
       {
-        "name": "OpenClaw",
-        "price": "開源免費（雲端託管依供應商而定）",
-        "desc": "可自主執行任務、串接外部工具與服務的開源 AI 代理框架，是目前 GitHub 成長最快的專案之一",
-        "fit": "技術門檻偏高，需自行設定串接技能，非工程背景者建議先觀望生態成熟度",
-        "link": "https://github.com/topics/openclaw-agent"
+        "name": "Atlaso",
+        "price": "免費開始（進階付費）",
+        "desc": "跨 AI 工具的共享記憶層，連接一次後 Claude Code、Cursor、Codex、ChatGPT 都能自動記得你的專案脈絡與習慣，不用每次重新交代背景。",
+        "fit": "值得關注但仍早期（8/4 上架），適合同時用多個 AI 編碼/聊天工具、受夠了每次重新解釋上下文的人；免費可先試用觀察穩定性。",
+        "link": "https://www.atlaso.ai/"
+      },
+      {
+        "name": "Glasp MCP Connector",
+        "price": "免費",
+        "desc": "把 Glasp 的網頁畫線/筆記變成 MCP 伺服器，直接在 Claude、ChatGPT 裡用自然語言搜尋自己收藏過的重點內容。",
+        "fit": "⭐ 低學習曲線、即插即用，很適合搭配 Notion/Heptabase 做第二大腦的人，把散落的畫線筆記接進日常對話式 AI 使用流程",
+        "link": "https://glasp.co/mcp"
+      },
+      {
+        "name": "SpeakoFlow",
+        "price": "開源免費（MIT）",
+        "desc": "跨桌面的語音輸入與 AI 助理，語音可直接輸入任何應用程式，說「Hey Flow」還能根據螢幕內容自動寫回覆；語音辨識可完全本機執行。",
+        "fit": "適合想用語音取代打字提升效率、注重隱私（可離線跑）的人；早期專案，建議先在次要工作流程試用。",
+        "link": "https://speakoflow.com/"
+      },
+      {
+        "name": "Domo（Claude Agent 範本）",
+        "price": "免費（需自備 Claude 訂閱）",
+        "desc": "用 Claude Code 原生工具打造的行事曆 Agent 範本，有專屬電話號碼可傳訊息新增行程，並附一個常駐牆面儀表板顯示行程。",
+        "fit": "更像一套「Agent 應用模式」範例，適合想學習如何用 Claude Code 打造個人自動化 Agent 的進階玩家，非新手一鍵可用",
+        "link": "https://howto.plow.co/domo"
       },
       {
         "name": "Firecrawl",
-        "price": "開源自架免費／雲端 API 有免費額度＋按量付費",
-        "desc": "自動爬取網站內容並轉成 AI 可直接使用的結構化資料或 Markdown，方便串進 n8n、Claude 等自動化流程",
-        "fit": "中低學習曲線，適合已有基礎自動化經驗、想做「自動蒐集網路資訊」的人",
-        "link": "https://www.firecrawl.dev"
+        "price": "開源自架免費／雲端方案有免費額度＋按量付費",
+        "desc": "把整個網站轉成乾淨、適合餵給 LLM 的資料的爬蟲/搜尋 API，是許多 Agent 專案抓取網路資料的標配元件",
+        "fit": "很適合結合 n8n 打造自動化資料蒐集流程，需要一定技術背景（API/程式串接），適合已有自動化基礎的使用者",
+        "link": "https://github.com/firecrawl/firecrawl"
       },
       {
-        "name": "Qwen Image Edit LoRAs",
-        "price": "免費（線上 Space 直接試用）",
-        "desc": "免安裝的線上圖片編輯示範，用文字指令快速修改圖片風格與細節",
-        "fit": "零學習曲線，適合想體驗最新影像 AI 又不想寫程式的人，屬玩玩看性質",
-        "link": "https://huggingface.co/spaces?sort=trending"
+        "name": "freellmapi",
+        "price": "開源免費（需自架）",
+        "desc": "把 28 家 LLM 供應商的免費額度整合成單一 OpenAI 相容端點，自動路由與容錯，疊出大量免費 token 用量",
+        "fit": "對想省錢實驗多種模型的開發者/重度 AI 使用者很有價值，但需要自己架設與管理金鑰，學習曲線偏高",
+        "link": "https://github.com/tashfeenahmed/freellmapi"
       },
       {
-        "name": "Mina Meeting Assistant",
-        "price": "免費試用，付費方案詳見官網",
-        "desc": "會議中即時發言、執行任務的 AI 助手，能在通話當下拉取 Slack、Notion、HubSpot 等 200+ 工具資訊並直接產出結果",
-        "fit": "⭐ 與 Fireflies.ai 同類但更進階（可即時互動非僅記錄），適合大量開會、需自動化會議紀錄與待辦追蹤的人",
-        "link": "https://www.producthunt.com/products/mina-meeting-assistant"
+        "name": "LFM2.5 Edge Research Agent",
+        "price": "免費（瀏覽器內執行）",
+        "desc": "在瀏覽器用 WebGPU 直接本機執行的輕量研究型 Agent，不需伺服器、不用等待即可示範「本機端 AI 研究助理」的可行性",
+        "fit": "適合想體驗本機/邊緣 AI Agent 概念的人，屬技術展示（demo）性質，尚不是成熟日常工具，先當趨勢觀察",
+        "link": "https://huggingface.co/spaces/LiquidAI/LFM2.5-2.6B-WebGPU"
       },
       {
-        "name": "Databox MCP",
-        "price": "Databox 本身有免費方案，MCP 功能需付費帳號",
-        "desc": "讓 Claude 等 AI 直接讀取即時營運數據儀表板，不用再手動截圖丟給 AI 分析",
-        "fit": "適合已在用 Databox 做數據儀表板、想串 Claude/MCP 自動化分析的人；MCP 設定技術門檻偏高",
-        "link": "https://www.producthunt.com/products/databox"
+        "name": "Space OCR",
+        "price": "App／API（詳細定價需至官網查看）",
+        "desc": "會「自我檢查答案」的 OCR 工具，提供 App 與 API 兩種形式，把圖片文件轉成可信度較高的文字",
+        "fit": "適合需要把大量掃描文件、截圖轉文字並要求準確度的辦公室工作者；剛上架，成熟度待觀察",
+        "link": "https://www.producthunt.com/products/space-ocr"
       }
     ]
   },
   "toolVideos": {
     "Claude": [
-      {
-        "t": "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院",
-        "u": "https://www.youtube.com/watch?v=5Aha8QOVke4"
-      },
-      {
-        "t": "6個Claude核心功能讓你超越99%的AI使用者！Cowork/Code保姆級完整教學",
-        "u": "https://www.youtube.com/watch?v=8244knXN9e0"
-      }
+      { "t": "你唯一需要的Claude教學，從入門到打造你的AI團隊", "u": "https://www.youtube.com/watch?v=qYKRiZBWrZ4" },
+      { "t": "6個Claude核心功能讓你超越99%的AI使用者！Cowork/Code保姆級完整教學", "u": "https://www.youtube.com/watch?v=8244knXN9e0" }
     ],
     "ChatGPT": [
-      {
-        "t": "【2026最新】你不知道的20種使用ChatGPT的方法！ChatGPT沒人談論的隱藏功能和技巧",
-        "u": "https://www.youtube.com/watch?v=04cz8zNr33Y"
-      },
-      {
-        "t": "The ULTIMATE ChatGPT Guide 2026: How to Use ChatGPT 5.5 For Beginners",
-        "u": "https://www.youtube.com/watch?v=McOK2URVyNg"
-      }
+      { "t": "【2026最新】你不知道的20種使用ChatGPT的方法！", "u": "https://www.youtube.com/watch?v=04cz8zNr33Y" },
+      { "t": "【ChatGPT 教學】最新最全 | 9成人冇用嘅功能＋新出 Work 自動幫你做嘢", "u": "https://www.youtube.com/watch?v=o7AUbq28-Ss" }
     ],
     "Notion AI": [
-      {
-        "t": "【NOTION AI筆記寫手】英文課不再手忙腳亂！錄音直接變「全自動複習筆記」",
-        "u": "https://www.youtube.com/watch?v=oAlnbyj-urw"
-      },
-      {
-        "t": "Notion AI Can Do Anything! (Complete Tutorial 2026)",
-        "u": "https://www.youtube.com/watch?v=ODbTqcor84g"
-      }
+      { "t": "【NOTION AI筆記寫手】英文課不再手忙腳亂！錄音直接變「全自動複習筆記」", "u": "https://www.youtube.com/watch?v=oAlnbyj-urw" },
+      { "t": "Notion AI Can Do Anything! (Complete Tutorial 2026)", "u": "https://www.youtube.com/watch?v=ODbTqcor84g" }
     ],
     "沉浸式翻譯": [
-      {
-        "t": "【沉浸式翻譯30s教學】無字幕救星！沉浸式翻譯「AI字幕生成」教學",
-        "u": "https://www.youtube.com/watch?v=Zs2tflpsYvA"
-      },
-      {
-        "t": "最強 Chrome 免費 AI 翻譯擴充！沉浸式翻譯搞定外語網頁／PDF／影片！",
-        "u": "https://www.youtube.com/watch?v=y4dCaGEwIQk"
-      }
+      { "t": "超強AI翻譯插件，全新6大使用方法｜沉浸式翻译", "u": "https://www.youtube.com/watch?v=amru_En_z74" },
+      { "t": "【科技說】比Google翻譯更智慧！更聰明！更人性化！沉浸式翻譯擴充軟體！", "u": "https://www.youtube.com/watch?v=YyBOe_BY1I8" }
     ],
     "DeepL": [
-      {
-        "t": "什麼？打趴Google的免費翻譯工具！DeepL快來利用他賺取額外收入吧！",
-        "u": "https://www.youtube.com/watch?v=Dya0shEqh9k"
-      },
-      {
-        "t": "How To Use DeepL Chrome Extension (2026) | BEST FULL GUIDE",
-        "u": "https://www.youtube.com/watch?v=ME1AAdlHCog"
-      }
+      { "t": "什麼？打趴Google的免費翻譯工具！DeepL快來利用他賺取額外收入吧！", "u": "https://www.youtube.com/watch?v=Dya0shEqh9k" },
+      { "t": "How To Use DeepL Chrome Extension (2026) | BEST FULL GUIDE", "u": "https://www.youtube.com/watch?v=ME1AAdlHCog" }
     ],
     "Sora": [
-      {
-        "t": "必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼）",
-        "u": "https://www.youtube.com/watch?v=5XgvjKV1iEw"
-      },
-      {
-        "t": "【 Sora AI 影片生成教學】自由混合影片功能、自動分鏡設定，讓影片創作變得簡單又有趣！",
-        "u": "https://www.youtube.com/watch?v=pIXKND86ldo"
-      }
+      { "t": "必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼）", "u": "https://www.youtube.com/watch?v=5XgvjKV1iEw" },
+      { "t": "【Sora 2 教學 - 廣東話版】無需邀請碼及 VPN！教你用 Higgsfield AI 生成 Sora 2 影片", "u": "https://www.youtube.com/watch?v=2RILgLMraxk" }
     ],
     "Runway": [
-      {
-        "t": "Runway 完整教學| AI生成影片｜完全免費",
-        "u": "https://www.youtube.com/watch?v=ZxZ4AOwR08U"
-      },
-      {
-        "t": "【AI影片生成】如何使用Runway Gen-3 Alpha 創作電影級視頻！",
-        "u": "https://www.youtube.com/watch?v=paGpFGWwNOE"
-      }
+      { "t": "【AI影片生成】如何使用Runway Gen-3 Alpha 創作電影級視頻！", "u": "https://www.youtube.com/watch?v=paGpFGWwNOE" },
+      { "t": "Runway 完整教學| AI生成影片｜完全免費", "u": "https://www.youtube.com/watch?v=ZxZ4AOwR08U" }
     ],
     "HeyGen": [
-      {
-        "t": "【秒變語言天才！HeyGen AI 教學＋實戰（三種語言現場實測)】",
-        "u": "https://www.youtube.com/watch?v=jGYbWOGX5ZE"
-      },
-      {
-        "t": "How to Use HeyGen in 2026 (Step-by-Step Beginner Tutorial)",
-        "u": "https://www.youtube.com/watch?v=RTmlxuroR50"
-      }
+      { "t": "竟然用AI說流利日文 教你用HeyGen創建虛擬分身，免費", "u": "https://www.youtube.com/watch?v=1rW8KfprMtY" },
+      { "t": "【秒變語言天才！HeyGen AI 教學＋實戰（三種語言現場實測）】", "u": "https://www.youtube.com/watch?v=jGYbWOGX5ZE" }
     ],
     "CapCut": [
-      {
-        "t": "【免費剪輯神器】CapCut 手機剪輯教學｜15分鐘做出高質感影片",
-        "u": "https://www.youtube.com/watch?v=K3cax7G8cjM"
-      },
-      {
-        "t": "剪映Capcut 教學 | 從入門到邪門 | 電腦版 | 帶你從零基礎剪好一部片",
-        "u": "https://www.youtube.com/watch?v=A56NKsBs8WM"
-      }
+      { "t": "剪映Capcut 教學 | 從入門到邪門 | 電腦版 | 帶你從零基礎剪好一部片", "u": "https://www.youtube.com/watch?v=A56NKsBs8WM" },
+      { "t": "【免費剪輯神器】CapCut 手機剪輯教學｜15分鐘做出高質感影片", "u": "https://www.youtube.com/watch?v=K3cax7G8cjM" }
     ],
     "Descript": [
-      {
-        "t": "Descript Tutorial 2026 | Edit Videos by Editing Text with AI",
-        "u": "https://www.youtube.com/watch?v=DbU5l3UvwIc"
-      },
-      {
-        "t": "Complete Descript Tutorial 2026: Zero to Expert",
-        "u": "https://www.youtube.com/watch?v=RgwJNOXGARI"
-      }
+      { "t": "ULTIMATE Descript Tutorial for Beginners in 2026 | How to Edit Fast Using AI", "u": "https://www.youtube.com/watch?v=L4lUwaI7NSI" },
+      { "t": "Descript Tutorial for Beginners 2026: Complete Video Editing Guide", "u": "https://www.youtube.com/watch?v=D5MQbP4b_sQ" }
     ],
     "Midjourney": [
-      {
-        "t": "Midjourney V7網頁版攻略，玩AI影片前必學｜細節大師的提示詞、設定到修圖全流程！",
-        "u": "https://www.youtube.com/watch?v=EiUFzuSaL1U"
-      },
-      {
-        "t": "Complete Midjourney Tutorial for 2026",
-        "u": "https://www.youtube.com/watch?v=jl6qGVrpzYM"
-      }
+      { "t": "2026最新 Midjourney 完整教程｜从注册订阅到高级提示词，零基础快速上手 AI 绘画", "u": "https://www.youtube.com/watch?v=U1yxkWu1CQY" },
+      { "t": "Midjourney V7網頁版攻略，玩AI影片前必學｜細節大師的提示詞、設定到修圖全流程！", "u": "https://www.youtube.com/watch?v=EiUFzuSaL1U" }
     ],
     "DALL·E（ChatGPT 內建）": [
-      {
-        "t": "DALL·E 3快速上手教學｜比Midjourney更好用的免費AI繪圖工具｜支持中文提示詞，完全免費｜如何在ChatGPT開啟DALL·E 3",
-        "u": "https://www.youtube.com/watch?v=Wav60DMzP74"
-      },
-      {
-        "t": "【DALL.E 3】你唯一需要的AI圖片工具，DALLE.3完整教學，地球上最強大的文字轉圖AI，ChatGPT4支持，完全免費，Bing Image Creator",
-        "u": "https://www.youtube.com/watch?v=2RNHxUzeZcg"
-      }
+      { "t": "ChatGPT 最新 4o 圖片生成教學｜10 種應用全評測！人人都是設計師的時代來臨？", "u": "https://www.youtube.com/watch?v=dO45dBx-WNE" },
+      { "t": "DALL·E 3快速上手教學｜比Midjourney更好用的免費AI繪圖工具｜如何在ChatGPT開啟DALL·E 3", "u": "https://www.youtube.com/watch?v=Wav60DMzP74" }
     ],
     "Stable Diffusion": [
-      {
-        "t": "Stable Diffusion 最新版安裝 | 基本操作教學 | 繁體中文介面設定教學 | 無廣告",
-        "u": "https://www.youtube.com/watch?v=urF_6GSALWo"
-      },
-      {
-        "t": "超簡單AI繪圖工具Stable Diffusion安裝篇2024最新版",
-        "u": "https://www.youtube.com/watch?v=4HCPrO1vrIQ"
-      }
+      { "t": "Stable Diffusion 最新版安裝 | 基本操作教學 | 繁體中文介面設定教學 | 無廣告", "u": "https://www.youtube.com/watch?v=urF_6GSALWo" },
+      { "t": "Stable Diffusion 零基礎新手入門！Part 1 - 安裝與基本設置 (Windows / Mac)", "u": "https://www.youtube.com/watch?v=d2Xj0fKKaJ4" }
     ],
     "Claude Code": [
-      {
-        "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)",
-        "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c"
-      },
-      {
-        "t": "【超級新手指南】我如何使用Claude Code？基礎知識和驚人用途一次說清楚！",
-        "u": "https://www.youtube.com/watch?v=wW6_Q-5aH5o"
-      }
+      { "t": "Claude Code保姆級攻略2.0：中文語言設定、第三方模型接入、MCP、Skill、Subagent完整教學", "u": "https://www.youtube.com/watch?v=Czky9q7sOWU" },
+      { "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)", "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c" }
     ],
     "Cursor": [
-      {
-        "t": "【Cursor 教學】入門到實戰，用 AI Agent 自動化你的工作流！",
-        "u": "https://www.youtube.com/watch?v=kVniOF36GEk"
-      },
-      {
-        "t": "Cursor AI 教學 - 實戰4個月後的終極使用心得！10x你的Programming 效率",
-        "u": "https://www.youtube.com/watch?v=yHiYyiWMhlI"
-      }
+      { "t": "【Cursor 教學】入門到實戰，用 AI Agent 自動化你的工作流！", "u": "https://www.youtube.com/watch?v=kVniOF36GEk" },
+      { "t": "Cursor AI: The Only IDE You Need in 2026 (Beginner to Pro)", "u": "https://www.youtube.com/watch?v=ed26g7jxAbU" }
     ],
     "GitHub Copilot": [
-      {
-        "t": "GitHub Copilot CLI 實戰教學｜從修 Bug 到自動建立 Pull Request（含 MCP 設定與切換 Model 示範）",
-        "u": "https://www.youtube.com/watch?v=KVht2h5fb9E"
-      },
-      {
-        "t": "GitHub Copilot Coding Agent 超實用教學｜自動修 Bug、寫測試、拉 PR 一次搞懂",
-        "u": "https://www.youtube.com/watch?v=Z9EVVDCgm8M"
-      }
+      { "t": "【GitHub Copilot】GitHub Copilot完整範例與步驟解說教你開始使用 | 用AI配對程式設計師幫你寫程式", "u": "https://www.youtube.com/watch?v=5MZyLmxOx0Q" },
+      { "t": "GitHub Copilot CLI 實戰教學｜從修 Bug 到自動建立 Pull Request（含 MCP 設定與切換 Model 示範）", "u": "https://www.youtube.com/watch?v=KVht2h5fb9E" }
     ],
     "ElevenLabs": [
-      {
-        "t": "ElevenLabs Complete Platform Tutorial 2026: Beginner To Pro In 50 Minutes",
-        "u": "https://www.youtube.com/watch?v=6-WqxzJz8Wg"
-      },
-      {
-        "t": "How to Use ElevenLabs | Beginner's Guide 2026",
-        "u": "https://www.youtube.com/watch?v=GtnRt1QlVkA"
-      }
+      { "t": "ElevenLabs AI 语音生成教程：50 分钟学会AI 配音", "u": "https://www.youtube.com/watch?v=vCYem4AH7Z8" },
+      { "t": "ElevenLabs Complete Platform Tutorial 2026: Beginner To Pro In 50 Minutes", "u": "https://www.youtube.com/watch?v=6-WqxzJz8Wg" }
     ],
     "Suno": [
-      {
-        "t": "Suno AI 2026 作曲完整教學 | 入門到進階 | AI創作歌曲不僅好聽還可以商用",
-        "u": "https://www.youtube.com/watch?v=Xv_cpCtN4yE"
-      },
-      {
-        "t": "生產力黑科技EP09｜Suno AI 教學：如何用 Gemini 寫歌詞 + 生成音樂？2026 最新 AI 作曲全攻略。",
-        "u": "https://www.youtube.com/watch?v=xiG6FFySkY0"
-      }
+      { "t": "Suno AI 2026 作曲完整教學 | 入門到進階 | AI創作歌曲不僅好聽還可以商用", "u": "https://www.youtube.com/watch?v=Xv_cpCtN4yE" },
+      { "t": "生產力黑科技EP09｜Suno AI 教學：如何用 Gemini 寫歌詞 + 生成音樂？2026 最新 AI 作曲全攻略", "u": "https://www.youtube.com/watch?v=xiG6FFySkY0" }
     ],
     "Whisper": [
-      {
-        "t": "實測推薦！完全免費的 OpenAI Whisper 語音轉文字自動工具，字幕、逐字稿一鍵搞定｜Buzz 教學",
-        "u": "https://www.youtube.com/watch?v=HHE5gbZgc8g"
-      },
-      {
-        "t": "一次學會AI自動字幕+逐字稿 ❘ Open AI Whisper和Google Colab教學影片",
-        "u": "https://www.youtube.com/watch?v=5CFbvdxW-yU"
-      }
+      { "t": "【Whisper】免費開源語音辨識自動上字幕 字幕正確率比剪映還高！！！｜如何在Windows上使用Whisper", "u": "https://www.youtube.com/watch?v=kFtrvdriLU8" },
+      { "t": "實測推薦！完全免費的 OpenAI Whisper 語音轉文字自動工具，字幕、逐字稿一鍵搞定｜Buzz 教學", "u": "https://www.youtube.com/watch?v=HHE5gbZgc8g" }
     ],
     "Gamma": [
-      {
-        "t": "2026最新AI 簡報神器PK 40 秒做完簡報Gamma、AiPPT",
-        "u": "https://www.youtube.com/watch?v=X5IToXLK5Pk"
-      },
-      {
-        "t": "【AI工作流】簡報神器 Gamma｜文字一鍵變 PPT，但別只用 AI 就交差",
-        "u": "https://www.youtube.com/watch?v=4A4RXctUSoM"
-      }
+      { "t": "😱 只有老人才用 PPT 做簡報？新世代 AI 簡報神器 Gamma 讓你告別石器時代邁向新世紀！", "u": "https://www.youtube.com/watch?v=nl-eVo1EhEQ" },
+      { "t": "它竟把6千字長文快速轉成簡報？內容處理量更大贏 ChatGPT？還能用 AI 提示語生成最精準 PPT 需求！｜Gamma｜泛科學院", "u": "https://www.youtube.com/watch?v=f0Tw2w-WxRs" }
     ],
     "Napkin": [
-      {
-        "t": "【Napkin AI 教學- 超強AI 工具】文字一鍵生成專業圖表",
-        "u": "https://www.youtube.com/watch?v=c5vYIyJD43I"
-      },
-      {
-        "t": "完全免費文字轉圖表NAPKIN AI 教學簡報文章手繪視覺思考",
-        "u": "https://www.youtube.com/watch?v=CvgxmCIA9ho"
-      }
+      { "t": "這麼好用還完全免費？Napkin AI秒生成設計感爆棚的圖表，老闆以為你開掛了！全網最詳細介紹！【泛科學院】", "u": "https://www.youtube.com/watch?v=TKRFfB3Ja0w" },
+      { "t": "【Napkin AI 教學- 超強AI 工具】文字一鍵生成專業圖表", "u": "https://www.youtube.com/watch?v=c5vYIyJD43I" }
     ],
     "Claude（檔案分析）": [
-      {
-        "t": "最聰明的AI工具？Claude 免費版 5 大神功能：一鍵生成 Excel 分析與 Office 檔案，上班族必看的 AI 省錢工作流！｜泛科學院",
-        "u": "https://www.youtube.com/watch?v=114H9EWKfzM"
-      },
-      {
-        "t": "【Claude Code教學】Excel資料自動變PPT圖表！AI跨檔案生成可編輯簡報",
-        "u": "https://www.youtube.com/watch?v=juxoWOlsPyU"
-      }
+      { "t": "最聰明的AI工具？Claude 免費版 5 大神功能：一鍵生成 Excel 分析與 Office 檔案，上班族必看的 AI 省錢工作流！｜泛科學院", "u": "https://www.youtube.com/watch?v=114H9EWKfzM" },
+      { "t": "1-5 它要動你的檔案前，一定先讓你點頭同意｜Claude Code 第一次對話實錄", "u": "https://www.youtube.com/watch?v=ypETEQQeMsk" }
     ],
     "Perplexity": [
-      {
-        "t": "【最完整教學】Perplexity Comet AI 瀏覽器 10 大神級用法：工作效率、研究搜尋、生活資訊一次搞定！",
-        "u": "https://www.youtube.com/watch?v=oLn8dbfXH-0"
-      },
-      {
-        "t": "Perplexity AI Tutorial for Beginners 2026 (In-Depth Tutorial)",
-        "u": "https://www.youtube.com/watch?v=tzsvWErdK50"
-      }
+      { "t": "Perplexity AI Tutorial for Beginners 2026 (In-Depth Tutorial)", "u": "https://www.youtube.com/watch?v=tzsvWErdK50" },
+      { "t": "【2026 最值AI訂閱攻略】ChatGPT超便宜、Perplexity 免費領、Gemini 家族湊、Grok變天｜泛科學院", "u": "https://www.youtube.com/watch?v=svDbThRvByk" }
     ],
     "NotebookLM": [
-      {
-        "t": "NotebookLM 2.0徹底變了：2026年最重要更新一次看懂！",
-        "u": "https://www.youtube.com/watch?v=mBoxAlg7V3M"
-      },
-      {
-        "t": "NotebookLM 完整教學！93%的人還不知道的8個隱藏用法，完勝ChatGPT| 分析報告 | 會議記錄 | 自動生成Podcast、教學影片",
-        "u": "https://www.youtube.com/watch?v=zgWerTIynVA"
-      }
+      { "t": "NotebookLM完整教學！10個95%的人還不知道的超強隱藏用法，超越ChatGPT的最強免費AI神器！", "u": "https://www.youtube.com/watch?v=pbds1YRoXJw" },
+      { "t": "NotebookLM 2.0徹底變了：2026年最重要更新一次看懂！", "u": "https://www.youtube.com/watch?v=mBoxAlg7V3M" }
     ],
     "Fireflies.ai": [
-      {
-        "t": "2026 Fireflies.ai Tutorial + Coupon Code",
-        "u": "https://www.youtube.com/watch?v=1yNtt802IiY"
-      },
-      {
-        "t": "How to Use FireFlies AI Notes in 2026 | Ultimate Tutorial",
-        "u": "https://www.youtube.com/watch?v=8NNEnT0UkBY"
-      }
+      { "t": "2026 Fireflies.ai Tutorial + Coupon Code", "u": "https://www.youtube.com/watch?v=1yNtt802IiY" },
+      { "t": "Fireflies AI Overview 2026: Automate Meeting Notes, Transcription & More | Full Product Demo", "u": "https://www.youtube.com/watch?v=uZuFXgNfZmI" }
     ],
     "Reclaim.ai": [
-      {
-        "t": "Reclaim AI Tutorial for Beginners 2026 (Step By Step)",
-        "u": "https://www.youtube.com/watch?v=-6WJqMEr9p8"
-      },
-      {
-        "t": "What Is Reclaim AI? How to Set Up & Use Reclaim AI",
-        "u": "https://www.youtube.com/watch?v=1B8diQeYeWM"
-      }
+      { "t": "Reclaim AI Tutorial 2026: How To Use Reclaim.ai (For Beginners)", "u": "https://www.youtube.com/watch?v=R76SbifV_vA" },
+      { "t": "What Is Reclaim AI? How to Set Up & Use Reclaim AI", "u": "https://www.youtube.com/watch?v=1B8diQeYeWM" }
     ],
     "n8n": [
-      {
-        "t": "2026 最強 N8N 教學！從零開始打造你的 AI 自動化工作流！",
-        "u": "https://www.youtube.com/watch?v=6s_Z9Tl0sHU"
-      },
-      {
-        "t": "從零基礎到精通n8n！萬用三步驟做出AI自動化助理(超簡單)",
-        "u": "https://www.youtube.com/watch?v=mNRphFUPzjE"
-      }
+      { "t": "2026 最強 N8N 教學！從零開始打造你的 AI 自動化工作流！", "u": "https://www.youtube.com/watch?v=6s_Z9Tl0sHU" },
+      { "t": "別再手動做了！零基礎學會用n8n打造AI自動化工作流：從抓取資料到AI決策，全流程手把手教學｜Kelly Tsai", "u": "https://www.youtube.com/watch?v=-vKewrChihk" }
     ],
     "Cowork": [
-      {
-        "t": "Claude Cowork太強了，7個瘋狂案例，自動處理郵件、操控你的電腦、遠端派任務，AI終於能直接幫你幹活了",
-        "u": "https://www.youtube.com/watch?v=9WL8HOrMH2s"
-      },
-      {
-        "t": "Claude Cowork 最友善的手把手教學！你還在叫 AI 幫你想答案？但高手們都已經在用 AI 交成品了 ~",
-        "u": "https://www.youtube.com/watch?v=_cVTzXvb7xs"
-      }
+      { "t": "Claude Cowork 最友善的手把手教學！你還在叫 AI 幫你想答案？但高手們都已經在用 AI 交成品了", "u": "https://www.youtube.com/watch?v=_cVTzXvb7xs" },
+      { "t": "Claude Cowork/Code保姆級完整教學：從入門到進階，自動生成內容、網頁和工作流，快速打造你的AI員工", "u": "https://www.youtube.com/watch?v=Lq-wedAiffo" }
     ],
     "Make": [
-      {
-        "t": "告別重複作業地獄！Make.com 零基礎上手 ~ 不懂程式碼照樣也能搞定辦公室流程自動化！",
-        "u": "https://www.youtube.com/watch?v=_Fz-Gmrr5B4"
-      },
-      {
-        "t": "Make.com FULL COURSE 2026: Beginner to Pro (Build & Sell AI Automations)",
-        "u": "https://www.youtube.com/watch?v=3cjBI3xtr4Y"
-      }
+      { "t": "告別重複作業地獄！Make.com 零基礎上手 ~ 不懂程式碼照樣也能搞定辦公室流程自動化！", "u": "https://www.youtube.com/watch?v=_Fz-Gmrr5B4" },
+      { "t": "Make.com FULL COURSE 2026: Beginner to Pro (Build & Sell AI Automations)", "u": "https://www.youtube.com/watch?v=3cjBI3xtr4Y" }
     ],
     "Zapier": [
-      {
-        "t": "Zapier自動化實戰教學：一步步帶你實現工作流自動化！",
-        "u": "https://www.youtube.com/watch?v=3noUj0KANVE"
-      },
-      {
-        "t": "生產力戰爭已開打！已有兩百萬家公司使用 Zapier 將常用 Apps 改造成全自動化部隊！！",
-        "u": "https://www.youtube.com/watch?v=n8GhwLI9Q2o"
-      }
+      { "t": "Zapier自動化實戰教學：一步步帶你實現工作流自動化！", "u": "https://www.youtube.com/watch?v=3noUj0KANVE" },
+      { "t": "Learning Zapier in 2026: AI Automation for Beginners", "u": "https://www.youtube.com/watch?v=h6euNY9-7dA" }
     ],
     "Sim": [
-      {
-        "t": "How to Use SIM AI Step-by-Step Guide 2026",
-        "u": "https://www.youtube.com/watch?v=drNL0QqSMNw"
-      },
-      {
-        "t": "Build FREE AI Agent Using SIM AI (N8N Alternative & Open Source)",
-        "u": "https://www.youtube.com/watch?v=DdLF5So9Py8"
-      }
+      { "t": "The Ultimate n8n Killer is Here - Meet SIM AI", "u": "https://www.youtube.com/watch?v=QEoyyheDZ1Y" }
     ],
     "Dify": [
-      {
-        "t": "【2026 廣東話AI 教學】10 分鐘用Dify 從零開始打造企業級私有部署",
-        "u": "https://www.youtube.com/watch?v=1XxGaNkq_g4"
-      },
-      {
-        "t": "Dify 系統化教學｜Dify 零代碼革命：RAG 知識庫、自動化流程與企業級部署全解析",
-        "u": "https://www.youtube.com/watch?v=IX8g7l578oQ"
-      }
-    ]
+      { "t": "Dify 系統化教學｜Dify 零代碼革命：RAG 知識庫、自動化流程與企業級部署全解析", "u": "https://www.youtube.com/watch?v=IX8g7l578oQ" },
+      { "t": "Dify零基础教程：手把手教你搭建第一个AI工作流 | Workflow与Chatflow模式详解+节点配置实战", "u": "https://www.youtube.com/watch?v=ZKmVvtSAEek" }
+    ],
+    "Glasp MCP Connector": [],
+    "Firecrawl": []
   },
   "toolVideosHistory": {
     "Claude": [
-      {
-        "t": "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院",
-        "u": "https://www.youtube.com/watch?v=5Aha8QOVke4"
-      },
-      {
-        "t": "6個Claude核心功能讓你超越99%的AI使用者！Cowork/Code保姆級完整教學",
-        "u": "https://www.youtube.com/watch?v=8244knXN9e0"
-      },
-      {
-        "t": "【超實用】一次搞懂Claude AI全生態！2026全新初學者完整教程，從基本用法到全新自動化系統！零基礎初學者必看，15個Claude超棒的使用方法！ChatGPT用戶看完都轉投了！",
-        "u": "https://www.youtube.com/watch?v=zm3K831v470"
-      },
-      {
-        "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)",
-        "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c"
-      }
+      { "t": "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院", "u": "https://www.youtube.com/watch?v=5Aha8QOVke4" },
+      { "t": "6個Claude核心功能讓你超越99%的AI使用者！Cowork/Code保姆級完整教學", "u": "https://www.youtube.com/watch?v=8244knXN9e0" },
+      { "t": "【超實用】一次搞懂Claude AI全生態！2026全新初學者完整教程，從基本用法到全新自動化系統！零基礎初學者必看，15個Claude超棒的使用方法！ChatGPT用戶看完都轉投了！", "u": "https://www.youtube.com/watch?v=zm3K831v470" },
+      { "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)", "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c" }
     ],
     "ChatGPT": [
-      {
-        "t": "ChatGPT 大改版：5 個變化一次看懂！【會自己幹活、Work、GPT-5.6】",
-        "u": "https://www.youtube.com/watch?v=Au206yH7ufE"
-      },
-      {
-        "t": "ChatGPT 不只會回答了！GPT-5.6 Work、桌面操作完整解析",
-        "u": "https://www.youtube.com/watch?v=iP9Oy7naM1s"
-      },
-      {
-        "t": "【2026最新】你不知道的20種使用ChatGPT的方法！ChatGPT沒人談論的隱藏功能和技巧，好用到開掛一樣！手把手帶你從小白到頂尖專家！",
-        "u": "https://www.youtube.com/watch?v=04cz8zNr33Y"
-      },
-      {
-        "t": "ChatGPT Skills 教學：一鍵標準化輸出內容，告別每次重寫 Prompt",
-        "u": "https://www.youtube.com/watch?v=vB9n85aeufA"
-      }
+      { "t": "【2026最新】你不知道的20種使用ChatGPT的方法！ChatGPT沒人談論的隱藏功能和技巧", "u": "https://www.youtube.com/watch?v=04cz8zNr33Y" },
+      { "t": "The ULTIMATE ChatGPT Guide 2026: How to Use ChatGPT 5.5 For Beginners", "u": "https://www.youtube.com/watch?v=McOK2URVyNg" },
+      { "t": "ChatGPT 大改版：5 個變化一次看懂！【會自己幹活、Work、GPT-5.6】", "u": "https://www.youtube.com/watch?v=Au206yH7ufE" },
+      { "t": "ChatGPT 不只會回答了！GPT-5.6 Work、桌面操作完整解析", "u": "https://www.youtube.com/watch?v=iP9Oy7naM1s" },
+      { "t": "ChatGPT Skills 教學：一鍵標準化輸出內容，告別每次重寫 Prompt", "u": "https://www.youtube.com/watch?v=vB9n85aeufA" }
     ],
     "Notion AI": [
-      {
-        "t": "【NOTION AI筆記寫手】英文課不再手忙腳亂！錄音直接變「全自動複習筆記」",
-        "u": "https://www.youtube.com/watch?v=oAlnbyj-urw"
-      },
-      {
-        "t": "Notion AI Agent 設定全攻略：5 個步驟客製化你的 AI 助理，讓它讀懂你的心！",
-        "u": "https://www.youtube.com/watch?v=hPA-WZwVc6w"
-      },
-      {
-        "t": "Notion AI Can Do Anything! (Complete Tutorial 2026)",
-        "u": "https://www.youtube.com/watch?v=ODbTqcor84g"
-      },
-      {
-        "t": "最新 Notion AI 自動化應用教學｜完整比較 ChatGPT 更好上手的 AI 工具",
-        "u": "https://www.youtube.com/watch?v=Hq56E4fmP6o"
-      },
-      {
-        "t": "線上課程買了看不完？教你用 Notion AI「會議功能」無腦學習",
-        "u": "https://www.youtube.com/watch?v=elK4w0B5-T8"
-      }
+      { "t": "【NOTION AI筆記寫手】英文課不再手忙腳亂！錄音直接變「全自動複習筆記」", "u": "https://www.youtube.com/watch?v=oAlnbyj-urw" },
+      { "t": "Notion AI Can Do Anything! (Complete Tutorial 2026)", "u": "https://www.youtube.com/watch?v=ODbTqcor84g" },
+      { "t": "Notion AI Agent 設定全攻略：5 個步驟客製化你的 AI 助理，讓它讀懂你的心！", "u": "https://www.youtube.com/watch?v=hPA-WZwVc6w" },
+      { "t": "最新 Notion AI 自動化應用教學｜完整比較 ChatGPT 更好上手的 AI 工具", "u": "https://www.youtube.com/watch?v=Hq56E4fmP6o" },
+      { "t": "線上課程買了看不完？教你用 Notion AI「會議功能」無腦學習", "u": "https://www.youtube.com/watch?v=elK4w0B5-T8" }
     ],
     "沉浸式翻譯": [
-      {
-        "t": "最強 Chrome 免費 AI 翻譯擴充！沉浸式翻譯搞定外語網頁／PDF／影片！",
-        "u": "https://www.youtube.com/watch?v=y4dCaGEwIQk"
-      },
-      {
-        "t": "超強AI翻譯插件，全新6大使用方法｜沉浸式翻译，超過100萬用戶使用的翻譯工具｜外語網站、PDF一鍵翻譯，雙語字幕｜openAI/DeepL",
-        "u": "https://www.youtube.com/watch?v=amru_En_z74"
-      },
-      {
-        "t": "【中文外語對照】沉浸式翻譯：網站、文件、YouTube字幕一秒雙語顯示翻譯！語言學習必備！2026提升工作效率工具！",
-        "u": "https://www.youtube.com/watch?v=LfOzyIH5RGg"
-      },
-      {
-        "t": "【沉浸式翻譯30s教學】無字幕救星！沉浸式翻譯「AI字幕生成」教學",
-        "u": "https://www.youtube.com/watch?v=Zs2tflpsYvA"
-      },
-      {
-        "t": "教你快速上手網頁翻譯神器【沉浸式翻譯】",
-        "u": "https://www.youtube.com/watch?v=L6tCcDqbA_0"
-      }
+      { "t": "【沉浸式翻譯30s教學】無字幕救星！沉浸式翻譯「AI字幕生成」教學", "u": "https://www.youtube.com/watch?v=Zs2tflpsYvA" },
+      { "t": "最強 Chrome 免費 AI 翻譯擴充！沉浸式翻譯搞定外語網頁／PDF／影片！", "u": "https://www.youtube.com/watch?v=y4dCaGEwIQk" },
+      { "t": "超強AI翻譯插件，全新6大使用方法｜沉浸式翻译，超過100萬用戶使用的翻譯工具｜外語網站、PDF一鍵翻譯，雙語字幕｜openAI/DeepL", "u": "https://www.youtube.com/watch?v=amru_En_z74" },
+      { "t": "【中文外語對照】沉浸式翻譯：網站、文件、YouTube字幕一秒雙語顯示翻譯！語言學習必備！2026提升工作效率工具！", "u": "https://www.youtube.com/watch?v=LfOzyIH5RGg" },
+      { "t": "教你快速上手網頁翻譯神器【沉浸式翻譯】", "u": "https://www.youtube.com/watch?v=L6tCcDqbA_0" }
     ],
     "DeepL": [
-      {
-        "t": "How To Use DeepL Translator For Beginners (2026 Guide)",
-        "u": "https://www.youtube.com/watch?v=hi35fAfjNc8"
-      },
-      {
-        "t": "How to Add DeepL to Chrome [2026 Full Guide]",
-        "u": "https://www.youtube.com/watch?v=GcbIjp4ObTA"
-      },
-      {
-        "t": "How To Use DeepL Chrome Extension (2026) | BEST FULL GUIDE",
-        "u": "https://www.youtube.com/watch?v=ME1AAdlHCog"
-      },
-      {
-        "t": "DeepL翻译全功能揭秘｜提升效率的必备神器",
-        "u": "https://www.youtube.com/watch?v=GdLVIS00cmw"
-      },
-      {
-        "t": "How To Use DeepL Translator For Beginners (Step-By-Step) | DeepL Tutorial 2025",
-        "u": "https://www.youtube.com/watch?v=N5lY9bPU_iA"
-      }
+      { "t": "什麼？打趴Google的免費翻譯工具！DeepL快來利用他賺取額外收入吧！", "u": "https://www.youtube.com/watch?v=Dya0shEqh9k" },
+      { "t": "How To Use DeepL Chrome Extension (2026) | BEST FULL GUIDE", "u": "https://www.youtube.com/watch?v=ME1AAdlHCog" },
+      { "t": "How To Use DeepL Translator For Beginners (2026 Guide)", "u": "https://www.youtube.com/watch?v=hi35fAfjNc8" },
+      { "t": "How to Add DeepL to Chrome [2026 Full Guide]", "u": "https://www.youtube.com/watch?v=GcbIjp4ObTA" },
+      { "t": "DeepL翻译全功能揭秘｜提升效率的必备神器", "u": "https://www.youtube.com/watch?v=GdLVIS00cmw" },
+      { "t": "How To Use DeepL Translator For Beginners (Step-By-Step) | DeepL Tutorial 2025", "u": "https://www.youtube.com/watch?v=N5lY9bPU_iA" }
     ],
     "Sora": [
-      {
-        "t": "Sora 2 教學｜用 n8n + Notion 全自動生成 AI 影片！免費工作流",
-        "u": "https://www.youtube.com/watch?v=mUZIdGwiJ98"
-      },
-      {
-        "t": "Ultimate SORA 2 Guide 2026: How To Use Sora 2 For Beginners",
-        "u": "https://www.youtube.com/watch?v=H8szjl6KwXs"
-      },
-      {
-        "t": "必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN）",
-        "u": "https://www.youtube.com/watch?v=5XgvjKV1iEw"
-      },
-      {
-        "t": "【Sora AI 影片生成教學】自由混合影片功能、自動分鏡設定，讓影片創作變得簡單又有趣！內含如何提升影片畫質教學!",
-        "u": "https://www.youtube.com/watch?v=pIXKND86ldo"
-      },
-      {
-        "t": "【Sora 2 教學 - 廣東話版】無需邀請碼及 VPN",
-        "u": "https://www.youtube.com/watch?v=2RILgLMraxk"
-      },
-      {
-        "t": "OpenAI 全球熱爆 Sora2 教學｜AI 一鍵複製人樣同聲線？！用文字生成 20 秒短片",
-        "u": "https://www.youtube.com/watch?v=jZ1_YRRSicg"
-      }
+      { "t": "必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼）", "u": "https://www.youtube.com/watch?v=5XgvjKV1iEw" },
+      { "t": "【 Sora AI 影片生成教學】自由混合影片功能、自動分鏡設定，讓影片創作變得簡單又有趣！", "u": "https://www.youtube.com/watch?v=pIXKND86ldo" },
+      { "t": "Sora 2 教學｜用 n8n + Notion 全自動生成 AI 影片！免費工作流", "u": "https://www.youtube.com/watch?v=mUZIdGwiJ98" },
+      { "t": "Ultimate SORA 2 Guide 2026: How To Use Sora 2 For Beginners", "u": "https://www.youtube.com/watch?v=H8szjl6KwXs" },
+      { "t": "【Sora 2 教學 - 廣東話版】無需邀請碼及 VPN", "u": "https://www.youtube.com/watch?v=2RILgLMraxk" },
+      { "t": "OpenAI 全球熱爆 Sora2 教學｜AI 一鍵複製人樣同聲線？！用文字生成 20 秒短片", "u": "https://www.youtube.com/watch?v=jZ1_YRRSicg" }
     ],
     "Runway": [
-      {
-        "t": "How to Edit Videos with Runway AI Full Guide 2026",
-        "u": "https://www.youtube.com/watch?v=mk0kPZPJgPM"
-      },
-      {
-        "t": "How To Use Runway For FREE Unlimited in 2026 | Step-by-Step Tutorial",
-        "u": "https://www.youtube.com/watch?v=kPg0s3ehp3Y"
-      },
-      {
-        "t": "Ultimate Runway Gen 4.5 Tutorial For New Users in 2026",
-        "u": "https://www.youtube.com/watch?v=IUge3u4ZrqQ"
-      },
-      {
-        "t": "Runway 完整教學｜AI生成影片｜完全免費",
-        "u": "https://www.youtube.com/watch?v=ZxZ4AOwR08U"
-      },
-      {
-        "t": "【AI影片生成】如何使用Runway Gen-3 Alpha 創作電影級視頻",
-        "u": "https://www.youtube.com/watch?v=paGpFGWwNOE"
-      },
-      {
-        "t": "Runway Gen 4.5 教學：5分鐘學會使用方法",
-        "u": "https://www.youtube.com/watch?v=w_kKWDyPZnI"
-      }
+      { "t": "Runway 完整教學| AI生成影片｜完全免費", "u": "https://www.youtube.com/watch?v=ZxZ4AOwR08U" },
+      { "t": "【AI影片生成】如何使用Runway Gen-3 Alpha 創作電影級視頻！", "u": "https://www.youtube.com/watch?v=paGpFGWwNOE" },
+      { "t": "How to Edit Videos with Runway AI Full Guide 2026", "u": "https://www.youtube.com/watch?v=mk0kPZPJgPM" },
+      { "t": "How To Use Runway For FREE Unlimited in 2026 | Step-by-Step Tutorial", "u": "https://www.youtube.com/watch?v=kPg0s3ehp3Y" },
+      { "t": "Ultimate Runway Gen 4.5 Tutorial For New Users in 2026", "u": "https://www.youtube.com/watch?v=IUge3u4ZrqQ" },
+      { "t": "Runway Gen 4.5 教學：5分鐘學會使用方法", "u": "https://www.youtube.com/watch?v=w_kKWDyPZnI" }
     ],
     "HeyGen": [
-      {
-        "t": "不露脸也能拍YouTube：HeyGen AI 数字人全流程无痛上手｜0基础，新手友好",
-        "u": "https://www.youtube.com/watch?v=soIjjhcrtqY"
-      },
-      {
-        "t": "How to Use HeyGen in 2026 (Step-by-Step Beginner Tutorial)",
-        "u": "https://www.youtube.com/watch?v=RTmlxuroR50"
-      },
-      {
-        "t": "Heygen AI 影片生成工具介紹及教學｜AI 影片產生工具推薦",
-        "u": "https://www.youtube.com/watch?v=eeJ2L0Q0lUA"
-      },
-      {
-        "t": "竟然用AI說流利日文 教你用HeyGen創建虛擬分身",
-        "u": "https://www.youtube.com/watch?v=1rW8KfprMtY"
-      },
-      {
-        "t": "【秒變語言天才！HeyGen AI 教學＋實戰（三種語言現場實測）",
-        "u": "https://www.youtube.com/watch?v=jGYbWOGX5ZE"
-      },
-      {
-        "t": "HeyGen AI - Full Tutorial 2026: BEST AI Avatar Video Generator",
-        "u": "https://www.youtube.com/watch?v=eFwx6fyDOmU"
-      }
+      { "t": "【秒變語言天才！HeyGen AI 教學＋實戰（三種語言現場實測)】", "u": "https://www.youtube.com/watch?v=jGYbWOGX5ZE" },
+      { "t": "How to Use HeyGen in 2026 (Step-by-Step Beginner Tutorial)", "u": "https://www.youtube.com/watch?v=RTmlxuroR50" },
+      { "t": "不露脸也能拍YouTube：HeyGen AI 数字人全流程无痛上手｜0基础，新手友好", "u": "https://www.youtube.com/watch?v=soIjjhcrtqY" },
+      { "t": "Heygen AI 影片生成工具介紹及教學｜AI 影片產生工具推薦", "u": "https://www.youtube.com/watch?v=eeJ2L0Q0lUA" },
+      { "t": "竟然用AI說流利日文 教你用HeyGen創建虛擬分身", "u": "https://www.youtube.com/watch?v=1rW8KfprMtY" },
+      { "t": "HeyGen AI - Full Tutorial 2026: BEST AI Avatar Video Generator", "u": "https://www.youtube.com/watch?v=eFwx6fyDOmU" }
     ],
     "CapCut": [
-      {
-        "t": "【免費剪輯神器】CapCut 手機剪輯教學｜15分鐘做出高質感影片",
-        "u": "https://www.youtube.com/watch?v=K3cax7G8cjM"
-      },
-      {
-        "t": "Learn Video Editing in 35 MINUTES: CapCut 2026 Masterclass",
-        "u": "https://www.youtube.com/watch?v=RrO7j8c19UU"
-      },
-      {
-        "t": "CapCut影片剪輯教學大全｜適合新手的完整教學系列",
-        "u": "https://www.youtube.com/playlist?list=PLNUIzu31Ju-fOMovmfaOYfGvrMtWALIpL"
-      },
-      {
-        "t": "CapCut Tutorial for Beginners (2026) – Full Video Editing Guide",
-        "u": "https://www.youtube.com/watch?v=j5_471mO14c"
-      },
-      {
-        "t": "【CapCut 教學 2026】新手完整入門指南：從0開始學會影片剪輯",
-        "u": "https://www.youtube.com/watch?v=o2Z2yTrgayk"
-      }
+      { "t": "【免費剪輯神器】CapCut 手機剪輯教學｜15分鐘做出高質感影片", "u": "https://www.youtube.com/watch?v=K3cax7G8cjM" },
+      { "t": "剪映Capcut 教學 | 從入門到邪門 | 電腦版 | 帶你從零基礎剪好一部片", "u": "https://www.youtube.com/watch?v=A56NKsBs8WM" },
+      { "t": "Learn Video Editing in 35 MINUTES: CapCut 2026 Masterclass", "u": "https://www.youtube.com/watch?v=RrO7j8c19UU" },
+      { "t": "CapCut影片剪輯教學大全｜適合新手的完整教學系列", "u": "https://www.youtube.com/playlist?list=PLNUIzu31Ju-fOMovmfaOYfGvrMtWALIpL" },
+      { "t": "CapCut Tutorial for Beginners (2026) – Full Video Editing Guide", "u": "https://www.youtube.com/watch?v=j5_471mO14c" },
+      { "t": "【CapCut 教學 2026】新手完整入門指南：從0開始學會影片剪輯", "u": "https://www.youtube.com/watch?v=o2Z2yTrgayk" }
     ],
     "Descript": [
-      {
-        "t": "Descript Tutorial 2026 | Edit Videos by Editing Text with AI",
-        "u": "https://www.youtube.com/watch?v=DbU5l3UvwIc"
-      },
-      {
-        "t": "Descript Tutorial for Beginners 2026: Complete Video Editing Guide",
-        "u": "https://www.youtube.com/watch?v=D5MQbP4b_sQ"
-      },
-      {
-        "t": "ULTIMATE Descript Tutorial for Beginners in 2026 | How to Edit Fast Using AI",
-        "u": "https://www.youtube.com/watch?v=L4lUwaI7NSI"
-      }
+      { "t": "Descript Tutorial 2026 | Edit Videos by Editing Text with AI", "u": "https://www.youtube.com/watch?v=DbU5l3UvwIc" },
+      { "t": "Complete Descript Tutorial 2026: Zero to Expert", "u": "https://www.youtube.com/watch?v=RgwJNOXGARI" },
+      { "t": "Descript Tutorial for Beginners 2026: Complete Video Editing Guide", "u": "https://www.youtube.com/watch?v=D5MQbP4b_sQ" },
+      { "t": "ULTIMATE Descript Tutorial for Beginners in 2026 | How to Edit Fast Using AI", "u": "https://www.youtube.com/watch?v=L4lUwaI7NSI" }
     ],
     "Midjourney": [
-      {
-        "t": "2026最新 Midjourney 完整教程｜从注册订阅到高级提示词，零基础快速上手 AI 绘画",
-        "u": "https://www.youtube.com/watch?v=U1yxkWu1CQY"
-      },
-      {
-        "t": "How to ACTUALLY Use Midjourney for AI Filmmaking in 2026",
-        "u": "https://www.youtube.com/watch?v=CjCDpNCqEuY"
-      },
-      {
-        "t": "Midjourney 保姆級完整教學01：10分鐘學會Midjourney，如何註冊、使用",
-        "u": "https://www.youtube.com/watch?v=VSzIn_kkwiQ"
-      },
-      {
-        "t": "Midjourney V7網頁版攻略，玩AI影片前必學｜細節大師的提示詞、設定到修圖全流程！",
-        "u": "https://www.youtube.com/watch?v=EiUFzuSaL1U"
-      },
-      {
-        "t": "【MidJourney 線上網頁版最新教學】不需再用Discord 了",
-        "u": "https://www.youtube.com/watch?v=GAQ6HRktsoY"
-      }
+      { "t": "Midjourney V7網頁版攻略，玩AI影片前必學｜細節大師的提示詞、設定到修圖全流程！", "u": "https://www.youtube.com/watch?v=EiUFzuSaL1U" },
+      { "t": "Complete Midjourney Tutorial for 2026", "u": "https://www.youtube.com/watch?v=jl6qGVrpzYM" },
+      { "t": "2026最新 Midjourney 完整教程｜从注册订阅到高级提示词，零基础快速上手 AI 绘画", "u": "https://www.youtube.com/watch?v=U1yxkWu1CQY" },
+      { "t": "How to ACTUALLY Use Midjourney for AI Filmmaking in 2026", "u": "https://www.youtube.com/watch?v=CjCDpNCqEuY" },
+      { "t": "Midjourney 保姆級完整教學01：10分鐘學會Midjourney，如何註冊、使用", "u": "https://www.youtube.com/watch?v=VSzIn_kkwiQ" },
+      { "t": "【MidJourney 線上網頁版最新教學】不需再用Discord 了", "u": "https://www.youtube.com/watch?v=GAQ6HRktsoY" }
     ],
     "DALL·E（ChatGPT 內建）": [
-      {
-        "t": "ChatGPT4o生圖30大應用場景全解析，顛覆AI行業｜普通人初學者AI畫圖全教學｜聊天P圖的時代來啦！",
-        "u": "https://www.youtube.com/watch?v=M0JmfVpyX2o"
-      },
-      {
-        "t": "別再只叫 AI 生圖！ChatGPT Images 2.0 真正強在這 5 件事 | 交付整套素材的完整 AI 工作流",
-        "u": "https://www.youtube.com/watch?v=Qkzbz4PtFNM"
-      },
-      {
-        "t": "DALL·E 3快速上手教學：比Midjourney更好用的免費AI繪圖工具，支持中文提示詞，如何在ChatGPT開啟DALL·E 3",
-        "u": "https://www.youtube.com/watch?v=Wav60DMzP74"
-      },
-      {
-        "t": "【DALL.E 3】 你唯一需要的AI圖片工具，DALLE.3完整教學，地球上最強大的文字轉圖AI，ChatGPT4支持，完全免費，Bing Image Creator",
-        "u": "https://www.youtube.com/watch?v=2RNHxUzeZcg"
-      },
-      {
-        "t": "DALL·E 3特殊技巧 & 一致性角色創建",
-        "u": "https://www.youtube.com/watch?v=1YbOAMLn0mA"
-      }
+      { "t": "DALL·E 3快速上手教學｜比Midjourney更好用的免費AI繪圖工具｜支持中文提示詞，完全免費｜如何在ChatGPT開啟DALL·E 3", "u": "https://www.youtube.com/watch?v=Wav60DMzP74" },
+      { "t": "【DALL.E 3】你唯一需要的AI圖片工具，DALLE.3完整教學，地球上最強大的文字轉圖AI，ChatGPT4支持，完全免費，Bing Image Creator", "u": "https://www.youtube.com/watch?v=2RNHxUzeZcg" },
+      { "t": "ChatGPT4o生圖30大應用場景全解析，顛覆AI行業｜普通人初學者AI畫圖全教學｜聊天P圖的時代來啦！", "u": "https://www.youtube.com/watch?v=M0JmfVpyX2o" },
+      { "t": "別再只叫 AI 生圖！ChatGPT Images 2.0 真正強在這 5 件事 | 交付整套素材的完整 AI 工作流", "u": "https://www.youtube.com/watch?v=Qkzbz4PtFNM" },
+      { "t": "DALL·E 3特殊技巧 & 一致性角色創建", "u": "https://www.youtube.com/watch?v=1YbOAMLn0mA" }
     ],
     "Stable Diffusion": [
-      {
-        "t": "How to Setup Stable Diffusion Locally (2026 Guide)",
-        "u": "https://www.youtube.com/watch?v=wiC0wZiuv4I"
-      },
-      {
-        "t": "Stable Diffusion 最新版安裝：基本操作教學：繁體中文介面設定教學",
-        "u": "https://www.youtube.com/watch?v=urF_6GSALWo"
-      },
-      {
-        "t": "Stable Diffusion 零基礎新手入門！Part 1 - 安裝與基本設置 (Windows/Mac)",
-        "u": "https://www.youtube.com/watch?v=d2Xj0fKKaJ4"
-      }
+      { "t": "Stable Diffusion 最新版安裝 | 基本操作教學 | 繁體中文介面設定教學 | 無廣告", "u": "https://www.youtube.com/watch?v=urF_6GSALWo" },
+      { "t": "超簡單AI繪圖工具Stable Diffusion安裝篇2024最新版", "u": "https://www.youtube.com/watch?v=4HCPrO1vrIQ" },
+      { "t": "How to Setup Stable Diffusion Locally (2026 Guide)", "u": "https://www.youtube.com/watch?v=wiC0wZiuv4I" },
+      { "t": "Stable Diffusion 零基礎新手入門！Part 1 - 安裝與基本設置 (Windows/Mac)", "u": "https://www.youtube.com/watch?v=d2Xj0fKKaJ4" }
     ],
     "Claude Code": [
-      {
-        "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)",
-        "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c"
-      },
-      {
-        "t": "Claude Code保姆級攻略2.0：中文語言設定、第三方模型接入、MCP、Skill、Subagent完整教學",
-        "u": "https://www.youtube.com/watch?v=Czky9q7sOWU"
-      },
-      {
-        "t": "【超實用】一次搞懂Claude AI全生態！2026全新初學者完整教程，從基本用法到全新自動化系統！",
-        "u": "https://www.youtube.com/watch?v=zm3K831v470"
-      },
-      {
-        "t": "全网最全！60分钟全面掌握Claude Code",
-        "u": "https://www.youtube.com/watch?v=r-CGDAGeXLU"
-      },
-      {
-        "t": "還在羨慕別人用 AI 開發酷產品？Claude Code 保姆級教學讓你輕鬆體驗 Vibe Coding，動動嘴就能做出Anything！",
-        "u": "https://www.youtube.com/watch?v=2pM-7fBXc_M"
-      },
-      {
-        "t": "FULL Claude Code Tutorial For Beginners in 2026! (Become a PRO)",
-        "u": "https://www.youtube.com/watch?v=X_zVY3-mbM8"
-      }
+      { "t": "CLAUDE CODE 4小時完整教學：學會Skills / AI 自動工作 / 搜集資料 (2026)", "u": "https://www.youtube.com/watch?v=fYuohy6rQ9c" },
+      { "t": "【超級新手指南】我如何使用Claude Code？基礎知識和驚人用途一次說清楚！", "u": "https://www.youtube.com/watch?v=wW6_Q-5aH5o" },
+      { "t": "Claude Code保姆級攻略2.0：中文語言設定、第三方模型接入、MCP、Skill、Subagent完整教學", "u": "https://www.youtube.com/watch?v=Czky9q7sOWU" },
+      { "t": "【超實用】一次搞懂Claude AI全生態！2026全新初學者完整教程，從基本用法到全新自動化系統！", "u": "https://www.youtube.com/watch?v=zm3K831v470" },
+      { "t": "全网最全！60分钟全面掌握Claude Code", "u": "https://www.youtube.com/watch?v=r-CGDAGeXLU" },
+      { "t": "還在羨慕別人用 AI 開發酷產品？Claude Code 保姆級教學讓你輕鬆體驗 Vibe Coding，動動嘴就能做出Anything！", "u": "https://www.youtube.com/watch?v=2pM-7fBXc_M" },
+      { "t": "FULL Claude Code Tutorial For Beginners in 2026! (Become a PRO)", "u": "https://www.youtube.com/watch?v=X_zVY3-mbM8" }
     ],
     "Cursor": [
-      {
-        "t": "How to Create My First Project in Cursor AI (2026)",
-        "u": "https://www.youtube.com/watch?v=dRsB_sOdYtw"
-      },
-      {
-        "t": "Cursor AI: The Only IDE You Need in 2026 (Beginner to Pro)",
-        "u": "https://www.youtube.com/watch?v=ed26g7jxAbU"
-      },
-      {
-        "t": "【Cursor 教學】入門到實戰，用AI Agent自動化你的工作流！",
-        "u": "https://www.youtube.com/watch?v=kVniOF36GEk"
-      },
-      {
-        "t": "Cursor AI 教學 - 實戰4個月後的終極使用心得！10x你的Programming 效率",
-        "u": "https://www.youtube.com/watch?v=yHiYyiWMhlI"
-      }
+      { "t": "【Cursor 教學】入門到實戰，用 AI Agent 自動化你的工作流！", "u": "https://www.youtube.com/watch?v=kVniOF36GEk" },
+      { "t": "Cursor AI 教學 - 實戰4個月後的終極使用心得！10x你的Programming 效率", "u": "https://www.youtube.com/watch?v=yHiYyiWMhlI" },
+      { "t": "How to Create My First Project in Cursor AI (2026)", "u": "https://www.youtube.com/watch?v=dRsB_sOdYtw" },
+      { "t": "Cursor AI: The Only IDE You Need in 2026 (Beginner to Pro)", "u": "https://www.youtube.com/watch?v=ed26g7jxAbU" }
     ],
     "GitHub Copilot": [
-      {
-        "t": "GitHub Copilot CLI 實戰教學｜從修 Bug 到自動建立 Pull Request（含 MCP 設定與切換 Model 示範）",
-        "u": "https://www.youtube.com/watch?v=KVht2h5fb9E"
-      },
-      {
-        "t": "Master GitHub Copilot in One Video | Complete 2026 Walkthrough",
-        "u": "https://www.youtube.com/watch?v=w1JfidXVFuA"
-      },
-      {
-        "t": "How To Use GitHub Copilot With Visual Studio Code | Set Up GitHub Copilot in VS Code (2026)",
-        "u": "https://www.youtube.com/watch?v=AIgZH8zbMTE"
-      },
-      {
-        "t": "GitHub Copilot 最佳實務：不要這麼做就對了",
-        "u": "https://www.youtube.com/watch?v=QW9bu2aeQC8"
-      }
+      { "t": "GitHub Copilot CLI 實戰教學｜從修 Bug 到自動建立 Pull Request（含 MCP 設定與切換 Model 示範）", "u": "https://www.youtube.com/watch?v=KVht2h5fb9E" },
+      { "t": "GitHub Copilot Coding Agent 超實用教學｜自動修 Bug、寫測試、拉 PR 一次搞懂", "u": "https://www.youtube.com/watch?v=Z9EVVDCgm8M" },
+      { "t": "Master GitHub Copilot in One Video | Complete 2026 Walkthrough", "u": "https://www.youtube.com/watch?v=w1JfidXVFuA" },
+      { "t": "How To Use GitHub Copilot With Visual Studio Code | Set Up GitHub Copilot in VS Code (2026)", "u": "https://www.youtube.com/watch?v=AIgZH8zbMTE" },
+      { "t": "GitHub Copilot 最佳實務：不要這麼做就對了", "u": "https://www.youtube.com/watch?v=QW9bu2aeQC8" }
     ],
     "ElevenLabs": [
-      {
-        "t": "只給文字腳本，AI 自動配好語音 + 音樂 + 影片！直接拼出一支能上架的影片‼️｜ElevenLabs AI 教程",
-        "u": "https://www.youtube.com/watch?v=gGAGjPbecQI"
-      },
-      {
-        "t": "ElevenLabs Complete Platform Tutorial 2026: Beginner To Pro In 50 Minutes",
-        "u": "https://www.youtube.com/watch?v=6-WqxzJz8Wg"
-      },
-      {
-        "t": "ElevenLabs AI 语音生成教程：50 分钟学会AI 配音",
-        "u": "https://www.youtube.com/watch?v=vCYem4AH7Z8"
-      },
-      {
-        "t": "ElevenLabs 超擬真語音教學：結合 n8n 自動生成 AI 旁白！",
-        "u": "https://www.youtube.com/watch?v=T-oQOu_ZltM"
-      }
+      { "t": "ElevenLabs Complete Platform Tutorial 2026: Beginner To Pro In 50 Minutes", "u": "https://www.youtube.com/watch?v=6-WqxzJz8Wg" },
+      { "t": "How to Use ElevenLabs | Beginner's Guide 2026", "u": "https://www.youtube.com/watch?v=GtnRt1QlVkA" },
+      { "t": "只給文字腳本，AI 自動配好語音 + 音樂 + 影片！直接拼出一支能上架的影片‼️｜ElevenLabs AI 教程", "u": "https://www.youtube.com/watch?v=gGAGjPbecQI" },
+      { "t": "ElevenLabs AI 语音生成教程：50 分钟学会AI 配音", "u": "https://www.youtube.com/watch?v=vCYem4AH7Z8" },
+      { "t": "ElevenLabs 超擬真語音教學：結合 n8n 自動生成 AI 旁白！", "u": "https://www.youtube.com/watch?v=T-oQOu_ZltM" }
     ],
     "Suno": [
-      {
-        "t": "Suno AI 2026 作曲完整教學 | 入門到進階 | AI創作歌曲不僅好聽還可以商用",
-        "u": "https://www.youtube.com/watch?v=Xv_cpCtN4yE"
-      },
-      {
-        "t": "生產力黑科技EP09｜Suno AI 教學：如何用 Gemini 寫歌詞 + 生成音樂？2026 最新 AI 作曲全攻略",
-        "u": "https://www.youtube.com/watch?v=xiG6FFySkY0"
-      },
-      {
-        "t": "SUNO AI 教學: 介面深度解析、自定義模式、實戰技巧全公開",
-        "u": "https://www.youtube.com/watch?v=qg2bN10glyw"
-      },
-      {
-        "t": "Suno AI Advanced Tutorial 2026 (In-Depth Tutorial)",
-        "u": "https://www.youtube.com/watch?v=sWg3ehNd29Y"
-      }
+      { "t": "Suno AI 2026 作曲完整教學 | 入門到進階 | AI創作歌曲不僅好聽還可以商用", "u": "https://www.youtube.com/watch?v=Xv_cpCtN4yE" },
+      { "t": "生產力黑科技EP09｜Suno AI 教學：如何用 Gemini 寫歌詞 + 生成音樂？2026 最新 AI 作曲全攻略。", "u": "https://www.youtube.com/watch?v=xiG6FFySkY0" },
+      { "t": "SUNO AI 教學: 介面深度解析、自定義模式、實戰技巧全公開", "u": "https://www.youtube.com/watch?v=qg2bN10glyw" },
+      { "t": "Suno AI Advanced Tutorial 2026 (In-Depth Tutorial)", "u": "https://www.youtube.com/watch?v=sWg3ehNd29Y" }
     ],
     "Whisper": [
-      {
-        "t": "YouTube 影片字幕神器：Whisper AI 語音轉字幕超簡單教學",
-        "u": "https://www.youtube.com/watch?v=VXzmkYaayUE"
-      },
-      {
-        "t": "實測推薦！完全免費的 OpenAI Whisper 語音轉文字自動工具，字幕、逐字稿一鍵搞定｜Buzz 教學",
-        "u": "https://www.youtube.com/watch?v=HHE5gbZgc8g"
-      },
-      {
-        "t": "Whisper YouTube 中文字幕生成指南（無需Key）：從新手入門到 AI 校正",
-        "u": "https://www.youtube.com/watch?v=E-X3kp8wCIg"
-      },
-      {
-        "t": "How To Install Whisper Ai Step-By-Step (Beginner Setup Guide) 2026 (Free Version)",
-        "u": "https://www.youtube.com/watch?v=mJPtmzcyoyk"
-      }
+      { "t": "實測推薦！完全免費的 OpenAI Whisper 語音轉文字自動工具，字幕、逐字稿一鍵搞定｜Buzz 教學", "u": "https://www.youtube.com/watch?v=HHE5gbZgc8g" },
+      { "t": "一次學會AI自動字幕+逐字稿 ❘ Open AI Whisper和Google Colab教學影片", "u": "https://www.youtube.com/watch?v=5CFbvdxW-yU" },
+      { "t": "YouTube 影片字幕神器：Whisper AI 語音轉字幕超簡單教學", "u": "https://www.youtube.com/watch?v=VXzmkYaayUE" },
+      { "t": "Whisper YouTube 中文字幕生成指南（無需Key）：從新手入門到 AI 校正", "u": "https://www.youtube.com/watch?v=E-X3kp8wCIg" },
+      { "t": "How To Install Whisper Ai Step-By-Step (Beginner Setup Guide) 2026 (Free Version)", "u": "https://www.youtube.com/watch?v=mJPtmzcyoyk" }
     ],
     "Gamma": [
-      {
-        "t": "2026最新AI 簡報神器PK 40 秒做完簡報Gamma、AiPPT",
-        "u": "https://www.youtube.com/watch?v=X5IToXLK5Pk"
-      },
-      {
-        "t": "Gamma AI Tutorial 2026 – How to use Gamma AI for Presentations & Graphics",
-        "u": "https://www.youtube.com/watch?v=rhNzKR2g300"
-      },
-      {
-        "t": "簡報製作教學，Gamma.app：AI 幫你做簡報",
-        "u": "https://www.youtube.com/watch?v=YHmM2Xavjc0"
-      },
-      {
-        "t": "Gamma App Tutorial - 2026 | From Idea to Slides in Seconds - Build Full Presentation Inside Claude",
-        "u": "https://www.youtube.com/watch?v=A1O7ot12YJI"
-      },
-      {
-        "t": "Gamma AI Website Builder Tutorial (2026) – Build a Website in Minutes",
-        "u": "https://www.youtube.com/watch?v=_CevSPs_0dI"
-      },
-      {
-        "t": "製作 PPT 太麻煩？Gamma AI，幾分鐘搞定高質感簡報，從排版到內容生成一站式解決",
-        "u": "https://www.youtube.com/watch?v=9PgHe_ThV4U"
-      },
-      {
-        "t": "它竟把6千字長文快速轉成簡報？內容處理量更大贏 ChatGPT？還能用 AI 提示語生成最精準 PPT 需求！｜Gamma｜泛科學院",
-        "u": "https://www.youtube.com/watch?v=f0Tw2w-WxRs"
-      }
+      { "t": "2026最新AI 簡報神器PK 40 秒做完簡報Gamma、AiPPT", "u": "https://www.youtube.com/watch?v=X5IToXLK5Pk" },
+      { "t": "【AI工作流】簡報神器 Gamma｜文字一鍵變 PPT，但別只用 AI 就交差", "u": "https://www.youtube.com/watch?v=4A4RXctUSoM" },
+      { "t": "Gamma AI Tutorial 2026 – How to use Gamma AI for Presentations & Graphics", "u": "https://www.youtube.com/watch?v=rhNzKR2g300" },
+      { "t": "簡報製作教學，Gamma.app：AI 幫你做簡報", "u": "https://www.youtube.com/watch?v=YHmM2Xavjc0" },
+      { "t": "Gamma App Tutorial - 2026 | From Idea to Slides in Seconds - Build Full Presentation Inside Claude", "u": "https://www.youtube.com/watch?v=A1O7ot12YJI" },
+      { "t": "Gamma AI Website Builder Tutorial (2026) – Build a Website in Minutes", "u": "https://www.youtube.com/watch?v=_CevSPs_0dI" },
+      { "t": "製作 PPT 太麻煩？Gamma AI，幾分鐘搞定高質感簡報，從排版到內容生成一站式解決", "u": "https://www.youtube.com/watch?v=9PgHe_ThV4U" },
+      { "t": "它竟把6千字長文快速轉成簡報？內容處理量更大贏 ChatGPT？還能用 AI 提示語生成最精準 PPT 需求！｜Gamma｜泛科學院", "u": "https://www.youtube.com/watch?v=f0Tw2w-WxRs" }
     ],
     "Napkin": [
-      {
-        "t": "【Napkin AI 教學- 超強AI 工具】文字一鍵生成專業圖表",
-        "u": "https://www.youtube.com/watch?v=c5vYIyJD43I"
-      },
-      {
-        "t": "Turn Text into Diagrams in Seconds with Napkin AI",
-        "u": "https://www.youtube.com/watch?v=aFZBl9NryXg"
-      },
-      {
-        "t": "這麼好用還完全免費？Napkin AI秒生成設計感爆棚的圖表（泛科學院）",
-        "u": "https://www.youtube.com/watch?v=TKRFfB3Ja0w"
-      },
-      {
-        "t": "Napkin AI Complete Tutorial 2026 | Turn Your Text Into Stunning Visuals in Seconds with Napkin AI",
-        "u": "https://www.youtube.com/watch?v=ozHDhKGhdEE"
-      }
+      { "t": "【Napkin AI 教學- 超強AI 工具】文字一鍵生成專業圖表", "u": "https://www.youtube.com/watch?v=c5vYIyJD43I" },
+      { "t": "完全免費文字轉圖表NAPKIN AI 教學簡報文章手繪視覺思考", "u": "https://www.youtube.com/watch?v=CvgxmCIA9ho" },
+      { "t": "Turn Text into Diagrams in Seconds with Napkin AI", "u": "https://www.youtube.com/watch?v=aFZBl9NryXg" },
+      { "t": "這麼好用還完全免費？Napkin AI秒生成設計感爆棚的圖表（泛科學院）", "u": "https://www.youtube.com/watch?v=TKRFfB3Ja0w" },
+      { "t": "Napkin AI Complete Tutorial 2026 | Turn Your Text Into Stunning Visuals in Seconds with Napkin AI", "u": "https://www.youtube.com/watch?v=ozHDhKGhdEE" }
     ],
     "Claude（檔案分析）": [
-      {
-        "t": "如何用Claude 3.5处理最多100页PDF？3个简单步骤教你！",
-        "u": "https://www.youtube.com/watch?v=DxB8jSOAagY"
-      },
-      {
-        "t": "How to Upload and Analyze PDF in Claude AI Full Guide 2026",
-        "u": "https://www.youtube.com/watch?v=zfOMMtEhWr4"
-      },
-      {
-        "t": "最聰明的AI工具？Claude 免費版 5 大神功能：一鍵生成 Excel 分析與 Office 檔案（泛科學院）",
-        "u": "https://www.youtube.com/watch?v=114H9EWKfzM"
-      },
-      {
-        "t": "【Claude Code 新手必學】從安裝流程、MCP＋Skills 功能強化、報表分析等實戰技巧，一次全學會！",
-        "u": "https://www.youtube.com/watch?v=vPXXD7W56Bw"
-      },
-      {
-        "t": "【Claude Code教學】Excel資料自動變PPT圖表！AI跨檔案生成可編輯簡報",
-        "u": "https://www.youtube.com/watch?v=juxoWOlsPyU"
-      },
-      {
-        "t": "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院",
-        "u": "https://www.youtube.com/watch?v=5Aha8QOVke4"
-      }
+      { "t": "最聰明的AI工具？Claude 免費版 5 大神功能：一鍵生成 Excel 分析與 Office 檔案，上班族必看的 AI 省錢工作流！｜泛科學院", "u": "https://www.youtube.com/watch?v=114H9EWKfzM" },
+      { "t": "【Claude Code教學】Excel資料自動變PPT圖表！AI跨檔案生成可編輯簡報", "u": "https://www.youtube.com/watch?v=juxoWOlsPyU" },
+      { "t": "如何用Claude 3.5处理最多100页PDF？3个简单步骤教你！", "u": "https://www.youtube.com/watch?v=DxB8jSOAagY" },
+      { "t": "How to Upload and Analyze PDF in Claude AI Full Guide 2026", "u": "https://www.youtube.com/watch?v=zfOMMtEhWr4" },
+      { "t": "【Claude Code 新手必學】從安裝流程、MCP＋Skills 功能強化、報表分析等實戰技巧，一次全學會！", "u": "https://www.youtube.com/watch?v=vPXXD7W56Bw" },
+      { "t": "10分鐘搞懂 Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院", "u": "https://www.youtube.com/watch?v=5Aha8QOVke4" }
     ],
     "Perplexity": [
-      {
-        "t": "【最完整教學】Perplexity Comet AI 瀏覽器 10 大神級用法：工作效率、研究搜尋、生活資訊一次搞定！",
-        "u": "https://www.youtube.com/watch?v=oLn8dbfXH-0"
-      },
-      {
-        "t": "How to Use Perplexity AI Like a PRO for FREE in 2026",
-        "u": "https://www.youtube.com/watch?v=d4WCyOtl-7Y"
-      },
-      {
-        "t": "The CORRECT way to use Perplexity In 2026 (Beginner Guide)",
-        "u": "https://www.youtube.com/watch?v=t4xwaRmFrNs"
-      },
-      {
-        "t": "10分鐘學會用 Perplexity，AI 教父都愛用！｜張邁可",
-        "u": "https://www.youtube.com/watch?v=SiCoXrlobec"
-      }
+      { "t": "【最完整教學】Perplexity Comet AI 瀏覽器 10 大神級用法：工作效率、研究搜尋、生活資訊一次搞定！", "u": "https://www.youtube.com/watch?v=oLn8dbfXH-0" },
+      { "t": "Perplexity AI Tutorial for Beginners 2026 (In-Depth Tutorial)", "u": "https://www.youtube.com/watch?v=tzsvWErdK50" },
+      { "t": "How to Use Perplexity AI Like a PRO for FREE in 2026", "u": "https://www.youtube.com/watch?v=d4WCyOtl-7Y" },
+      { "t": "The CORRECT way to use Perplexity In 2026 (Beginner Guide)", "u": "https://www.youtube.com/watch?v=t4xwaRmFrNs" },
+      { "t": "10分鐘學會用 Perplexity，AI 教父都愛用！｜張邁可", "u": "https://www.youtube.com/watch?v=SiCoXrlobec" }
     ],
     "NotebookLM": [
-      {
-        "t": "NotebookLM 完整教學！93%的人還不知道的8個隱藏用法，完勝ChatGPT| 分析報告 | 會議記錄 | 自動生成Podcast、教學影片",
-        "u": "https://www.youtube.com/watch?v=zgWerTIynVA"
-      },
-      {
-        "t": "別再自己做簡報！NotebookLM 3分鐘直接幫你完成：一鍵去浮水印、換圖全流程公開！",
-        "u": "https://www.youtube.com/watch?v=yjFixFO5TUs"
-      },
-      {
-        "t": "NotebookLM完整教學！10個95%的人還不知道的超強隱藏用法",
-        "u": "https://www.youtube.com/watch?v=pbds1YRoXJw"
-      },
-      {
-        "t": "別再忙著手抄筆記！NotebookLM教學｜YT影片、音檔秒變逐字稿與重點摘要",
-        "u": "https://www.youtube.com/watch?v=-BhyDONU8q8"
-      }
+      { "t": "NotebookLM 2.0徹底變了：2026年最重要更新一次看懂！", "u": "https://www.youtube.com/watch?v=mBoxAlg7V3M" },
+      { "t": "NotebookLM 完整教學！93%的人還不知道的8個隱藏用法，完勝ChatGPT| 分析報告 | 會議記錄 | 自動生成Podcast、教學影片", "u": "https://www.youtube.com/watch?v=zgWerTIynVA" },
+      { "t": "別再自己做簡報！NotebookLM 3分鐘直接幫你完成：一鍵去浮水印、換圖全流程公開！", "u": "https://www.youtube.com/watch?v=yjFixFO5TUs" },
+      { "t": "NotebookLM完整教學！10個95%的人還不知道的超強隱藏用法", "u": "https://www.youtube.com/watch?v=pbds1YRoXJw" },
+      { "t": "別再忙著手抄筆記！NotebookLM教學｜YT影片、音檔秒變逐字稿與重點摘要", "u": "https://www.youtube.com/watch?v=-BhyDONU8q8" }
     ],
     "Fireflies.ai": [
-      {
-        "t": "2026 Fireflies.ai Tutorial + Coupon Code",
-        "u": "https://www.youtube.com/watch?v=1yNtt802IiY"
-      },
-      {
-        "t": "Fireflies AI Overview 2026: Automate Meeting Notes, Transcription & More | Full Product Demo",
-        "u": "https://www.youtube.com/watch?v=uZuFXgNfZmI"
-      },
-      {
-        "t": "How to Use FireFlies AI Notes in 2026 | Ultimate Tutorial",
-        "u": "https://www.youtube.com/watch?v=8NNEnT0UkBY"
-      }
+      { "t": "2026 Fireflies.ai Tutorial + Coupon Code", "u": "https://www.youtube.com/watch?v=1yNtt802IiY" },
+      { "t": "How to Use FireFlies AI Notes in 2026 | Ultimate Tutorial", "u": "https://www.youtube.com/watch?v=8NNEnT0UkBY" },
+      { "t": "Fireflies AI Overview 2026: Automate Meeting Notes, Transcription & More | Full Product Demo", "u": "https://www.youtube.com/watch?v=uZuFXgNfZmI" }
     ],
     "Reclaim.ai": [
-      {
-        "t": "Reclaim AI Tutorial for Beginners 2026(Step By Step)",
-        "u": "https://www.youtube.com/watch?v=-6WJqMEr9p8"
-      },
-      {
-        "t": "What Is Reclaim AI? How to Set Up & Use Reclaim AI",
-        "u": "https://www.youtube.com/watch?v=1B8diQeYeWM"
-      },
-      {
-        "t": "Reclaim AI Tutorial 2026: How To Use Reclaim.ai (For Beginners)",
-        "u": "https://www.youtube.com/watch?v=8KmSXDuispE"
-      },
-      {
-        "t": "How to Use Reclaim.AI (2026) Best AI Time Management App",
-        "u": "https://www.youtube.com/watch?v=fCc0zEwKv00"
-      }
+      { "t": "Reclaim AI Tutorial for Beginners 2026 (Step By Step)", "u": "https://www.youtube.com/watch?v=-6WJqMEr9p8" },
+      { "t": "What Is Reclaim AI? How to Set Up & Use Reclaim AI", "u": "https://www.youtube.com/watch?v=1B8diQeYeWM" },
+      { "t": "Reclaim AI Tutorial 2026: How To Use Reclaim.ai (For Beginners)", "u": "https://www.youtube.com/watch?v=8KmSXDuispE" },
+      { "t": "How to Use Reclaim.AI (2026) Best AI Time Management App", "u": "https://www.youtube.com/watch?v=fCc0zEwKv00" }
     ],
     "n8n": [
-      {
-        "t": "2026 最強 N8N 教學！從零開始打造你的 AI 自動化工作流！",
-        "u": "https://www.youtube.com/watch?v=6s_Z9Tl0sHU"
-      },
-      {
-        "t": "【n8n - AI 自動化保姆級教程】從 0 到 1 建立你的 AI 自動化工作流 (JSON、API、節點邏輯一次搞懂)",
-        "u": "https://www.youtube.com/watch?v=02U_eT1S-AY"
-      },
-      {
-        "t": "別再手動做了！零基礎學會用n8n打造AI自動化工作流：從抓取資料到AI決策，全流程手把手教學｜Kelly Tsai",
-        "u": "https://www.youtube.com/watch?v=-vKewrChihk"
-      },
-      {
-        "t": "從零基礎到精通n8n！萬用三步驟做出AI自動化助理",
-        "u": "https://www.youtube.com/watch?v=mNRphFUPzjE"
-      },
-      {
-        "t": "超詳細教學：n8n AI 實作0基礎入門到進階（AI Agent／LLM／RAG／Webhook）",
-        "u": "https://www.youtube.com/watch?v=vvqhzbp4J5A"
-      },
-      {
-        "t": "n8n 手把手完整教學：從基礎到進階，學習簡單強大的流程自動化工作流",
-        "u": "https://www.youtube.com/watch?v=sYWCxgEF_yY"
-      }
+      { "t": "2026 最強 N8N 教學！從零開始打造你的 AI 自動化工作流！", "u": "https://www.youtube.com/watch?v=6s_Z9Tl0sHU" },
+      { "t": "從零基礎到精通n8n！萬用三步驟做出AI自動化助理(超簡單)", "u": "https://www.youtube.com/watch?v=mNRphFUPzjE" },
+      { "t": "【n8n - AI 自動化保姆級教程】從 0 到 1 建立你的 AI 自動化工作流 (JSON、API、節點邏輯一次搞懂)", "u": "https://www.youtube.com/watch?v=02U_eT1S-AY" },
+      { "t": "別再手動做了！零基礎學會用n8n打造AI自動化工作流：從抓取資料到AI決策，全流程手把手教學｜Kelly Tsai", "u": "https://www.youtube.com/watch?v=-vKewrChihk" },
+      { "t": "超詳細教學：n8n AI 實作0基礎入門到進階（AI Agent／LLM／RAG／Webhook）", "u": "https://www.youtube.com/watch?v=vvqhzbp4J5A" },
+      { "t": "n8n 手把手完整教學：從基礎到進階，學習簡單強大的流程自動化工作流", "u": "https://www.youtube.com/watch?v=sYWCxgEF_yY" }
     ],
     "Cowork": [
-      {
-        "t": "Claude Cowork 30分钟超全教程超全教程，全球强者都在用。",
-        "u": "https://www.youtube.com/watch?v=ER7mb6-hdvs"
-      },
-      {
-        "t": "Claude Cowork太強了，7個瘋狂案例，自動處理郵件、操控你的電腦、遠端派任務，AI終於能直接幫你幹活了",
-        "u": "https://www.youtube.com/watch?v=9WL8HOrMH2s"
-      },
-      {
-        "t": "Claude Cowork 最友善的手把手教學！你還在叫 AI 幫你想答案？但高手們都已經在用 AI 交成品了",
-        "u": "https://www.youtube.com/watch?v=_cVTzXvb7xs"
-      },
-      {
-        "t": "Claude Cowork/Code保姆級完整教學：從入門到進階，自動生成內容、網頁和工作流，快速打造你的AI員工",
-        "u": "https://www.youtube.com/watch?v=Lq-wedAiffo"
-      },
-      {
-        "t": "FULL Claude Cowork Tutorial For Beginners in 2026! (Zero to PRO)",
-        "u": "https://www.youtube.com/watch?v=JdQ_FHgP5ms"
-      },
-      {
-        "t": "The ONLY Claude Cowork Tutorial You'll Ever Need in 2026",
-        "u": "https://www.youtube.com/watch?v=PnPsf-hwGtI"
-      }
+      { "t": "Claude Cowork太強了，7個瘋狂案例，自動處理郵件、操控你的電腦、遠端派任務，AI終於能直接幫你幹活了", "u": "https://www.youtube.com/watch?v=9WL8HOrMH2s" },
+      { "t": "Claude Cowork 最友善的手把手教學！你還在叫 AI 幫你想答案？但高手們都已經在用 AI 交成品了 ~", "u": "https://www.youtube.com/watch?v=_cVTzXvb7xs" },
+      { "t": "Claude Cowork 30分钟超全教程超全教程，全球强者都在用。", "u": "https://www.youtube.com/watch?v=ER7mb6-hdvs" },
+      { "t": "Claude Cowork/Code保姆級完整教學：從入門到進階，自動生成內容、網頁和工作流，快速打造你的AI員工", "u": "https://www.youtube.com/watch?v=Lq-wedAiffo" },
+      { "t": "FULL Claude Cowork Tutorial For Beginners in 2026! (Zero to PRO)", "u": "https://www.youtube.com/watch?v=JdQ_FHgP5ms" },
+      { "t": "The ONLY Claude Cowork Tutorial You'll Ever Need in 2026", "u": "https://www.youtube.com/watch?v=PnPsf-hwGtI" }
     ],
     "Make": [
-      {
-        "t": "Make.com Tutorial for Beginners 2026: Automate Your Business (Step by Step)",
-        "u": "https://www.youtube.com/watch?v=d0vHcgTVOc4"
-      },
-      {
-        "t": "告別重複作業地獄！Make.com 零基礎上手 ~ 不懂程式碼照樣也能搞定辦公室流程自動化！",
-        "u": "https://www.youtube.com/watch?v=_Fz-Gmrr5B4"
-      },
-      {
-        "t": "使用Make.com 完成臉書粉絲專業自動化發文",
-        "u": "https://www.youtube.com/watch?v=YBgY1k1-_iU"
-      }
+      { "t": "告別重複作業地獄！Make.com 零基礎上手 ~ 不懂程式碼照樣也能搞定辦公室流程自動化！", "u": "https://www.youtube.com/watch?v=_Fz-Gmrr5B4" },
+      { "t": "Make.com FULL COURSE 2026: Beginner to Pro (Build & Sell AI Automations)", "u": "https://www.youtube.com/watch?v=3cjBI3xtr4Y" },
+      { "t": "Make.com Tutorial for Beginners 2026: Automate Your Business (Step by Step)", "u": "https://www.youtube.com/watch?v=d0vHcgTVOc4" },
+      { "t": "使用Make.com 完成臉書粉絲專業自動化發文", "u": "https://www.youtube.com/watch?v=YBgY1k1-_iU" }
     ],
     "Zapier": [
-      {
-        "t": "How to Use Zapier in 2026: Complete Setup & Strategy",
-        "u": "https://www.youtube.com/watch?v=AqVB9ZU9cGg"
-      },
-      {
-        "t": "Learning Zapier in 2026: AI Automation for Beginners",
-        "u": "https://www.youtube.com/watch?v=h6euNY9-7dA"
-      },
-      {
-        "t": "Zapier自動化實戰教學：一步步帶你實現工作流自動化",
-        "u": "https://www.youtube.com/watch?v=3noUj0KANVE"
-      },
-      {
-        "t": "Zapier MCP 教學，如何連結到 Manus 等 AI Agent｜CLI 取代不了 MCP 的原因",
-        "u": "https://www.youtube.com/watch?v=uZ4i3g_WoLw"
-      }
+      { "t": "Zapier自動化實戰教學：一步步帶你實現工作流自動化！", "u": "https://www.youtube.com/watch?v=3noUj0KANVE" },
+      { "t": "生產力戰爭已開打！已有兩百萬家公司使用 Zapier 將常用 Apps 改造成全自動化部隊！！", "u": "https://www.youtube.com/watch?v=n8GhwLI9Q2o" },
+      { "t": "How to Use Zapier in 2026: Complete Setup & Strategy", "u": "https://www.youtube.com/watch?v=AqVB9ZU9cGg" },
+      { "t": "Learning Zapier in 2026: AI Automation for Beginners", "u": "https://www.youtube.com/watch?v=h6euNY9-7dA" },
+      { "t": "Zapier MCP 教學，如何連結到 Manus 等 AI Agent｜CLI 取代不了 MCP 的原因", "u": "https://www.youtube.com/watch?v=uZ4i3g_WoLw" }
     ],
     "Sim": [
-      {
-        "t": "Sim AI | Create Powerful AI Automations & Triggers Without Coding | AI Workflow Builder | AI LedgerX",
-        "u": "https://www.youtube.com/watch?v=UnFHoxO3vzg"
-      },
-      {
-        "t": "Is Sim AI the Game Changing Alternative to n8n You've Been Waiting For?",
-        "u": "https://www.youtube.com/watch?v=EkC9Cnp2UlA"
-      },
-      {
-        "t": "How to Use SIM AI Step-by-Step Guide 2026",
-        "u": "https://www.youtube.com/watch?v=drNL0QqSMNw"
-      }
+      { "t": "How to Use SIM AI Step-by-Step Guide 2026", "u": "https://www.youtube.com/watch?v=drNL0QqSMNw" },
+      { "t": "Build FREE AI Agent Using SIM AI (N8N Alternative & Open Source)", "u": "https://www.youtube.com/watch?v=DdLF5So9Py8" },
+      { "t": "Sim AI | Create Powerful AI Automations & Triggers Without Coding | AI Workflow Builder | AI LedgerX", "u": "https://www.youtube.com/watch?v=UnFHoxO3vzg" },
+      { "t": "Is Sim AI the Game Changing Alternative to n8n You've Been Waiting For?", "u": "https://www.youtube.com/watch?v=EkC9Cnp2UlA" }
     ],
     "Dify": [
-      {
-        "t": "Master Dify AI in 1 Hour: Complete Beginner's Guide for 2026",
-        "u": "https://www.youtube.com/watch?v=f-rvwoywUgM"
-      },
-      {
-        "t": "Dify 系統化教學｜Dify 零代碼革命：RAG 知識庫、自動化流程與企業級部署全解析",
-        "u": "https://www.youtube.com/watch?v=IX8g7l578oQ"
-      },
-      {
-        "t": "使用 Dify 工作流 | 10 分鐘打造高效 AI 客服系統！(附 CC 字幕)",
-        "u": "https://www.youtube.com/watch?v=ZeBMzx4y8l0"
-      }
-    ]
+      { "t": "【2026 廣東話AI 教學】10 分鐘用Dify 從零開始打造企業級私有部署", "u": "https://www.youtube.com/watch?v=1XxGaNkq_g4" },
+      { "t": "Dify 系統化教學｜Dify 零代碼革命：RAG 知識庫、自動化流程與企業級部署全解析", "u": "https://www.youtube.com/watch?v=IX8g7l578oQ" },
+      { "t": "Master Dify AI in 1 Hour: Complete Beginner's Guide for 2026", "u": "https://www.youtube.com/watch?v=f-rvwoywUgM" },
+      { "t": "使用 Dify 工作流 | 10 分鐘打造高效 AI 客服系統！(附 CC 字幕)", "u": "https://www.youtube.com/watch?v=ZeBMzx4y8l0" }
+    ],
+    "Glasp MCP Connector": [],
+    "Firecrawl": []
   }
 };
