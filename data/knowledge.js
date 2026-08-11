@@ -1,6 +1,6 @@
 // AI 知識庫資料檔 —— 每週排程檢查官方更新日誌，有變動時自動改寫並標記更新日期
 window.SITE_KNOWLEDGE = {
-  lastUpdated: "2026-07-27",
+  lastUpdated: "2026-08-11",
   basics: [
     { term: "LLM（大型語言模型）", en: "Large Language Model", body: "以海量文字訓練出的 AI 模型，能理解與生成自然語言。ChatGPT、Claude、Gemini 背後都是 LLM。它的本質是「預測下一個字」，但規模夠大後湧現出推理、翻譯、寫程式等能力。" },
     { term: "Token（詞元）", en: "Token", body: "LLM 處理文字的最小單位。一個中文字約 1~2 個 token，英文單字約 1~1.3 個。API 計費、模型輸入長度限制都以 token 計算。" },
@@ -21,9 +21,9 @@ window.SITE_KNOWLEDGE = {
     },
     {
       name: "ChatGPT / GPT 系列（OpenAI）",
-      updated: "2026-07-13",
-      body: "GPT-5.6 分三級：Sol（旗艦）、Terra（平衡）、Luna（快速），本週正式全面開放（先前為限量預覽），Sol 在代理式程式任務上 token 使用效率提升 54%。本週新增：「ChatGPT Work」工作代理上線，可整合跨應用與檔案的上下文，自動產出文件、試算表、簡報、報告、網站等成品（先桌面版全面開放，網頁/手機版由 Pro/Enterprise 用戶先行）；新一代語音模型「GPT-Live」上線，取代舊版 Voice，全雙工架構可同時聆聽與說話，語氣更自然，並能即時委派推理任務給前沿模型。特色功能：GPTs（自訂機器人商店）、Canvas（協作編輯）、Sora（影片生成）、深度研究。強項：生態系最大、外掛與整合最多。",
-      learn: "入門：免費版日常問答，試試新版 GPT-Live 語音模式 → 進階：GPTs 商店找現成工具、ChatGPT Work 自動產出文件 → 高階：API 串接自動化"
+      updated: "2026-08-11",
+      body: "GPT-5.6 分三級：Sol（旗艦）、Terra（平衡）、Luna（快速），已全面開放，Sol 在代理式程式任務上 token 使用效率提升 54%。本週新增：8/6 起免費版用戶的文字對話改為「無限制」（先前有額度限制），預設模型升級為 GPT-5.6 Luna；Plus/Pro 用戶的 Sol 新增「Think」思考按鈕/推理強度滑桿，可依需求手動加強推理深度。此前更新：「ChatGPT Work」工作代理上線，可整合跨應用與檔案的上下文，自動產出文件、試算表、簡報、報告、網站等成品（先桌面版全面開放，網頁/手機版由 Pro/Enterprise 用戶先行）；新一代語音模型「GPT-Live」上線，取代舊版 Voice，全雙工架構可同時聆聽與說話，語氣更自然，並能即時委派推理任務給前沿模型。特色功能：GPTs（自訂機器人商店）、Canvas（協作編輯）、Sora（影片生成）、深度研究。強項：生態系最大、外掛與整合最多、免費版現可無限文字對話。",
+      learn: "入門：免費版現在可無限次文字對話，日常問答免煩惱額度 → 進階：GPTs 商店找現成工具、ChatGPT Work 自動產出文件 → 高階：API 串接自動化"
     },
     {
       name: "Gemini（Google）",
@@ -39,12 +39,12 @@ window.SITE_KNOWLEDGE = {
     }
   ],
   compare: {
-    updated: "2026-07-13",
+    updated: "2026-08-11",
     note: "價格與功能變動快，以官方頁面為準",
     rows: [
       ["定位", "Claude", "ChatGPT", "Gemini"],
       ["最適合", "長文/文件/程式/代理", "泛用/生態系/創意", "Google 整合/研究"],
-      ["免費版", "有（額度制）", "有（額度制）", "有（大方）"],
+      ["免費版", "有（額度制）", "有（文字對話已無限制）", "有（大方）"],
       ["付費月費", "約 $17-20 起", "約 $20 起", "約 $19 起"],
       ["殺手級功能", "Cowork、Claude Code", "GPTs、Sora", "NotebookLM"]
     ]
